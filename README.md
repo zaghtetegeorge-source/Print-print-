@@ -32,3 +32,21 @@ vercel.json           ← إعدادات Vercel (كاش للصور + هيدرز 
 ## ٣) لوحة الطلبات
 افتح رابط الموقع وزيد بآخره `#admin` (مثال: `https://print-print.vercel.app/#admin`)،
 حط كلمة السر (`ADMIN_KEY`) وبتطلعلك كل الطلبات، بتغيّر حالتها، وبتحمّل فاتورة كل طلب PDF.
+
+## ٤) مين فات عالموقع وشو عمل (الإحصائيات)
+الكود جاهز بالموقع، بس لازم تفعّل الأداتين:
+
+**أ) Vercel Analytics — أرقام الزوار**
+Project → تبويب **Analytics** → **Enable**. بتشوف: عدد الزوار، من أي بلد، موبايل ولا كمبيوتر، ومن وين جايين (إنستا، غوغل، واتساب…).
+
+**ب) Microsoft Clarity — تسجيل فيديو لكل زيارة + Heatmap (مجاني)**
+1. ادخل [clarity.microsoft.com](https://clarity.microsoft.com) وسجّل دخول، **Add new project** وحط رابط موقعك.
+2. Settings → Overview → انسخ **Project ID** (متل `abc12xyz34`).
+3. افتح `index.html` وابحث عن `const CLARITY_ID='';` وحط الـ ID بين العلامتين، وبعدها push.
+4. بعد ساعتين تقريباً بتبلّش تطلع: **Recordings** (فيديو لكل زيارة: وين ضغط، لوين نزل، وين وقف)، **Heatmaps**، و **Dashboard**.
+
+**الأحداث اللي بتنسجل:** `add_to_cart` · `buy_now` · `order_submitted` · `invoice_pdf` · `whatsapp_click` · `whatsapp_invoice` · `call_click`
+بـ Clarity: Filters → Custom events، مثلاً بتشوف بس الزيارات اللي عملت طلب أو ضغطت واتساب.
+
+> أي جهاز بيفتح `#admin` بيصير مستثنى تلقائياً، فزياراتك انت ما بتخرّب الأرقام.
+> Clarity بيخفي اللي بيكتبه الزبون بالحقول (اسم، رقم) بشكل افتراضي.

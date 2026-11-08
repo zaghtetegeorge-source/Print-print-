@@ -9,6 +9,26 @@
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#4F5CC2">
 <link rel="icon" href="img/logo.jpg">
+<script>
+/* ---------- analytics ----------
+   CLARITY_ID: من clarity.microsoft.com → Settings → Overview → Project ID
+   أي جهاز بيفتح #admin بيتسجّل "مستثنى" وما بيتحسب بالإحصائيات (زياراتك انت) */
+const CLARITY_ID='';
+(function(){
+  let off=false;try{if(location.hash==='#admin')localStorage.setItem('ig_notrack','1');off=localStorage.getItem('ig_notrack')==='1';}catch(_){}
+  window.IG_NOTRACK=off; if(off)return;
+  window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};
+  const v=document.createElement('script');v.defer=true;v.src='/_vercel/insights/script.js';document.head.appendChild(v);
+  if(CLARITY_ID){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script",CLARITY_ID);}
+})();
+function track(name,data){
+  if(window.IG_NOTRACK)return;
+  try{if(window.clarity){clarity('event',name);if(data)for(const k in data)clarity('set',k,String(data[k]));}}catch(_){}
+  try{window.va&&va('event',{name,data});}catch(_){}
+}
+</script>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Infinity Graphic · طباعة فاخرة بالإمارات</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1008,13 +1028,13 @@ function bindOrder(){
   });
   $('editBtn').addEventListener('click',()=>{$('order').hidden=false;$('confirm').hidden=true;});
   $('sharePdf').addEventListener('click',sharePdf);
-  $('dlPdf').addEventListener('click',downloadPdf);
+  $('dlPdf').addEventListener('click',()=>{track('invoice_pdf');downloadPdf();});
   $('copyBtn').addEventListener('click',()=>{const b=$('copyBtn');navigator.clipboard.writeText(msg).then(()=>{b.textContent='انتسخ ✓';setTimeout(()=>b.textContent='انسخ الفاتورة',1800);}).catch(()=>{b.textContent='ما زبط، انسخ من الجدول';});});
 }
 
 /* ---------- backend (Google Sheet) ---------- */
 const API_URL='';
-function sendOrder(o){if(!API_URL)return;try{fetch(API_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({action:'new',order:o})});}catch(_){}}
+function sendOrder(o){track('order_submitted',{order_total:o.t,pay:o.pay});if(!API_URL)return;try{fetch(API_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({action:'new',order:o})});}catch(_){}}
 
 /* ---------- dashboard ---------- */
 const STATUSES=['جديد','قيد التصميم','بالطباعة','تم التسليم'];
@@ -1281,13 +1301,16 @@ document.addEventListener('focusout',()=>{setTimeout(()=>{const a=document.activ
 downloadsNS();
 
 /* ---------- events ---------- */
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href');
+  if(h.startsWith('https://wa.me'))track(a.id==='waBtn'?'whatsapp_invoice':'whatsapp_click',{from:location.hash||'#home'});
+  else if(h.startsWith('tel:'))track('call_click',{from:location.hash||'#home'});},true);
 document.addEventListener('click',e=>{
   const t=e.target.closest('button'); if(!t)return;
   if(t.dataset.tab){tab=t.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',x===t));$('grid').innerHTML=P.filter(p=>tab==='all'||p.g===tab).map(prodCard).join('');observe();return;}
   if(t.dataset.pq){const id=location.hash.slice(3),d=drafts[id];d.q=Math.max(1,Math.min(20,d.q+ +t.dataset.pq));$('pq').textContent=(d.q*1000).toLocaleString('en-US');$('ptot').textContent=fmt(byId[id].price*d.q);return;}
   if(t.dataset.fold){const id=location.hash.slice(3);drafts[id].fold=t.dataset.fold;document.querySelectorAll('[data-fold]').forEach(x=>x.setAttribute('aria-pressed',x===t));return;}
-  if(t.dataset.order){addFromDraft(t.dataset.order);location.hash='order';return;}
-  if(t.dataset.add){addFromDraft(t.dataset.add);toast('انضاف لطلبك ✓');return;}
+  if(t.dataset.order){track('buy_now',{product:t.dataset.order});addFromDraft(t.dataset.order);location.hash='order';return;}
+  if(t.dataset.add){track('add_to_cart',{product:t.dataset.add});addFromDraft(t.dataset.add);toast('انضاف لطلبك ✓');return;}
   if(t.dataset.cq){const c=cart[t.dataset.id];c.q=Math.max(1,Math.min(20,c.q+ +t.dataset.cq));renderCart();return;}
   if(t.dataset.rm){delete cart[t.dataset.rm];renderCart();return;}
   if(t.dataset.quick){cart[t.dataset.quick]={q:1,fold:'3 طيّات'};renderCart();return;}
@@ -1314,6 +1337,8 @@ function route(){
   document.body.classList.toggle('on-order',view==='order');
   document.body.classList.toggle('on-admin',view==='admin');
   document.querySelectorAll('[data-nav]').forEach(a=>a.setAttribute('aria-current',(a.dataset.nav===view||(h==='products'&&a.dataset.nav==='products')||(view==='home'&&h!=='products'&&a.dataset.nav==='home'))?'page':'false'));
+  if(view==='admin'){try{localStorage.setItem('ig_notrack','1');}catch(_){}window.IG_NOTRACK=true;}
+  else{try{window.clarity&&clarity('set','page',h);}catch(_){}}
   if(view==='order')bindOrder();
   if(view==='admin')bootDash();
   updateBadge(); observe();
