@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Infinity Graphic: طباعة بزنس كارد بفويل ذهبي وسبوت UV، فلايرات وبروشورات، مع توصيل لكل الإمارات. وباقة تسويق رقمي من 2000 درهم.">
-<meta property="og:title" content="Infinity Graphic · طباعة فاخرة بالإمارات">
-<meta property="og:description" content="بزنس كارد من 70 درهم لـ 1000 كرت. فويل ذهبي، سبوت UV، ورق لحد 760 غرام. توصيل لكل الإمارات.">
+<meta name="description" content="Infinity Graphic: طباعة بطاقات أعمال بفويل ذهبي وسبوت UV، وفلايرات وبروشورات، مع التوصيل إلى جميع الإمارات، وباقة تسويق رقمي ابتداءً من 2000 درهم. Premium business cards, flyers and brochures with UAE-wide delivery.">
+<meta property="og:title" content="Infinity Graphic · طباعة فاخرة في الإمارات | Premium Printing UAE">
+<meta property="og:description" content="بطاقات أعمال ابتداءً من 70 درهم لكل 1000 بطاقة: فويل ذهبي، سبوت UV، وورق يصل إلى 760 غرام، مع التوصيل إلى جميع الإمارات.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#4F5CC2">
 <link rel="icon" href="img/logo.jpg">
@@ -30,7 +30,7 @@ function track(name,data){
 }
 </script>
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Infinity Graphic · طباعة فاخرة بالإمارات</title>
+<title>Infinity Graphic · طباعة فاخرة في الإمارات</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap">
 <style>
@@ -597,439 +597,553 @@ body.modal-open{overflow:hidden}
 .uses i{display:block;font-style:normal;font-size:1.6rem;margin-bottom:4px}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rot span:first-child{opacity:1;transform:none}.js .reveal:not(.in){transform:none}}
+
+/* language switch + LTR (English) adjustments */
+.nav-r{display:flex;align-items:center;gap:8px}
+.lang{font-family:var(--head);font-weight:700;font-size:.82rem;line-height:1;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 12px;cursor:pointer}
+.lang:hover{background:var(--soft)}
+[dir=ltr] .brand small{text-align:left}
+[dir=ltr] .track{animation-name:scroll-l}
+@keyframes scroll-l{to{transform:translateX(-50%)}}
+[dir=ltr] .order-now .arrow{animation-name:nudge-l}
+@keyframes nudge-l{50%{transform:translateX(6px)}}
+[dir=ltr] .inv-meta,[dir=ltr] .oc-tot{text-align:right}
+[dir=ltr] .inv-t td:not(:first-child),[dir=ltr] .inv-t th:not(:first-child),[dir=ltr] .receipt td:last-child{text-align:right}
 </style>
 
-<div dir="rtl" lang="ar">
-<nav class="gut"><div class="wrap in">
-  <a class="brand" href="#home"><img src="img/logo.jpg" alt="شعار Infinity Graphic"><div><b>Infinity Graphic</b><small>TO BE UNIQUE</small></div></a>
-  <div class="links">
-    <a href="#home" data-nav="home">الرئيسية</a>
-    <a href="#products" data-nav="products">المنتجات</a>
-    <a href="#services" data-nav="services">التسويق</a>
-    <a href="#how" data-nav="how">طريقة العمل</a>
-  </div>
-  <a class="nav-cta" href="#order">اطلب الآن<span class="cnt num" id="cnt" hidden>0</span></a>
-</div></nav>
-<div class="links tabbar">
-  <a href="#home" data-nav="home">الرئيسية</a>
-  <a href="#products" data-nav="products">المنتجات</a>
-  <a href="#services" data-nav="services">التسويق</a>
-    <a href="#how" data-nav="how">طريقة العمل</a>
-</div>
+<div id="root" dir="rtl" lang="ar">
+<nav class="gut" id="nav"></nav>
+<div class="links tabbar" id="tabbar"></div>
 
 <main id="app"></main>
 
-<footer class="gut">
-  <div class="brand"><img src="img/logo.jpg" alt=""><div><b>Infinity Graphic</b><small>TO BE UNIQUE</small></div></div>
-  طباعة أونلاين بالإمارات · واتساب واتصال <span dir="ltr">+971 50 689 2431</span>
-</footer>
+<footer class="gut" id="foot"></footer>
 
-<a class="fab" href="https://wa.me/971506892431" target="_blank" rel="noopener" aria-label="راسلنا على واتساب">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
-  <span>واتساب</span>
-</a>
-<a class="fab-call" href="tel:+971506892431" aria-label="اتصل فينا">📞</a>
+<a class="fab" id="fab" href="https://wa.me/971506892431" target="_blank" rel="noopener"></a>
+<a class="fab-call" id="fabCall" href="tel:+971506892431">📞</a>
 <div class="toast" id="toast" role="status"></div>
-<div class="modal" id="signModal" hidden role="dialog" aria-modal="true" aria-labelledby="signTitle" dir="rtl" lang="ar">
-  <div class="sheet">
-    <div class="sheet-h"><span class="nf-q" style="width:46px;height:46px;font-size:1.3rem">✍️</span><div><h3 id="signTitle">وقّع على فاتورتك</h3><p>اكتب اسمك ووقّع بإصبعك، والتوقيع بينزل عالفاتورة دغري.</p></div></div>
-    <label class="f">الاسم الكامل<input id="signName" type="text" autocomplete="name" placeholder="اسمك متل ما بدك ينكتب عالفاتورة"></label>
-    <div class="pad-wrap"><canvas id="pad" aria-label="مكان التوقيع"></canvas><span class="pad-hint" id="padHint">وقّع هون</span><button type="button" class="pad-clear" id="padClear">امسح</button></div>
-    <details class="why-sign">
-      <summary><span class="q">؟</span>ليش لازم وقّع على الفاتورة؟</summary>
-      <ul>
-        <li><b>بيثبّت طلبك:</b> توقيعك بيأكّد إنك راجعت المنتجات والكميات والأسعار ووافقت عليهم.</li>
-        <li><b>منبلّش دغري:</b> أول ما توصلنا الفاتورة الموقّعة منبلّش التصميم بدون ما نرجع نسألك.</li>
-        <li><b>بيحميك وبيحمينا:</b> إذا صار أي سوء تفاهم، الفاتورة الموقّعة بتوضّح شو اتفقنا عليه بالضبط.</li>
-        <li><b>توقيعك بس عالفاتورة:</b> ما منستخدمه لأي شي تاني.</li>
-      </ul>
-    </details>
-    <label class="agree"><input type="checkbox" id="signAgree" checked> راجعت الطلب والأسعار وموافق عليهم</label>
-    <p class="err" id="signErr" hidden></p>
-    <div class="sheet-f"><button type="button" class="btn out" id="signBack">رجوع</button><button type="button" class="btn grad" id="signOk">وقّع وحمّل الفاتورة</button></div>
-  </div>
-</div>
+<div class="modal" id="signModal" hidden role="dialog" aria-modal="true" aria-labelledby="signTitle"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 document.documentElement.classList.add('js');
+
+/* ---------- language ---------- */
+let LANG=(()=>{try{const q=new URLSearchParams(location.search).get('lang');if(q==='ar'||q==='en'){localStorage.setItem('ig_lang',q);return q;}
+  const s=localStorage.getItem('ig_lang');if(s==='ar'||s==='en')return s;}catch(_){}return 'ar';})();
+const tr=(ar,en)=>LANG==='en'?en:ar;
+const ARW=()=>tr('←','→');
+const loc=(o,en)=>LANG==='en'&&en?{...o,...en}:o;
+
+/* ---------- data ---------- */
 const P=[
-  {id:'c350',g:'cards',badge:'الأوفر',name:'كرت كلاسيك 350',short:'350 GSM · طباعة وجهين',price:70,img:'c350',unit:'كرت',
-   desc:'الخيار العملي لكل نشاط. ورق 350 غرام متين، طباعة ألوان كاملة على الوجهين، وبيعطي صورة مرتبة بسعر بسيط.',
-   spec:[['الورق','350 GSM'],['الطباعة','وجهين، ألوان كاملة'],['الزوايا','عادية (مربعة)'],['الكمية','1000 كرت']],
-   feat:['أوفر خيار لطلبات الكمية','مناسب للمطاعم والمحلات والشركات الناشئة','نفس السعر سواء التصميم وجه أو وجهين']},
-  {id:'c400',g:'cards',name:'كرت 400 زوايا مدوّرة',short:'400 GSM · زوايا كيرف',price:110,img:'c400',unit:'كرت',
-   desc:'ورق أسمك 400 غرام مع زوايا مدوّرة (كيرف) بتعطي الكرت شكل أنعم وإحساس أفخم بالإيد.',
-   spec:[['الورق','400 GSM'],['الزوايا','مدوّرة (كيرف)'],['الطباعة','ألوان كاملة'],['الكمية','1000 كرت']],
-   feat:['سماكة واضحة بتفرق عن الكرت العادي','زوايا ناعمة ما بتنطوي بسرعة','مناسب للعيادات والصالونات والمكاتب']},
-  {id:'c400uv',g:'cards',name:'كيرف مع سبوت UV',short:'400 GSM · كيرف · سبوت UV',price:220,img:'c400uv',unit:'كرت',
-   desc:'طبقة UV لمّاعة على أجزاء محددة من التصميم، متل اللوغو أو الاسم، فوق خلفية مطفية. اللمعة بتبيّن مع الضو وبتنحس باللمس.',
-   spec:[['الورق','400 GSM'],['الزوايا','مدوّرة (كيرف)'],['التشطيب','سبوت UV'],['الكمية','1000 كرت']],
-   feat:['اللوغو بيلمع ويبرز عن الخلفية','فرق واضح بين المطفي واللمّاع','بيعطي انطباع فخم من أول لمسة']},
-  {id:'c400f',g:'cards',badge:'الأكتر طلباً',name:'كيرف مع فويل ذهبي',short:'400 GSM · كيرف · فويل ذهبي',price:250,img:'c400f',unit:'كرت',
-   desc:'طباعة فويل ذهبي معدني على اللوغو أو الخطوط، على ورق 400 غرام بزوايا مدوّرة. الكرت اللي الناس بتحتفظ فيه.',
-   spec:[['الورق','400 GSM'],['الزوايا','مدوّرة (كيرف)'],['التشطيب','فويل ذهبي'],['الكمية','1000 كرت']],
-   feat:['لمعة ذهبية معدنية حقيقية','مثالي للعقارات والعطور والمجوهرات','بيرفع قيمة البراند عند الزبون']},
-  {id:'c760',g:'cards',name:'كرت سميك 760 مع UV',short:'760 GSM · كيرف · UV',price:280,img:'c760',unit:'كرت',
-   desc:'ورق 760 غرام، تقريباً ضعف سماكة الكرت العادي. مع UV وزوايا مدوّرة، الكرت بيحسّ كأنه قطعة فخمة مو ورقة.',
-   spec:[['الورق','760 GSM'],['الزوايا','مدوّرة (كيرف)'],['التشطيب','UV'],['الكمية','1000 كرت']],
-   feat:['سماكة بتنحس فوراً بالإيد','ما بينطوي وبيعيش طويل','للي بدو يطلع عن المألوف']},
-  {id:'c760f',g:'cards',badge:'بريميوم',name:'760 مع UV وفويل',short:'760 GSM · كيرف · UV + فويل',price:360,img:'c760f',unit:'كرت',
-   desc:'أفخم كرت عنا: ورق 760 غرام سميك، فويل ذهبي، وسبوت UV مع بعض. للبراندات اللي ما بترضى بأقل من الأفضل.',
-   spec:[['الورق','760 GSM'],['الزوايا','مدوّرة (كيرف)'],['التشطيب','UV + فويل ذهبي'],['الكمية','1000 كرت']],
-   feat:['كل اللمسات الفاخرة بكرت واحد','الأنسب لرجال الأعمال والبراندات الفخمة','انطباع ما بيتنسى']},
-  {id:'fa5',g:'flyers',name:'فلاير A5',short:'A5 · 1000 فلاير',price:150,img:'flyer',unit:'فلاير',
-   desc:'فلاير بقياس A5 (148 × 210 ملم) بألوان كاملة وحيّة. مثالي للعروض والافتتاحات والتوزيع بالمحل أو مع الطلبات.',
-   spec:[['القياس','A5 · 148 × 210 ملم'],['الطباعة','ألوان كاملة'],['الكمية','1000 فلاير']],
-   feat:['أفضل وسيلة لنشر عرض بسرعة','سهل التوزيع ومع الطلبات','سعر قليل لكمية كبيرة']},
-  {id:'bA4',g:'brochures',name:'بروشور A4',short:'A4 · 3 طيّات أو طيّتين',price:360,img:'brochure',unit:'بروشور',fold:true,
-   desc:'بروشور بقياس A4 (210 × 297 ملم)، بتختار 3 طيّات أو طيّتين. بيعرض خدماتك أو مشاريعك بشكل مرتب واحترافي.',
-   spec:[['القياس','A4 · 210 × 297 ملم'],['الطي','3 طيّات أو طيّتين'],['الطباعة','ألوان كاملة'],['الكمية','1000 بروشور']],
-   feat:['مساحة كافية تشرح كل خدماتك','مثالي للعقارات والعيادات والمدارس','بيعطي صورة شركة كبيرة']}
+  {id:'c350',g:'cards',fx:{},badge:'الأفضل قيمة',name:'بطاقة كلاسيك 350',short:'350 GSM · طباعة على الوجهين',price:70,img:'c350',unit:'بطاقة',
+   desc:'الخيار العملي لكل نشاط تجاري: ورق متين بسماكة 350 غرام، وطباعة بألوان كاملة على الوجهين، لمظهر أنيق بسعر مناسب.',
+   spec:[['الورق','350 GSM'],['الطباعة','على الوجهين، ألوان كاملة'],['الزوايا','قائمة (عادية)'],['الكمية','1000 بطاقة']],
+   feat:['الخيار الأوفر للطلبات بكميات كبيرة','مناسبة للمطاعم والمتاجر والشركات الناشئة','السعر نفسه للتصميم على وجه واحد أو وجهين']},
+  {id:'c400',g:'cards',fx:{r:1},name:'بطاقة 400 بزوايا دائرية',short:'400 GSM · زوايا دائرية',price:110,img:'c400',unit:'بطاقة',
+   desc:'ورق أكثر سماكة بوزن 400 غرام مع زوايا دائرية تمنح البطاقة مظهراً أنعم وملمساً أكثر فخامة.',
+   spec:[['الورق','400 GSM'],['الزوايا','دائرية'],['الطباعة','ألوان كاملة'],['الكمية','1000 بطاقة']],
+   feat:['سماكة ملحوظة تميّزها عن البطاقة العادية','زوايا ناعمة تقاوم الانثناء','مثالية للعيادات والصالونات والمكاتب']},
+  {id:'c400uv',g:'cards',fx:{r:1,uv:1},name:'زوايا دائرية مع سبوت UV',short:'400 GSM · زوايا دائرية · سبوت UV',price:220,img:'c400uv',unit:'بطاقة',
+   desc:'طبقة UV لامعة على عناصر محددة من التصميم، كالشعار أو الاسم، فوق خلفية مطفية؛ لمعة تظهر مع الضوء ويُشعر بها عند اللمس.',
+   spec:[['الورق','400 GSM'],['الزوايا','دائرية'],['التشطيب','سبوت UV'],['الكمية','1000 بطاقة']],
+   feat:['يبرز الشعار بلمعة واضحة فوق الخلفية','تباين أنيق بين المطفي واللامع','انطباع فاخر من اللمسة الأولى']},
+  {id:'c400f',g:'cards',fx:{r:1,f:1},badge:'الأكثر طلباً',name:'زوايا دائرية مع فويل ذهبي',short:'400 GSM · زوايا دائرية · فويل ذهبي',price:250,img:'c400f',unit:'بطاقة',
+   desc:'طباعة بفويل ذهبي معدني على الشعار أو النصوص، على ورق 400 غرام بزوايا دائرية. بطاقة يحتفظ بها عملاؤك.',
+   spec:[['الورق','400 GSM'],['الزوايا','دائرية'],['التشطيب','فويل ذهبي'],['الكمية','1000 بطاقة']],
+   feat:['لمعة ذهبية معدنية حقيقية','مثالية لقطاعات العقارات والعطور والمجوهرات','ترفع قيمة علامتك التجارية لدى عملائك']},
+  {id:'c760',g:'cards',fx:{r:1,uv:1},name:'بطاقة فاخرة 760 مع UV',short:'760 GSM · زوايا دائرية · UV',price:280,img:'c760',unit:'بطاقة',
+   desc:'ورق بوزن 760 غرام، أي ما يقارب ضعف سماكة البطاقة العادية. مع طبقة UV وزوايا دائرية، تبدو البطاقة قطعة فاخرة لا مجرد ورقة.',
+   spec:[['الورق','760 GSM'],['الزوايا','دائرية'],['التشطيب','UV'],['الكمية','1000 بطاقة']],
+   feat:['سماكة تُلاحَظ فور الإمساك بها','متينة لا تنثني وتدوم طويلاً','لمن يبحث عن التميّز']},
+  {id:'c760f',g:'cards',fx:{r:1,uv:1,f:1},badge:'بريميوم',name:'760 مع UV وفويل ذهبي',short:'760 GSM · زوايا دائرية · UV + فويل',price:360,img:'c760f',unit:'بطاقة',
+   desc:'أفخم بطاقاتنا: ورق سميك بوزن 760 غرام، مع فويل ذهبي وسبوت UV معاً. للعلامات التجارية التي لا ترضى إلا بالأفضل.',
+   spec:[['الورق','760 GSM'],['الزوايا','دائرية'],['التشطيب','UV + فويل ذهبي'],['الكمية','1000 بطاقة']],
+   feat:['جميع اللمسات الفاخرة في بطاقة واحدة','الخيار الأمثل لرجال الأعمال والعلامات الراقية','انطباع لا يُنسى']},
+  {id:'fa5',g:'flyers',fx:{},name:'فلاير A5',short:'A5 · 1000 فلاير',price:150,img:'flyer',unit:'فلاير',
+   desc:'فلاير بمقاس A5 (148 × 210 ملم) بألوان كاملة وزاهية، مثالي للعروض والافتتاحات والتوزيع داخل المتجر أو مع الطلبات.',
+   spec:[['المقاس','A5 · 148 × 210 ملم'],['الطباعة','ألوان كاملة'],['الكمية','1000 فلاير']],
+   feat:['أسرع وسيلة للترويج لعروضك','سهل التوزيع ويُرفق مع الطلبات','تكلفة منخفضة لكمية كبيرة']},
+  {id:'bA4',g:'brochures',fx:{},name:'بروشور A4',short:'A4 · ثلاث طيّات أو طيّتان',price:360,img:'brochure',unit:'بروشور',fold:true,
+   desc:'بروشور بمقاس A4 (210 × 297 ملم) بخيار ثلاث طيّات أو طيّتين، يعرض خدماتك ومشاريعك بأسلوب منظّم واحترافي.',
+   spec:[['المقاس','A4 · 210 × 297 ملم'],['الطي','ثلاث طيّات أو طيّتان'],['الطباعة','ألوان كاملة'],['الكمية','1000 بروشور']],
+   feat:['مساحة كافية لعرض جميع خدماتك','مثالي للعقارات والعيادات والمدارس','يعكس صورة شركة راسخة']}
 ];
+const P_EN={
+  c350:{badge:'Best value',name:'Classic 350 Card',short:'350 GSM · Double-sided',unit:'cards',
+    desc:'The practical choice for any business: sturdy 350 gsm stock printed in full colour on both sides, for a polished look at an accessible price.',
+    spec:[['Paper','350 GSM'],['Print','Double-sided, full colour'],['Corners','Square'],['Quantity','1,000 cards']],
+    feat:['The most economical option for bulk orders','Ideal for restaurants, shops and start-ups','Same price for single- or double-sided designs']},
+  c400:{name:'Rounded-Corner 400 Card',short:'400 GSM · Rounded corners',unit:'cards',
+    desc:'Heavier 400 gsm stock with rounded corners for a softer look and a more premium feel in hand.',
+    spec:[['Paper','400 GSM'],['Corners','Rounded'],['Print','Full colour'],['Quantity','1,000 cards']],
+    feat:['Noticeably thicker than a standard card','Smooth corners that resist bending','Ideal for clinics, salons and offices']},
+  c400uv:{name:'Rounded Card with Spot UV',short:'400 GSM · Rounded · Spot UV',unit:'cards',
+    desc:'A glossy UV layer on selected elements, such as your logo or name, over a matte background. The shine catches the light and can be felt to the touch.',
+    spec:[['Paper','400 GSM'],['Corners','Rounded'],['Finish','Spot UV'],['Quantity','1,000 cards']],
+    feat:['Your logo shines against the background','Elegant contrast of matte and gloss','A premium impression from the first touch']},
+  c400f:{badge:'Most popular',name:'Rounded Card with Gold Foil',short:'400 GSM · Rounded · Gold foil',unit:'cards',
+    desc:'Metallic gold foil on your logo or text, on 400 gsm stock with rounded corners. The card your clients keep.',
+    spec:[['Paper','400 GSM'],['Corners','Rounded'],['Finish','Gold foil'],['Quantity','1,000 cards']],
+    feat:['Genuine metallic gold shine','Perfect for real estate, perfume and jewellery brands','Elevates how clients perceive your brand']},
+  c760:{name:'Thick 760 Card with UV',short:'760 GSM · Rounded · UV',unit:'cards',
+    desc:'Ultra-thick 760 gsm stock, nearly twice a standard card. With UV and rounded corners, it feels like a luxury object rather than paper.',
+    spec:[['Paper','760 GSM'],['Corners','Rounded'],['Finish','UV'],['Quantity','1,000 cards']],
+    feat:['Thickness you notice instantly','Rigid, durable and long-lasting','For those who want to stand out']},
+  c760f:{badge:'Premium',name:'760 with UV & Gold Foil',short:'760 GSM · Rounded · UV + Foil',unit:'cards',
+    desc:'Our most luxurious card: thick 760 gsm stock with gold foil and spot UV combined. For brands that accept nothing less than the best.',
+    spec:[['Paper','760 GSM'],['Corners','Rounded'],['Finish','UV + Gold foil'],['Quantity','1,000 cards']],
+    feat:['Every premium finish in one card','The top choice for executives and luxury brands','An unforgettable impression']},
+  fa5:{name:'A5 Flyer',short:'A5 · 1,000 flyers',unit:'flyers',
+    desc:'A5 flyers (148 × 210 mm) in vivid full colour, ideal for promotions, openings and in-store or in-package distribution.',
+    spec:[['Size','A5 · 148 × 210 mm'],['Print','Full colour'],['Quantity','1,000 flyers']],
+    feat:['The fastest way to promote an offer','Easy to hand out or add to orders','Low cost for high volume']},
+  bA4:{name:'A4 Brochure',short:'A4 · Tri-fold or bi-fold',unit:'brochures',
+    desc:'A4 brochure (210 × 297 mm) in tri-fold or bi-fold, presenting your services and projects in a clear, professional layout.',
+    spec:[['Size','A4 · 210 × 297 mm'],['Fold','Tri-fold or bi-fold'],['Print','Full colour'],['Quantity','1,000 brochures']],
+    feat:['Room to showcase all your services','Ideal for real estate, clinics and schools','Projects an established company image']}
+};
 const byId=Object.fromEntries(P.map(p=>[p.id,p]));
+const prod=id=>loc(byId[id],P_EN[id]);
+const FOLDS={tri:['ثلاث طيّات','Tri-fold'],bi:['طيّتان','Bi-fold']};
+const foldL=k=>(FOLDS[k]||FOLDS.tri)[LANG==='en'?1:0];
 const CATS=[
- {id:'cards',name:'بزنس كارد',img:'c400f',hero:'c760f',count:'6 أنواع',tags:['350 لـ 760 GSM','كيرف','سبوت UV','فويل ذهبي'],
-  desc:'من الكرت الكلاسيك العملي لحد الكرت السميك بالفويل والـ UV. اختار اللمسة اللي بتناسب نشاطك.',facts:['1000 كرت بكل طلب','طباعة ألوان كاملة','زوايا عادية أو كيرف']},
- {id:'flyers',name:'فلايرات',img:'flyer',hero:'flyer',count:'A5',tags:['A5','ألوان كاملة'],
-  desc:'فلايرات A5 بألوان حيّة للعروض والافتتاحات والتوزيع مع الطلبات.',facts:['1000 فلاير بكل طلب','قياس 148 × 210 ملم','ألوان كاملة'],
-  uses:[['🛍️','عروض وتخفيضات'],['🎉','افتتاح محل'],['🍔','قائمة توصيل'],['📦','مع الطلبات']]},
- {id:'brochures',name:'بروشورات',img:'brochure',hero:'brochure',count:'A4',tags:['A4','3 طيّات أو طيّتين'],
-  desc:'بروشورات A4 بـ 3 طيّات أو طيّتين لتعرض خدماتك ومشاريعك بشكل مرتب واحترافي.',facts:['1000 بروشور بكل طلب','قياس 210 × 297 ملم','3 طيّات أو طيّتين'],
-  uses:[['🏢','عقارات ومشاريع'],['🩺','عيادات'],['🎓','مدارس ومعاهد'],['🧾','قائمة خدمات']]}
+ {id:'cards',name:'بطاقات الأعمال',img:'c400f',hero:'c760f',count:'6 أنواع',tags:['من 350 إلى 760 GSM','زوايا دائرية','سبوت UV','فويل ذهبي'],
+  desc:'من البطاقة الكلاسيكية العملية إلى البطاقة السميكة بالفويل والـ UV؛ اختر اللمسة التي تناسب نشاطك.',facts:['1000 بطاقة في كل طلب','طباعة بألوان كاملة','زوايا قائمة أو دائرية']},
+ {id:'flyers',name:'الفلايرات',img:'flyer',hero:'flyer',count:'A5',tags:['A5','ألوان كاملة'],
+  desc:'فلايرات A5 بألوان زاهية للعروض والافتتاحات والتوزيع مع الطلبات.',facts:['1000 فلاير في كل طلب','مقاس 148 × 210 ملم','ألوان كاملة'],
+  uses:[['🛍️','العروض والتخفيضات'],['🎉','افتتاح المتاجر'],['🍔','قوائم التوصيل'],['📦','مرفقات الطلبات']]},
+ {id:'brochures',name:'البروشورات',img:'brochure',hero:'brochure',count:'A4',tags:['A4','ثلاث طيّات أو طيّتان'],
+  desc:'بروشورات A4 بثلاث طيّات أو طيّتين لعرض خدماتك ومشاريعك بأسلوب منظّم واحترافي.',facts:['1000 بروشور في كل طلب','مقاس 210 × 297 ملم','ثلاث طيّات أو طيّتان'],
+  uses:[['🏢','العقارات والمشاريع'],['🩺','العيادات'],['🎓','المدارس والمعاهد'],['🧾','قوائم الخدمات']]}
 ];
-const SERV=[
- {id:'social',name:'إدارة السوشيال ميديا',icon:'social',lead:'منستلم حساباتك ومننزّل محتوى منتظم بيشبه البراند تبعك.',
-  items:['خطة محتوى شهرية','تصاميم بوستات وستوريات','كتابة الكابشن والهاشتاغات','جدولة النشر والرد على الرسائل','تقرير أداء شهري']},
- {id:'ads',name:'الإعلانات الممولة',icon:'ads',lead:'حملات على فيسبوك وإنستغرام وواتساب بتجيبلك زباين ورسائل حقيقية.',
-  items:['إعداد الحملة والاستهداف','تصاميم وفيديوهات إعلانية','إعلانات رسائل واتساب','متابعة يومية وتحسين','تقرير بالنتائج والتكلفة']},
- {id:'web',name:'تصميم مواقع الويب',icon:'web',lead:'موقع سريع وعصري متل هالموقع، بيعرض شغلك وبيستقبل طلبات.',
-  items:['تصميم متجاوب للموبايل','صفحات خدمات ومنتجات','زر واتساب ونماذج طلب','ربط مع السوشيال ميديا','تجهيز للإعلانات']}
-];
+const CATS_EN={
+ cards:{name:'Business Cards',count:'6 types',tags:['350–760 GSM','Rounded corners','Spot UV','Gold foil'],
+  desc:'From the practical classic card to thick stock with foil and UV. Choose the finish that suits your business.',facts:['1,000 cards per order','Full-colour printing','Square or rounded corners']},
+ flyers:{name:'Flyers',tags:['A5','Full colour'],desc:'Vivid A5 flyers for promotions, openings and package inserts.',facts:['1,000 flyers per order','148 × 210 mm','Full colour'],
+  uses:[['🛍️','Sales & promotions'],['🎉','Store openings'],['🍔','Delivery menus'],['📦','Package inserts']]},
+ brochures:{name:'Brochures',tags:['A4','Tri-fold or bi-fold'],desc:'A4 tri-fold or bi-fold brochures that present your services and projects clearly and professionally.',facts:['1,000 brochures per order','210 × 297 mm','Tri-fold or bi-fold'],
+  uses:[['🏢','Real estate & projects'],['🩺','Clinics'],['🎓','Schools & institutes'],['🧾','Service menus']]}
+};
 const catById=Object.fromEntries(CATS.map(c=>[c.id,c]));
+const cat=id=>loc(catById[id],CATS_EN[id]);
+const SERV=[
+ {id:'social',icon:'social',name:'إدارة وسائل التواصل الاجتماعي',lead:'نتولّى إدارة حساباتك وننشر محتوى منتظماً يعكس هوية علامتك التجارية.',
+  items:['خطة محتوى شهرية','تصميم المنشورات والقصص','كتابة النصوص والوسوم','جدولة النشر والرد على الرسائل','تقرير أداء شهري']},
+ {id:'ads',icon:'ads',name:'الإعلانات الممولة',lead:'حملات على فيسبوك وإنستغرام وواتساب تجلب لك عملاء واستفسارات حقيقية.',
+  items:['إعداد الحملة وتحديد الجمهور','تصاميم وفيديوهات إعلانية','إعلانات رسائل واتساب','متابعة يومية وتحسين مستمر','تقارير بالنتائج والتكلفة']},
+ {id:'web',icon:'web',name:'تصميم المواقع الإلكترونية',lead:'موقع سريع وعصري كهذا الموقع، يعرض أعمالك ويستقبل الطلبات.',
+  items:['تصميم متجاوب مع الهواتف','صفحات للخدمات والمنتجات','زر واتساب ونماذج طلب','ربط بحسابات التواصل الاجتماعي','تهيئة للحملات الإعلانية']}
+];
+const SERV_EN={
+ social:{name:'Social Media Management',lead:'We manage your accounts and publish consistent content that reflects your brand.',
+  items:['Monthly content plan','Post and story designs','Captions and hashtags','Scheduling and inbox replies','Monthly performance report']},
+ ads:{name:'Paid Advertising',lead:'Facebook, Instagram and WhatsApp campaigns that bring real customers and enquiries.',
+  items:['Campaign setup and targeting','Ad creatives and videos','WhatsApp message ads','Daily monitoring and optimisation','Results and cost reports']},
+ web:{name:'Website Design',lead:'A fast, modern website like this one, showcasing your work and taking orders.',
+  items:['Mobile-responsive design','Service and product pages','WhatsApp button and order forms','Social media integration','Ad-ready setup']}
+};
+const serv=()=>SERV.map(s=>loc(s,SERV_EN[s.id]));
+const EMIRATES=[['دبي','Dubai'],['الشارقة','Sharjah'],['عجمان','Ajman'],['أبوظبي','Abu Dhabi'],['رأس الخيمة','Ras Al Khaimah'],['أم القيوين','Umm Al Quwain'],['الفجيرة','Fujairah']];
 const minPrice=g=>Math.min(...P.filter(p=>p.g===g).map(p=>p.price));
 const cart={}; // id -> {q, fold}
 let msg='', tab='all', drafts={};
 const $=id=>document.getElementById(id);
-const fmt=n=>n.toLocaleString('en-US')+' درهم';
+const fmtA=n=>Number(n).toLocaleString('en-US')+' درهم';
+const fmtE=n=>'AED '+Number(n).toLocaleString('en-US');
+const fmt=n=>LANG==='en'?fmtE(n):fmtA(n);
 const app=$('app');
+const WA='971506892431',PHONE='+971 50 689 2431';
+const waLink=t=>'https://wa.me/'+WA+(t?'?text='+encodeURIComponent(t):'');
+
+/* ---------- shell (nav, footer, signature sheet) ---------- */
+const NAV=()=>[['home',tr('الرئيسية','Home')],['products',tr('المنتجات','Products')],['services',tr('التسويق الرقمي','Marketing')],['how',tr('آلية الطلب','How it works')]];
+function renderShell(){
+  const root=$('root'),rtl=LANG==='ar';
+  root.dir=rtl?'rtl':'ltr';root.lang=LANG;document.documentElement.lang=LANG;document.documentElement.dir=rtl?'rtl':'ltr';
+  document.title=tr('Infinity Graphic · طباعة فاخرة في الإمارات','Infinity Graphic · Premium Printing in the UAE');
+  const links=NAV().map(([k,l])=>`<a href="#${k}" data-nav="${k}">${l}</a>`).join('');
+  $('nav').innerHTML=`<div class="wrap in">
+    <a class="brand" href="#home"><img src="img/logo.jpg" alt="${tr('شعار Infinity Graphic','Infinity Graphic logo')}"><div><b>Infinity Graphic</b><small>TO BE UNIQUE</small></div></a>
+    <div class="links">${links}</div>
+    <div class="nav-r"><button type="button" class="lang" data-lang aria-label="${tr('Switch to English','التبديل إلى العربية')}">${tr('EN','عربي')}</button>
+    <a class="nav-cta" href="#order">${tr('اطلب الآن','Order now')}<span class="cnt num" id="cnt" hidden>0</span></a></div></div>`;
+  $('tabbar').innerHTML=links;
+  $('foot').innerHTML=`<div class="brand"><img src="img/logo.jpg" alt=""><div><b>Infinity Graphic</b><small>TO BE UNIQUE</small></div></div>
+    ${tr('خدمات طباعة إلكترونية في الإمارات · واتساب وهاتف','Online printing across the UAE · WhatsApp & phone')} <span dir="ltr">${PHONE}</span>`;
+  $('fab').setAttribute('aria-label',tr('تواصل معنا عبر واتساب','Chat with us on WhatsApp'));
+  $('fab').innerHTML=`<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+  <span>${tr('واتساب','WhatsApp')}</span>`;
+  $('fabCall').setAttribute('aria-label',tr('اتصل بنا','Call us'));
+  $('signModal').innerHTML=`<div class="sheet">
+    <div class="sheet-h"><span class="nf-q" style="width:46px;height:46px;font-size:1.3rem">✍️</span><div><h3 id="signTitle">${tr('توقيع الفاتورة','Sign your invoice')}</h3><p>${tr('اكتب اسمك ووقّع بإصبعك، وسيظهر توقيعك على الفاتورة مباشرة.','Type your name and sign with your finger; your signature will appear on the invoice instantly.')}</p></div></div>
+    <label class="f">${tr('الاسم الكامل','Full name')}<input id="signName" type="text" autocomplete="name" placeholder="${tr('اسمك كما تودّ أن يظهر على الفاتورة','Your name as it should appear on the invoice')}"></label>
+    <div class="pad-wrap"><canvas id="pad" aria-label="${tr('مساحة التوقيع','Signature area')}"></canvas><span class="pad-hint" id="padHint">${tr('وقّع هنا','Sign here')}</span><button type="button" class="pad-clear" id="padClear">${tr('مسح','Clear')}</button></div>
+    <details class="why-sign">
+      <summary><span class="q">؟</span>${tr('لماذا نطلب توقيع الفاتورة؟','Why do we ask for a signature?')}</summary>
+      <ul>${(LANG==='en'?[
+        ['Confirms your order:','your signature confirms you have reviewed and approved the products, quantities and prices.'],
+        ['We start right away:','once we receive the signed invoice, we begin the design without further back-and-forth.'],
+        ['Protects both of us:','in case of any misunderstanding, the signed invoice records exactly what was agreed.'],
+        ['Used for this invoice only:','your signature is never used for any other purpose.']]:[
+        ['يؤكّد طلبك:','توقيعك يثبت أنك راجعت المنتجات والكميات والأسعار ووافقت عليها.'],
+        ['نبدأ فوراً:','بمجرد استلام الفاتورة الموقّعة نبدأ العمل على التصميم دون الحاجة إلى مراجعات إضافية.'],
+        ['ضمان للطرفين:','في حال حدوث أي التباس، توضّح الفاتورة الموقّعة ما تم الاتفاق عليه بدقة.'],
+        ['يُستخدم لهذه الفاتورة فقط:','لا نستخدم توقيعك لأي غرض آخر.']]).map(([b,t])=>`<li><b>${b}</b> ${t}</li>`).join('')}</ul>
+    </details>
+    <label class="agree"><input type="checkbox" id="signAgree" checked> ${tr('راجعتُ الطلب والأسعار وأوافق عليها','I have reviewed the order and prices and agree to them')}</label>
+    <p class="err" id="signErr" hidden></p>
+    <div class="sheet-f"><button type="button" class="btn out" id="signBack">${tr('رجوع','Back')}</button><button type="button" class="btn grad" id="signOk">${tr('توقيع وتحميل الفاتورة','Sign & download invoice')}</button></div>
+  </div>`;
+  bindSign.done=false;
+}
+function setLang(l){
+  if(l===LANG)return;LANG=l;try{localStorage.setItem('ig_lang',l);}catch(_){}
+  track('language',{lang:l});renderShell();route();
+}
 
 /* ---------- shared pieces ---------- */
 const loopSVG='<svg class="loop" viewBox="0 0 1000 420" aria-hidden="true"><path d="M500 210 C 380 60, 120 40, 110 210 C 120 380, 380 360, 500 210 C 620 60, 880 40, 890 210 C 880 380, 620 360, 500 210 Z"/></svg>';
-const prodCard=p=>`<a class="prod reveal" href="#p-${p.id}">
+const per1000=()=>tr('درهم / 1000','AED / 1,000');
+const prodCard=b=>{const p=prod(b.id);return `<a class="prod reveal" href="#p-${p.id}">
   <div class="ph">${p.badge?`<span class="badge">${p.badge}</span>`:''}<img src="img/${p.img}.jpg" alt="${p.name}" loading="lazy"></div>
   <div class="pb"><h3>${p.name}</h3><div class="specs">${p.short.split(' · ').map(s=>`<span class="chip">${s}</span>`).join('')}</div>
-  <div class="pf"><div class="price"><b class="num">${p.price}</b><span>درهم / 1000</span></div><span class="more">التفاصيل ←</span></div></div></a>`;
-const ctaBand=(t,s,href,label)=>`<div class="cta-band reveal">${loopSVG}<div><h2>${t}</h2><p>${s}</p></div><a class="btn dark" href="${href}">${label}</a></div>`;
+  <div class="pf"><div class="price"><b class="num">${p.price}</b><span>${per1000()}</span></div><span class="more">${tr('التفاصيل','Details')} ${ARW()}</span></div></div></a>`;};
+const ctaBand=(t,s,href,label)=>`<div class="cta-band reveal">${loopSVG}<div><h2>${t}</h2><p>${s}</p></div><a class="btn dark" href="${href}"${href.startsWith('http')?' target="_blank" rel="noopener"':''}>${label}</a></div>`;
+const fromPrice=id=>tr(`ابتداءً من <span class="from num">${minPrice(id)} درهم</span> لكل 1000`,`From <span class="from num">AED ${minPrice(id)}</span> per 1,000`);
+const crumbs=(...parts)=>`<div class="crumbs"><a href="#home">${tr('الرئيسية','Home')}</a> / ${parts.join(' / ')}</div>`;
 
 /* ---------- views ---------- */
 function vHome(){
-  const words=['إدارة سوشيال ميديا','إعلانات ممولة','تصميم مواقع','بزنس كارد 350 GSM','زوايا كيرف','سبوت UV','فويل ذهبي','ورق 760 GSM','فلاير A5','بروشور A4','توصيل لكل الإمارات','تقسيط مع تابي وتمارة'];
+  const words=LANG==='en'
+    ?['Social media management','Paid advertising','Website design','350 GSM business cards','Rounded corners','Spot UV','Gold foil','760 GSM stock','A5 flyers','A4 brochures','Delivery across the UAE','Pay later with Tabby & Tamara']
+    :['إدارة وسائل التواصل','إعلانات ممولة','تصميم مواقع','بطاقات أعمال 350 GSM','زوايا دائرية','سبوت UV','فويل ذهبي','ورق 760 GSM','فلاير A5','بروشور A4','توصيل إلى جميع الإمارات','تقسيط عبر تابي وتمارا'];
   const half=words.map(w=>`<span>${w}</span>`).join('');
   return `<header class="hero gut"><span class="blob b1"></span><span class="blob b2"></span>${loopSVG}
     <div class="wrap hero-grid"><div>
-      <span class="pill"><i></i>منطبع ومنوصّل لكل الإمارات</span>
-      <h1>طباعة بتخلّي<br>شغلك <span class="rot"><span>يلمع</span><span>يتذكّر</span><span>مميّز</span></span></h1>
-      <p class="lead">بزنس كارد بفويل ذهبي وسبوت UV وورق لحد 760 غرام، فلايرات وبروشورات بألوان حيّة. اختار، ابعت تصميمك، ونحنا منكفّي الباقي.</p>
-      <div class="ctas"><a class="btn dark" href="#products">اختار منتجك</a><a class="btn ghost" href="#how">شوف طريقة العمل</a></div>
+      <span class="pill"><i></i>${tr('نطبع ونوصل إلى جميع الإمارات','Printed and delivered across the UAE')}</span>
+      <h1>${tr('طباعة تجعل<br>أعمالك','Printing that makes<br>your brand')} <span class="rot">${(LANG==='en'?['shine','memorable','unique']:['تتألّق','لا تُنسى','مميّزة']).map(w=>`<span>${w}</span>`).join('')}</span></h1>
+      <p class="lead">${tr('بطاقات أعمال بفويل ذهبي وسبوت UV وورق يصل إلى 760 غرام، وفلايرات وبروشورات بألوان زاهية. اختر منتجك، وأرسل تصميمك، ونتولّى نحن الباقي.','Business cards with gold foil, spot UV and stock up to 760 gsm, plus vivid flyers and brochures. Choose your product, send your design, and we take care of the rest.')}</p>
+      <div class="ctas"><a class="btn dark" href="#products">${tr('اكتشف منتجاتنا','Explore products')}</a><a class="btn ghost" href="#how">${tr('تعرّف على آلية الطلب','See how it works')}</a></div>
     </div>
     <div class="stack" aria-hidden="true">
       <figure class="s1"><img src="img/c400f.jpg" alt=""></figure><figure class="s2"><img src="img/c760f.jpg" alt=""></figure><figure class="s3"><img src="img/brochure.jpg" alt=""></figure>
-      <span class="tag t1">✦ فويل <b>ذهبي</b></span><span class="tag t2">من <b>70 درهم</b> لـ 1000 كرت</span>
+      <span class="tag t1">✦ ${tr('فويل <b>ذهبي</b>','Gold <b>foil</b>')}</span><span class="tag t2">${tr('من <b>70 درهم</b> لكل 1000 بطاقة','From <b>AED 70</b> per 1,000 cards')}</span>
     </div></div></header>
   <div class="marquee" aria-hidden="true"><div class="track">${half+half}</div></div>
   <div class="gut"><div class="wrap">
     <section class="sec" id="products">
-      <div class="sh reveal"><div class="eyebrow gtext">منتجاتنا</div><h2>شو بدك تطبع اليوم؟</h2><p>اختار القسم وشوف كل الأنواع والأسعار. الأسعار بالدرهم لكل 1000 قطعة.</p></div>
-      <div class="bento">${CATS.map(c=>`<a class="cat reveal" href="#cat-${c.id}"><img src="img/${c.img}.jpg" alt="${c.name}" loading="lazy"><span class="cnt2">${c.count}</span>
+      <div class="sh reveal"><div class="eyebrow gtext">${tr('منتجاتنا','Our products')}</div><h2>${tr('ما الذي تودّ طباعته اليوم؟','What would you like to print today?')}</h2><p>${tr('اختر الفئة لاستعراض جميع الأنواع والأسعار. الأسعار بالدرهم الإماراتي لكل 1000 قطعة.','Choose a category to browse all options and prices. Prices are in AED per 1,000 pieces.')}</p></div>
+      <div class="bento">${CATS.map(b=>{const c=cat(b.id);return `<a class="cat reveal" href="#cat-${c.id}"><img src="img/${c.img}.jpg" alt="${c.name}" loading="lazy"><span class="cnt2">${c.count}</span>
         <div class="chips-row">${c.tags.map(t=>`<span>${t}</span>`).join('')}</div>
-        <h3>${c.name}</h3><p>من <span class="from num">${minPrice(c.id)} درهم</span> لكل 1000</p><span class="go">شوف الأنواع <span>←</span></span></a>`).join('')}</div>
+        <h3>${c.name}</h3><p>${fromPrice(c.id)}</p><span class="go">${tr('استعرض الأنواع','Browse options')} <span>${ARW()}</span></span></a>`}).join('')}</div>
     </section>
     ${helpBand()}
     <section class="sec" style="padding-bottom:clamp(52px,8vw,96px)">
-      <div class="sh reveal"><div class="eyebrow gtext">الأكتر طلباً</div><h2>اختيارات زبائننا</h2></div>
+      <div class="sh reveal"><div class="eyebrow gtext">${tr('الأكثر طلباً','Best sellers')}</div><h2>${tr('اختيارات عملائنا','Our clients’ favourites')}</h2></div>
       <div class="grid">${['c400f','c760f','c400uv','c350'].map(id=>prodCard(byId[id])).join('')}</div>
     </section>
     <section style="padding-bottom:clamp(52px,8vw,96px)">
-      <div class="sh reveal"><div class="eyebrow gtext">التسويق الرقمي</div><h2>مو بس طباعة</h2><p>منساعدك تجيب زباين أونلاين كمان.</p></div>
+      <div class="sh reveal"><div class="eyebrow gtext">${tr('التسويق الرقمي','Digital marketing')}</div><h2>${tr('أكثر من مجرد طباعة','More than printing')}</h2><p>${tr('نساعدك أيضاً على استقطاب العملاء عبر الإنترنت.','We also help you win customers online.')}</p></div>
       ${pkgBanner()}
-      <div class="svmini" style="margin-top:16px">${SERV.map(sv=>`<a class="svm reveal" href="#services">${servArt[sv.icon]}<h3>${sv.name}</h3><p>${sv.lead}</p><span class="more">مشمولة بالباقة ←</span></a>`).join('')}</div>
+      <div class="svmini" style="margin-top:16px">${serv().map(sv=>`<a class="svm reveal" href="#services">${servArt[sv.icon]()}<h3>${sv.name}</h3><p>${sv.lead}</p><span class="more">${tr('ضمن الباقة','Included in the package')} ${ARW()}</span></a>`).join('')}</div>
     </section>
-    ${ctaBand('ما بتعرف كيف بيمشي الطلب؟','4 خطوات بسيطة من الاختيار لحد الاستلام.','#how','طريقة العمل')}
+    ${ctaBand(tr('هل تودّ معرفة آلية الطلب؟','Want to know how ordering works?'),tr('خمس خطوات بسيطة من اختيار المنتج حتى الاستلام.','Five simple steps from choosing a product to delivery.'),'#how',tr('آلية الطلب','How it works'))}
     <section class="sec">
-      <div class="sh reveal"><div class="eyebrow gtext">مساعدة وقت ما تحتاج</div><h2>نحنا معك بكل خطوة</h2><p>عندك سؤال عن الورق أو التصميم أو التوصيل؟ احكينا.</p></div>
+      <div class="sh reveal"><div class="eyebrow gtext">${tr('دعم متواصل','Here to help')}</div><h2>${tr('نرافقك في كل خطوة','With you every step of the way')}</h2><p>${tr('لديك استفسار حول الورق أو التصميم أو التوصيل؟ يسعدنا تواصلك معنا.','Questions about paper, design or delivery? We’d be glad to hear from you.')}</p></div>
       <div class="help">
-        <div class="hc reveal"><div class="i">💬</div><h3>واتساب واتصال</h3><p><code>+971 50 689 2431</code></p><div style="display:flex;gap:8px;justify-content:center;margin-top:10px"><a class="btn wa sm" href="https://wa.me/971506892431" target="_blank" rel="noopener">واتساب</a><a class="btn out sm" href="tel:+971506892431">اتصال</a></div></div>
-        <div class="hc reveal"><div class="i">🎨</div><h3>ما عندك تصميم؟</h3><p>ابعت اللوغو والمعلومات ومنصمملك الكرت.</p></div>
-        <div class="hc reveal"><div class="i">🚚</div><h3>توصيل</h3><p>دبي، الشارقة، عجمان، أبوظبي وكل الإمارات.</p></div>
+        <div class="hc reveal"><div class="i">💬</div><h3>${tr('واتساب وهاتف','WhatsApp & phone')}</h3><p><code>${PHONE}</code></p><div style="display:flex;gap:8px;justify-content:center;margin-top:10px"><a class="btn wa sm" href="${waLink()}" target="_blank" rel="noopener">${tr('واتساب','WhatsApp')}</a><a class="btn out sm" href="tel:+${WA}">${tr('اتصال','Call')}</a></div></div>
+        <div class="hc reveal"><div class="i">🎨</div><h3>${tr('لا تملك تصميماً؟','No design yet?')}</h3><p>${tr('أرسل لنا الشعار والمعلومات، وسيتولّى فريقنا تصميم بطاقتك.','Send us your logo and details, and our team will design your card.')}</p></div>
+        <div class="hc reveal"><div class="i">🚚</div><h3>${tr('التوصيل','Delivery')}</h3><p>${tr('دبي، الشارقة، عجمان، أبوظبي وجميع الإمارات.','Dubai, Sharjah, Ajman, Abu Dhabi and every emirate.')}</p></div>
       </div>
     </section>
   </div></div>`;
 }
 
 function vHow(){
+  const en=LANG==='en';
   const step=(n,mock,t,p,li)=>`<div class="node"><span class="line"></span><span class="circle">${n}</span><span class="line"></span>
     <div class="scard reveal">${mock}<h3>${t}</h3><p>${p}</p>${li?`<ul>${li.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}</div></div>`;
+  const faq=en?[
+    ['What is the difference between spot UV and gold foil?','Spot UV is a clear glossy layer that highlights parts of your design. Gold foil is a metallic layer that shines like real metal. You can combine both on the 760 Premium card.'],
+    ['I don’t have a design. What should I send?','Your logo (ideally a transparent PNG or AI file), name and job title, contact numbers, email and website, and your type of business. We will design it and send it for your approval before printing.'],
+    ['Which payment methods are available?','Tabby and Tamara for interest-free instalments, bank card, or bank transfer. Payment is completed before printing.'],
+    ['Why do I sign the invoice?','Your signature confirms that you have reviewed and approved the order and prices, so we can start the design right away.'],
+    ['Can I order several products at once?','Of course. Add all the products you need and they will be combined into a single order.']]:[
+    ['ما الفرق بين سبوت UV والفويل الذهبي؟','السبوت UV طبقة شفافة لامعة تُبرز أجزاء محددة من التصميم، أما الفويل فطبقة معدنية ذهبية تلمع كالمعدن. ويمكنك الجمع بينهما في بطاقة 760 بريميوم.'],
+    ['لا أملك تصميماً، ما الذي ينبغي إرساله؟','الشعار (يُفضَّل بصيغة PNG شفافة أو AI)، والاسم والمسمى الوظيفي، وأرقام التواصل، والبريد الإلكتروني والموقع، ونوع النشاط. وسنرسل لك التصميم للموافقة عليه قبل الطباعة.'],
+    ['ما طرق الدفع المتاحة؟','تابي وتمارا للتقسيط دون فوائد، أو البطاقة البنكية، أو التحويل البنكي. ويتم الدفع قبل البدء بالطباعة.'],
+    ['لماذا يُطلب مني توقيع الفاتورة؟','يؤكّد التوقيع أنك راجعت الطلب والأسعار ووافقت عليها، لنبدأ العمل على التصميم فوراً.'],
+    ['هل يمكنني طلب أكثر من منتج في الطلب نفسه؟','بالتأكيد. أضف جميع المنتجات التي تحتاجها، وستُجمع كلها في طلب واحد.']];
   return `<header class="phero gut"><span class="blob b1"></span><span class="blob b2"></span>${loopSVG}
-    <div class="wrap"><div class="crumbs"><a href="#home">الرئيسية</a> / طريقة العمل</div><h1>كيف بيمشي طلبك معنا</h1><p>5 خطوات واضحة من أول ضغطة لحد ما يوصلك الشغل لإيدك.</p></div></header>
+    <div class="wrap">${crumbs(tr('آلية الطلب','How it works'))}<h1>${tr('كيف تتم معالجة طلبك','How your order works')}</h1><p>${tr('خمس خطوات واضحة من النقرة الأولى حتى وصول طلبك إليك.','Five clear steps from your first click to your order arriving at your door.')}</p></div></header>
   <section class="sec steps-sec gut"><div class="wrap"><div class="timeline">
-    ${step('01','<div class="mock"><img src="img/c350.jpg" alt=""><span class="act">اختار</span></div>','اختار منتجك','تصفّح المنتجات وافتح أي واحد لتشوف تفاصيله وسعره.',['الورق من 350 لـ 760 غرام','اختار الكمية (كل وحدة = 1000 قطعة)','للبروشور: 3 طيّات أو طيّتين'])}
-    ${step('02','<div class="mock up"><div style="display:grid;gap:10px;justify-items:center;width:100%"><span class="fl">my-design.pdf</span><span class="barx"><i></i></span></div><span class="act">ارفع</span></div>','ابعت تصميمك أو بياناتك','إذا عندك تصميم جاهز ابعته، وإذا لا منصمملك نحنا.',['تصميم جاهز: PDF أو AI أو صورة عالية الدقة','بدون تصميم: اللوغو، الاسم، الأرقام، النشاط التجاري','كل ما كانت معلوماتك أوضح، كل ما خلص الشغل أسرع'])}
-    ${step('03','<div class="mock pay"><span>تابي</span><span>تمارة</span><span>بطاقة</span><span class="act">ادفع</span></div>','اختار طريقة الدفع وثبّت الطلب','بتختار اللي بيريحك من 4 طرق، وبتوقّع الفاتورة إلكترونياً.',['تابي أو تمارة: قسّط المبلغ بدون فوائد','بطاقة بنكية: Visa أو Mastercard','حوالة بنكية: منبعتلك الـ IBAN على واتساب','بتكتب اسمك وبتوقّع عالفاتورة وبتحمّلها PDF'])}
-    ${step('04','<div class="mock check"><span class="seal">✓</span><span class="act">تأكيد</span></div>','منراجع ومنأكّد','مدقق بيراجع الملفات والبيانات والدفع قبل أي طباعة.',['منتأكد من الدقة والألوان والمعلومات','إذا في شي بدو تعديل منتواصل معك','ما منطبع شي قبل موافقتك'])}
-    ${step('05','<div class="mock van"><span class="v">🚚</span></div>','منطبع وبتستلم','منطبع طلبك ومنوصّله لعندك بأي إمارة.',null)}
+    ${step('01',`<div class="mock"><img src="img/c350.jpg" alt=""><span class="act">${tr('اختر','Choose')}</span></div>`,tr('اختر منتجك','Choose your product'),tr('تصفّح المنتجات واطّلع على تفاصيل وسعر كل منتج.','Browse the products and view the details and price of each one.'),
+      en?['Paper from 350 to 760 gsm','Choose the quantity (each unit = 1,000 pieces)','Brochures: tri-fold or bi-fold']:['ورق من 350 إلى 760 غرام','اختر الكمية (كل وحدة = 1000 قطعة)','للبروشور: ثلاث طيّات أو طيّتان'])}
+    ${step('02',`<div class="mock up"><div style="display:grid;gap:10px;justify-items:center;width:100%"><span class="fl">my-design.pdf</span><span class="barx"><i></i></span></div><span class="act">${tr('ارفع','Upload')}</span></div>`,tr('أرسل تصميمك أو بياناتك','Send your design or details'),tr('إن كان لديك تصميم جاهز فأرسله، وإلا فسيتولّى فريقنا تصميمه لك.','If you have a ready design, send it; otherwise our team will design it for you.'),
+      en?['Ready design: PDF, AI or a high-resolution image','No design: logo, name, phone numbers and business type','The clearer your details, the faster we deliver']:['تصميم جاهز: PDF أو AI أو صورة عالية الدقة','دون تصميم: الشعار والاسم والأرقام ونوع النشاط','كلما كانت معلوماتك أوضح، أُنجز العمل أسرع'])}
+    ${step('03',`<div class="mock pay"><span>${tr('تابي','Tabby')}</span><span>${tr('تمارا','Tamara')}</span><span>${tr('بطاقة','Card')}</span><span class="act">${tr('ادفع','Pay')}</span></div>`,tr('اختر طريقة الدفع وأكّد الطلب','Choose payment and confirm'),tr('اختر الطريقة الأنسب لك من بين أربع طرق، ثم وقّع الفاتورة إلكترونياً.','Pick the option that suits you from four methods, then sign the invoice electronically.'),
+      en?['Tabby or Tamara: split the amount, interest-free','Bank card: Visa or Mastercard','Bank transfer: we send you the IBAN on WhatsApp','Type your name, sign the invoice and download it as PDF']:['تابي أو تمارا: قسّط المبلغ دون فوائد','البطاقة البنكية: Visa أو Mastercard','التحويل البنكي: نرسل لك رقم الـ IBAN عبر واتساب','اكتب اسمك، ووقّع الفاتورة، وحمّلها بصيغة PDF'])}
+    ${step('04',`<div class="mock check"><span class="seal">✓</span><span class="act">${tr('تأكيد','Confirm')}</span></div>`,tr('نراجع ونؤكّد','We review and confirm'),tr('يراجع مختصّ التدقيق الملفات والبيانات والدفع قبل أي طباعة.','A proofreader checks the files, details and payment before anything is printed.'),
+      en?['We verify accuracy, colours and information','If anything needs adjusting, we contact you','Nothing is printed without your approval']:['نتحقق من الدقة والألوان والمعلومات','إذا احتاج أي شيء إلى تعديل نتواصل معك','لا نطبع شيئاً قبل موافقتك'])}
+    ${step('05','<div class="mock van"><span class="v">🚚</span></div>',tr('نطبع وتستلم','We print, you receive'),tr('نطبع طلبك ونوصله إليك في أي إمارة.','We print your order and deliver it to you in any emirate.'),null)}
   </div></div></section>
   <div class="gut"><div class="wrap"><section class="sec">
-    <div class="sh reveal"><div class="eyebrow gtext">أسئلة بتتكرر</div><h2>عندك سؤال؟</h2></div>
-    <div class="faq">
-      <details><summary>شو الفرق بين سبوت UV والفويل الذهبي؟</summary><p>السبوت UV طبقة شفافة لمّاعة بتبرّز أجزاء من التصميم. الفويل طبقة معدنية ذهبية بتلمع متل المعدن. فيك تاخدهم مع بعض بكرت الـ 760 بريميوم.</p></details>
-      <details><summary>ما عندي تصميم، شو لازم ابعت؟</summary><p>اللوغو (يفضّل PNG شفاف أو AI)، الاسم والمسمى الوظيفي، أرقام التواصل، الإيميل والموقع، ونوع نشاطك. ومنصمملك ومنبعتلك ياه لتوافق قبل الطباعة.</p></details>
-      <details><summary>شو طرق الدفع المتاحة؟</summary><p>تابي وتمارة للتقسيط بدون فوائد، بطاقة بنكية، أو حوالة بنكية. الدفع بيكون قبل الطباعة.</p></details>
-      <details><summary>ليش بوقّع على الفاتورة؟</summary><p>التوقيع بيثبّت إنك راجعت الطلب والأسعار ووافقت عليهم، ومنبلّش التصميم دغري بعدها.</p></details>
-      <details><summary>فيني اطلب أكتر من منتج بنفس الطلب؟</summary><p>أكيد. ضيف كل المنتجات اللي بدك ياها وبتطلع كلها بطلب واحد.</p></details>
-    </div>
+    <div class="sh reveal"><div class="eyebrow gtext">${tr('الأسئلة الشائعة','FAQ')}</div><h2>${tr('لديك سؤال؟','Have a question?')}</h2></div>
+    <div class="faq">${faq.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>
   </section>
-  ${ctaBand('جاهز تبلّش؟','اختار منتجك وخلّي الباقي علينا.','#products','تصفّح المنتجات')}
+  ${ctaBand(tr('هل أنت مستعد للبدء؟','Ready to get started?'),tr('اختر منتجك واترك الباقي علينا.','Choose your product and leave the rest to us.'),'#products',tr('تصفّح المنتجات','Browse products'))}
   <div style="height:clamp(48px,7vw,80px)"></div></div></div>`;
 }
 
-function vProduct(p){
-  const d=drafts[p.id]||(drafts[p.id]={q:1,fold:'3 طيّات'});
+function vProduct(b){
+  const p=prod(b.id),c=cat(p.g);
+  const d=drafts[p.id]||(drafts[p.id]={q:1,fold:'tri'});
   const rel=[...P.filter(x=>x.g===p.g&&x.id!==p.id),...P.filter(x=>x.g!==p.g)].slice(0,4);
   return `<header class="phero gut" style="padding-block:28px"><span class="blob b1"></span><span class="blob b2"></span>
-    <div class="wrap"><div class="crumbs"><a href="#home">الرئيسية</a> / <a href="#products">المنتجات</a> / <a href="#cat-${p.g}">${catById[p.g].name}</a> / ${p.name}</div></div></header>
+    <div class="wrap">${crumbs(`<a href="#products">${tr('المنتجات','Products')}</a>`,`<a href="#cat-${p.g}">${c.name}</a>`,p.name)}</div></header>
   <div class="gut"><div class="wrap">
     <div class="pp">
       <div class="gal"><div class="main">${p.badge?`<span class="badge">${p.badge}</span>`:''}<img src="img/${p.img}.jpg" alt="${p.name}"></div>
-        <div class="perks"><div><b>✓ تدقيق</b>قبل الطباعة</div><div><b>🚚 توصيل</b>لكل الإمارات</div><div><b>تابي وتمارة</b>تقسيط بدون فوائد</div></div></div>
+        <div class="perks"><div><b>✓ ${tr('تدقيق','Proofing')}</b>${tr('قبل الطباعة','before printing')}</div><div><b>🚚 ${tr('توصيل','Delivery')}</b>${tr('إلى جميع الإمارات','across the UAE')}</div><div><b>${tr('تابي وتمارا','Tabby & Tamara')}</b>${tr('تقسيط دون فوائد','interest-free')}</div></div></div>
       <div class="info">
-        <a class="eyebrow gtext" href="#cat-${p.g}" style="text-decoration:none">${catById[p.g].name}</a>
+        <a class="eyebrow gtext" href="#cat-${p.g}" style="text-decoration:none">${c.name}</a>
         <h1>${p.name}</h1>
         <p class="desc">${p.desc}</p>
-        <div class="bigprice"><b class="num gtext">${p.price}</b><span>درهم لكل 1000 ${p.unit}</span><em>أو 4 × ${(p.price/4).toLocaleString('en-US',{maximumFractionDigits:2})} مع تابي</em></div>
+        <div class="bigprice"><b class="num gtext">${p.price}</b><span>${tr(`درهم لكل 1000 ${p.unit}`,`AED per 1,000 ${p.unit}`)}</span><em>${tr('أو','or')} 4 × ${(p.price/4).toLocaleString('en-US',{maximumFractionDigits:2})} ${tr('مع تابي','with Tabby')}</em></div>
         <table class="spec-table">${p.spec.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>
         <ul class="feat">${p.feat.map(f=>`<li>${f}</li>`).join('')}</ul>
         <div class="choose">
-          <div class="row"><label>الكمية</label><div class="stepper"><button type="button" data-pq="-1" aria-label="إنقاص">−</button><output class="num" id="pq">${(d.q*1000).toLocaleString('en-US')}</output><button type="button" data-pq="1" aria-label="زيادة">+</button></div></div>
-          ${p.fold?`<div class="row"><label>نوع الطي</label><div class="seg">${['3 طيّات','طيّتين'].map(f=>`<button type="button" data-fold="${f}" aria-pressed="${d.fold===f}">${f}</button>`).join('')}</div></div>`:''}
-          <div class="sum-line"><span>المجموع</span><b class="num" id="ptot">${fmt(p.price*d.q)}</b></div>
-          <button class="btn grad order-now" type="button" data-order="${p.id}">اطلب الآن <span class="arrow">←</span></button>
-          <button class="btn out" type="button" data-add="${p.id}">ضيف للطلب وكمّل تسوّق</button>
+          <div class="row"><label>${tr('الكمية','Quantity')}</label><div class="stepper"><button type="button" data-pq="-1" aria-label="${tr('إنقاص','Decrease')}">−</button><output class="num" id="pq">${(d.q*1000).toLocaleString('en-US')}</output><button type="button" data-pq="1" aria-label="${tr('زيادة','Increase')}">+</button></div></div>
+          ${p.fold?`<div class="row"><label>${tr('نوع الطي','Fold')}</label><div class="seg">${Object.keys(FOLDS).map(f=>`<button type="button" data-fold="${f}" aria-pressed="${d.fold===f}">${foldL(f)}</button>`).join('')}</div></div>`:''}
+          <div class="sum-line"><span>${tr('الإجمالي','Total')}</span><b class="num" id="ptot">${fmt(p.price*d.q)}</b></div>
+          <button class="btn grad order-now" type="button" data-order="${p.id}">${tr('اطلب الآن','Order now')} <span class="arrow">${ARW()}</span></button>
+          <button class="btn out" type="button" data-add="${p.id}">${tr('أضف إلى الطلب وتابع التسوّق','Add to order & keep shopping')}</button>
         </div>
       </div>
     </div>
     ${helpBand()}
-    ${rel.length?`<section class="related" style="padding-top:clamp(40px,6vw,64px)"><div class="sh reveal" style="margin-bottom:22px"><h2 style="font-size:1.6rem">ممكن يعجبك كمان</h2></div><div class="grid">${rel.map(prodCard).join('')}</div></section>`:''}
+    ${rel.length?`<section class="related" style="padding-top:clamp(40px,6vw,64px)"><div class="sh reveal" style="margin-bottom:22px"><h2 style="font-size:1.6rem">${tr('قد يعجبك أيضاً','You may also like')}</h2></div><div class="grid">${rel.map(prodCard).join('')}</div></section>`:''}
   </div></div>`;
 }
 
-function vCat(c){
-  const items=P.filter(p=>p.g===c.id);
+function vCat(b){
+  const c=cat(b.id),items=P.filter(p=>p.g===c.id).map(p=>prod(p.id));
   const yes=v=>v?'<span class="y">✓</span>':'<span class="n">—</span>';
   let body;
   if(c.id==='cards'){
-    body=`<section class="sec" style="padding-bottom:20px"><div class="sh reveal"><div class="eyebrow gtext">${items.length} أنواع</div><h2>اختار نوع الكرت</h2><p>كل كرت فيه تفتحه وتشوف تفاصيله وتطلبه.</p></div>
+    body=`<section class="sec" style="padding-bottom:20px"><div class="sh reveal"><div class="eyebrow gtext">${tr(`${items.length} أنواع`,`${items.length} types`)}</div><h2>${tr('اختر نوع البطاقة','Choose your card')}</h2><p>${tr('افتح أي بطاقة لاستعراض تفاصيلها وطلبها.','Open any card to view its details and order.')}</p></div>
       <div class="grid">${items.map(prodCard).join('')}</div></section>
-      <section class="sec"><div class="sh reveal"><div class="eyebrow gtext">مقارنة سريعة</div><h2>شو الفرق بين الكروت؟</h2></div>
-      <div class="cmp-wrap reveal"><table class="cmp num"><thead><tr><th>الكرت</th><th>الورق</th><th>زوايا كيرف</th><th>سبوت UV</th><th>فويل ذهبي</th><th>السعر / 1000</th></tr></thead><tbody>
-      ${items.map(p=>{const sp=p.short;return `<tr><td><a href="#p-${p.id}" class="gtext">${p.name}</a></td><td>${sp.match(/\d+ GSM/)[0]}</td><td>${yes(/كيرف/.test(sp))}</td><td>${yes(/UV/.test(sp))}</td><td>${yes(/فويل/.test(sp))}</td><td><b>${p.price}</b> درهم</td></tr>`}).join('')}
+      <section class="sec"><div class="sh reveal"><div class="eyebrow gtext">${tr('مقارنة سريعة','Quick comparison')}</div><h2>${tr('ما الفرق بين البطاقات؟','How do the cards compare?')}</h2></div>
+      <div class="cmp-wrap reveal"><table class="cmp num"><thead><tr><th>${tr('البطاقة','Card')}</th><th>${tr('الورق','Paper')}</th><th>${tr('زوايا دائرية','Rounded')}</th><th>${tr('سبوت UV','Spot UV')}</th><th>${tr('فويل ذهبي','Gold foil')}</th><th>${tr('السعر / 1000','Price / 1,000')}</th></tr></thead><tbody>
+      ${items.map(p=>`<tr><td><a href="#p-${p.id}" class="gtext">${p.name}</a></td><td>${p.short.match(/\d+ GSM/)[0]}</td><td>${yes(p.fx.r)}</td><td>${yes(p.fx.uv)}</td><td>${yes(p.fx.f)}</td><td><b>${fmt(p.price)}</b></td></tr>`).join('')}
       </tbody></table></div></section>`;
   } else {
     const p=items[0];
     body=`<section class="sec"><div class="single reveal"><div class="ph"><img src="img/${p.img}.jpg" alt="${p.name}"></div>
       <div><span class="eyebrow gtext">${c.name}</span><h2>${p.name}</h2><p>${p.desc}</p>
-      <div class="bigprice"><b class="num gtext">${p.price}</b><span>درهم لكل 1000 ${p.unit}</span></div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn grad" href="#p-${p.id}">التفاصيل والطلب ←</a></div></div></div></section>
-      <section style="padding-bottom:clamp(52px,8vw,96px)"><div class="sh reveal"><div class="eyebrow gtext">مناسب لـ</div><h2>وين بتستخدمه؟</h2></div>
+      <div class="bigprice"><b class="num gtext">${p.price}</b><span>${tr(`درهم لكل 1000 ${p.unit}`,`AED per 1,000 ${p.unit}`)}</span></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn grad" href="#p-${p.id}">${tr('التفاصيل والطلب','Details & order')} ${ARW()}</a></div></div></div></section>
+      <section style="padding-bottom:clamp(52px,8vw,96px)"><div class="sh reveal"><div class="eyebrow gtext">${tr('مناسب لـ','Ideal for')}</div><h2>${tr('أين يمكن استخدامه؟','Where to use it')}</h2></div>
       <div class="uses">${c.uses.map(u=>`<div class="reveal"><i>${u[0]}</i>${u[1]}</div>`).join('')}</div></section>`;
   }
-  const others=CATS.filter(x=>x.id!==c.id);
+  const others=CATS.filter(x=>x.id!==c.id).map(x=>cat(x.id));
   return `<header class="chero gut"><img class="bg" src="img/${c.hero}.jpg" alt="">
-    <div class="wrap"><div class="crumbs"><a href="#home">الرئيسية</a> / <a href="#products">المنتجات</a> / ${c.name}</div>
+    <div class="wrap">${crumbs(`<a href="#products">${tr('المنتجات','Products')}</a>`,c.name)}
     <h1>${c.name}</h1><p>${c.desc}</p><div class="facts">${c.facts.map(f=>`<span>${f}</span>`).join('')}</div></div></header>
   <div class="gut"><div class="wrap">${body}
     ${helpBand()}<div style="height:clamp(40px,6vw,64px)"></div>
-    <section style="padding-bottom:clamp(52px,8vw,96px)"><div class="sh reveal"><h2 style="font-size:1.6rem">أقسام تانية</h2></div>
-    <div class="bento" style="grid-template-rows:none;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">${others.map(o=>`<a class="cat reveal" href="#cat-${o.id}" style="grid-row:auto;min-height:220px"><img src="img/${o.img}.jpg" alt="${o.name}" loading="lazy"><h3>${o.name}</h3><p>من <span class="from num">${minPrice(o.id)} درهم</span> لكل 1000</p><span class="go">شوف ←</span></a>`).join('')}</div></section>
+    <section style="padding-bottom:clamp(52px,8vw,96px)"><div class="sh reveal"><h2 style="font-size:1.6rem">${tr('فئات أخرى','Other categories')}</h2></div>
+    <div class="bento" style="grid-template-rows:none;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">${others.map(o=>`<a class="cat reveal" href="#cat-${o.id}" style="grid-row:auto;min-height:220px"><img src="img/${o.img}.jpg" alt="${o.name}" loading="lazy"><h3>${o.name}</h3><p>${fromPrice(o.id)}</p><span class="go">${tr('استعرض','Browse')} ${ARW()}</span></a>`).join('')}</div></section>
   </div></div>`;
 }
 
 const servArt={
- social:`<div class="sv-art sv-social"><div class="phone"><div class="post"></div><div class="post p2"></div><div class="post p3"></div></div><span class="heart">♥</span><span class="heart h2">♥</span><span class="bubble">+120 متابع</span></div>`,
- ads:`<div class="sv-art sv-ads"><div class="bars"><i style="--h:35%"></i><i style="--h:55%"></i><i style="--h:45%"></i><i style="--h:75%"></i><i style="--h:95%"></i></div><span class="bubble">💬 رسالة جديدة</span><span class="up">↗</span></div>`,
- web:`<div class="sv-art sv-web"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="wl w1"></div><div class="wl w2"></div><div class="wblk"></div><div class="wl w3"></div></div><span class="bubble">✓ موقعك جاهز</span></div>`};
-const PKG_WA='https://wa.me/971506892431?text='+encodeURIComponent('مرحبا، مهتم بباقة التسويق الرقمي (سوشيال ميديا + إعلانات ممولة + موقع ويب) اللي بتبدأ من 2000 درهم. بدي اعرف التفاصيل.');
-const servCard=(sv,i)=>`<article class="sv reveal" id="sv-${sv.id}">${servArt[sv.icon]}<div class="sv-b"><span class="inc">مشمول بالباقة · ${i+1}/3</span><h3>${sv.name}</h3><p>${sv.lead}</p>
+ social:()=>`<div class="sv-art sv-social"><div class="phone"><div class="post"></div><div class="post p2"></div><div class="post p3"></div></div><span class="heart">♥</span><span class="heart h2">♥</span><span class="bubble">${tr('+120 متابعاً','+120 followers')}</span></div>`,
+ ads:()=>`<div class="sv-art sv-ads"><div class="bars"><i style="--h:35%"></i><i style="--h:55%"></i><i style="--h:45%"></i><i style="--h:75%"></i><i style="--h:95%"></i></div><span class="bubble">💬 ${tr('رسالة جديدة','New message')}</span><span class="up">↗</span></div>`,
+ web:()=>`<div class="sv-art sv-web"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="wl w1"></div><div class="wl w2"></div><div class="wblk"></div><div class="wl w3"></div></div><span class="bubble">✓ ${tr('موقعك جاهز','Your site is live')}</span></div>`};
+const PKG_WA=()=>waLink(tr('مرحباً، أودّ الاستفسار عن باقة التسويق الرقمي (إدارة وسائل التواصل + الإعلانات الممولة + الموقع الإلكتروني) التي تبدأ من 2000 درهم.','Hello, I would like to learn more about the digital marketing package (social media + paid ads + website) starting from AED 2,000.'));
+const servCard=(sv,i)=>`<article class="sv reveal" id="sv-${sv.id}">${servArt[sv.icon]()}<div class="sv-b"><span class="inc">${tr('ضمن الباقة','Included')} · ${i+1}/3</span><h3>${sv.name}</h3><p>${sv.lead}</p>
   <ul class="feat">${sv.items.map(x=>`<li>${x}</li>`).join('')}</ul></div></article>`;
-const helpBand=()=>`<div class="nf reveal"><div class="nf-t"><span class="nf-q">؟</span><div><h3>ما لقيت طلبك؟</h3><p>تواصل معنا واتساب أو اتصال، ونحنا منخدمك. منطبع كمان ستيكرات وأكياس كرافت وغيرها.</p></div></div>
-  <div class="nf-b"><a class="btn wa" href="https://wa.me/971506892431?text=${encodeURIComponent('مرحبا، ما لقيت المنتج اللي بدي ياه بالموقع، بدي استفسر.')}" target="_blank" rel="noopener">💬 واتساب</a>
-  <a class="btn out" href="tel:+971506892431">📞 اتصال</a><span class="nf-n num" dir="ltr">050 689 2431</span></div></div>`;
+const helpBand=()=>`<div class="nf reveal"><div class="nf-t"><span class="nf-q">؟</span><div><h3>${tr('لم تجد ما تبحث عنه؟','Can’t find what you need?')}</h3><p>${tr('تواصل معنا عبر واتساب أو الهاتف ويسعدنا خدمتك. نطبع أيضاً الملصقات وأكياس الكرافت وغيرها.','Contact us on WhatsApp or by phone and we’ll be happy to help. We also print stickers, kraft bags and more.')}</p></div></div>
+  <div class="nf-b"><a class="btn wa" href="${waLink(tr('مرحباً، لم أجد المنتج الذي أبحث عنه في الموقع وأودّ الاستفسار.','Hello, I couldn’t find the product I need on the website and would like to enquire.'))}" target="_blank" rel="noopener">💬 ${tr('واتساب','WhatsApp')}</a>
+  <a class="btn out" href="tel:+${WA}">📞 ${tr('اتصال','Call')}</a><span class="nf-n num" dir="ltr">050 689 2431</span></div></div>`;
 const pkgBanner=()=>`<div class="pkg reveal">${loopSVG}
-  <div class="pkg-l"><span class="pill"><i></i>باقة وحدة · 3 خدمات</span><h2>باقة التسويق الرقمي</h2>
-    <p>سوشيال ميديا وإعلانات ممولة وموقع ويب، كلهم بباقة وحدة وفريق واحد بيتابع كل شي.</p>
-    <div class="pkg-tags"><span>📱 إدارة السوشيال ميديا</span><span>📣 الإعلانات الممولة</span><span>💻 تصميم موقع ويب</span></div></div>
-  <div class="pkg-r"><span>تبدأ من</span><b class="num">2000</b><span>درهم</span>
-    <a class="btn dark" href="${PKG_WA}" target="_blank" rel="noopener">احجز استشارة مجانية</a></div></div>`;
+  <div class="pkg-l"><span class="pill"><i></i>${tr('باقة واحدة · ثلاث خدمات','One package · three services')}</span><h2>${tr('باقة التسويق الرقمي','Digital Marketing Package')}</h2>
+    <p>${tr('إدارة وسائل التواصل، والإعلانات الممولة، والموقع الإلكتروني في باقة واحدة يتابعها فريق واحد.','Social media, paid advertising and a website in one package, managed by one dedicated team.')}</p>
+    <div class="pkg-tags"><span>📱 ${serv()[0].name}</span><span>📣 ${serv()[1].name}</span><span>💻 ${serv()[2].name}</span></div></div>
+  <div class="pkg-r"><span>${tr('ابتداءً من','Starting from')}</span><b class="num">2000</b><span>${tr('درهم','AED')}</span>
+    <a class="btn dark" href="${PKG_WA()}" target="_blank" rel="noopener">${tr('احجز استشارة مجانية','Book a free consultation')}</a></div></div>`;
 function vServices(){
   return `<header class="phero gut"><span class="blob b1"></span><span class="blob b2"></span>${loopSVG}
-    <div class="wrap"><div class="crumbs"><a href="#home">الرئيسية</a> / التسويق الرقمي</div><h1>خلّي الزباين يوصلوا لعندك</h1><p>باقة وحدة فيها إدارة السوشيال ميديا والإعلانات الممولة وتصميم موقع الويب، بتبدأ من 2000 درهم.</p></div></header>
+    <div class="wrap">${crumbs(tr('التسويق الرقمي','Digital marketing'))}<h1>${tr('اجعل عملاءك يصلون إليك','Bring customers to your door')}</h1><p>${tr('باقة واحدة تضم إدارة وسائل التواصل والإعلانات الممولة وتصميم الموقع الإلكتروني، ابتداءً من 2000 درهم.','One package covering social media management, paid advertising and website design, starting from AED 2,000.')}</p></div></header>
   <div class="gut"><div class="wrap">
     <section class="sec" style="padding-bottom:20px">${pkgBanner()}</section>
-    <section class="sec" style="padding-top:28px"><div class="sh reveal"><div class="eyebrow gtext">شو بتشمل الباقة</div><h2>3 خدمات بباقة وحدة</h2></div>
-      <div class="svgrid">${SERV.map(servCard).join('')}</div></section>
+    <section class="sec" style="padding-top:28px"><div class="sh reveal"><div class="eyebrow gtext">${tr('محتويات الباقة','What’s included')}</div><h2>${tr('ثلاث خدمات في باقة واحدة','Three services, one package')}</h2></div>
+      <div class="svgrid">${serv().map(servCard).join('')}</div></section>
     <section style="padding-bottom:clamp(52px,8vw,96px)">
-      <div class="sh reveal"><div class="eyebrow gtext">كيف منشتغل</div><h2>من أول رسالة لأول نتيجة</h2></div>
-      <div class="uses"><div class="reveal"><i>💬</i>استشارة مجانية</div><div class="reveal"><i>🧭</i>خطة على قد هدفك</div><div class="reveal"><i>🎨</i>تصميم وتنفيذ</div><div class="reveal"><i>📈</i>متابعة وتقارير</div></div>
+      <div class="sh reveal"><div class="eyebrow gtext">${tr('منهجية العمل','Our approach')}</div><h2>${tr('من الرسالة الأولى إلى النتائج الأولى','From first message to first results')}</h2></div>
+      <div class="uses">${(LANG==='en'?[['💬','Free consultation'],['🧭','A plan tailored to your goal'],['🎨','Design & execution'],['📈','Monitoring & reports']]:[['💬','استشارة مجانية'],['🧭','خطة مصمّمة وفق أهدافك'],['🎨','التصميم والتنفيذ'],['📈','المتابعة والتقارير']]).map(u=>`<div class="reveal"><i>${u[0]}</i>${u[1]}</div>`).join('')}</div>
       <div style="height:28px"></div>
-      ${ctaBand('عندك نشاط وبدك تكبّره؟','احكينا عن شغلك ومنفصّلك الباقة على قد هدفك.',PKG_WA,'احكينا على واتساب')}
+      ${ctaBand(tr('لديك نشاط تجاري وتطمح إلى توسيعه؟','Ready to grow your business?'),tr('حدّثنا عن عملك، وسنصمّم لك باقة تناسب أهدافك.','Tell us about your business and we’ll tailor a package to your goals.'),PKG_WA(),tr('تواصل معنا عبر واتساب','Message us on WhatsApp'))}
     </section>
   </div></div>`;
 }
 
 function vOrder(){
+  const radio=(name,val,checked,title,sub,extra='')=>`<label class="opt"><input type="radio" name="${name}" value="${val}" ${extra} ${checked?'checked':''}><div><b>${title}</b><span${name==='pay'&&val==='tabby'?' id="tabbyNote"':''}>${sub}</span></div></label>`;
   return `<header class="phero gut" style="padding-block:36px"><span class="blob b1"></span><span class="blob b2"></span>${loopSVG}
-    <div class="wrap"><div class="crumbs"><a href="#home">الرئيسية</a> / الطلب</div><h1>إتمام الطلب</h1><p>راجع منتجاتك، عبّي بياناتك، واختار طريقة الدفع.</p></div></header>
+    <div class="wrap">${crumbs(tr('الطلب','Order'))}<h1>${tr('إتمام الطلب','Checkout')}</h1><p>${tr('راجع منتجاتك، وأدخل بياناتك، واختر طريقة الدفع.','Review your products, enter your details and choose a payment method.')}</p></div></header>
   <div class="gut"><div class="wrap">
   <form id="order" class="sec" novalidate style="padding-bottom:0;padding-top:clamp(28px,5vw,48px)">
     <div class="formwrap">
-      <div class="box"><div class="bt"><b>1</b><h3>طلبك</h3></div><div class="cart" id="cartList"></div>
-        <div style="margin-top:12px;font-size:.88rem;color:var(--muted)">ضيف كمان:</div><div class="addmore" id="addMore"></div></div>
-      <div class="box"><div class="bt"><b>2</b><h3>معلوماتك</h3></div>
+      <div class="box"><div class="bt"><b>1</b><h3>${tr('طلبك','Your order')}</h3></div><div class="cart" id="cartList"></div>
+        <div style="margin-top:12px;font-size:.88rem;color:var(--muted)">${tr('أضف المزيد:','Add more:')}</div><div class="addmore" id="addMore"></div></div>
+      <div class="box"><div class="bt"><b>2</b><h3>${tr('بياناتك','Your details')}</h3></div>
         <div class="fields">
-          <label class="f">الاسم الكامل<input id="name" type="text" autocomplete="name" placeholder="مثال: أحمد خالد"></label>
-          <label class="f">رقم الموبايل / واتساب<input id="phone" type="tel" dir="ltr" autocomplete="tel" placeholder="05X XXX XXXX"></label>
-          <label class="f">اسم النشاط التجاري<input id="biz" type="text" placeholder="مثال: صالون لمسة"></label>
-          <label class="f">نوع النشاط<input id="activity" type="text" placeholder="مطعم، عقارات، صيانة سيارات…"></label>
+          <label class="f">${tr('الاسم الكامل','Full name')}<input id="name" type="text" autocomplete="name" placeholder="${tr('مثال: أحمد خالد','e.g. Ahmed Khaled')}"></label>
+          <label class="f">${tr('رقم الهاتف / واتساب','Mobile / WhatsApp')}<input id="phone" type="tel" dir="ltr" autocomplete="tel" placeholder="05X XXX XXXX"></label>
+          <label class="f">${tr('اسم النشاط التجاري','Business name')}<input id="biz" type="text" placeholder="${tr('مثال: صالون لمسة','e.g. Lamsa Salon')}"></label>
+          <label class="f">${tr('نوع النشاط','Business type')}<input id="activity" type="text" placeholder="${tr('مطعم، عقارات، صيانة سيارات…','Restaurant, real estate, car service…')}"></label>
         </div></div>
-      <div class="box"><div class="bt"><b>3</b><h3>الاستلام</h3></div>
+      <div class="box"><div class="bt"><b>3</b><h3>${tr('الاستلام','Delivery')}</h3></div>
         <div class="opts">
-          <label class="opt"><input type="radio" name="ship" value="delivery" ${ship==='delivery'?'checked':''}><div><b>توصيل لعندك · 25 درهم</b><span>لكل الإمارات</span></div></label>
-          <label class="opt"><input type="radio" name="ship" value="pickup" ${ship==='pickup'?'checked':''}><div><b>استلام من عجمان · مجاناً</b><span>بدون رسوم توصيل</span></div></label>
+          ${radio('ship','delivery',ship==='delivery',tr('التوصيل إلى عنوانك · 25 درهم','Delivery to your address · AED 25'),tr('إلى جميع الإمارات','Across the UAE'))}
+          ${radio('ship','pickup',ship==='pickup',tr('الاستلام من عجمان · مجاناً','Pickup in Ajman · Free'),tr('دون رسوم توصيل','No delivery fee'))}
         </div>
         <div class="fields" id="shipFields" style="margin-top:14px" ${ship==='pickup'?'hidden':''}>
-          <label class="f">الإمارة<select id="emirate"><option value="">اختار الإمارة</option><option>دبي</option><option>الشارقة</option><option>عجمان</option><option>أبوظبي</option><option>رأس الخيمة</option><option>أم القيوين</option><option>الفجيرة</option></select></label>
-          <label class="f">عنوان التوصيل<input id="address" type="text" placeholder="المنطقة، الشارع، رقم البناية"></label>
+          <label class="f">${tr('الإمارة','Emirate')}<select id="emirate"><option value="">${tr('اختر الإمارة','Select emirate')}</option>${EMIRATES.map(e=>`<option>${e[LANG==='en'?1:0]}</option>`).join('')}</select></label>
+          <label class="f">${tr('عنوان التوصيل','Delivery address')}<input id="address" type="text" placeholder="${tr('المنطقة، الشارع، رقم المبنى','Area, street, building number')}"></label>
         </div>
-        <div class="note" id="pickupNote" ${ship==='delivery'?'hidden':''}><b>الاستلام من عجمان:</b> منبعتلك موقع الاستلام على واتساب لما يجهز طلبك.</div></div>
-      <div class="box"><div class="bt"><b>4</b><h3>التصميم</h3></div>
+        <div class="note" id="pickupNote" ${ship==='delivery'?'hidden':''}><b>${tr('الاستلام من عجمان:','Pickup in Ajman:')}</b> ${tr('سنرسل لك موقع الاستلام عبر واتساب فور جاهزية طلبك.','we will send you the pickup location on WhatsApp once your order is ready.')}</div></div>
+      <div class="box"><div class="bt"><b>4</b><h3>${tr('التصميم','Design')}</h3></div>
         <div class="opts">
-          <label class="opt"><input type="radio" name="design" id="d-yes" value="yes" checked><div><b>عندي تصميم جاهز</b><span>PDF أو AI أو صورة عالية الدقة</span></div></label>
-          <label class="opt"><input type="radio" name="design" id="d-no" value="no"><div><b>صمموه إنتو</b><span>ابعت اللوغو والمعلومات ومنجهزلك التصميم</span></div></label>
+          <label class="opt"><input type="radio" name="design" id="d-yes" value="yes" checked><div><b>${tr('لديّ تصميم جاهز','I have a ready design')}</b><span>${tr('PDF أو AI أو صورة عالية الدقة','PDF, AI or a high-resolution image')}</span></div></label>
+          <label class="opt"><input type="radio" name="design" id="d-no" value="no"><div><b>${tr('أرغب في أن تصمّموه لي','Please design it for me')}</b><span>${tr('أرسل الشعار والمعلومات وسنُعدّ التصميم','Send your logo and details and we’ll prepare the design')}</span></div></label>
         </div>
-        <div id="has-design" style="margin-top:14px"><div class="drop"><div class="ic">↑</div>اسحب ملفات التصميم لهون أو اضغط لتختارها<small>PDF · AI · EPS · PSD · PNG · JPG</small>
-          <input id="designFiles" type="file" multiple accept=".pdf,.ai,.eps,.psd,.png,.jpg,.jpeg,.svg" aria-label="ملفات التصميم"></div><ul class="files" id="designList"></ul></div>
+        <div id="has-design" style="margin-top:14px"><div class="drop"><div class="ic">↑</div>${tr('اسحب ملفات التصميم إلى هنا أو انقر لاختيارها','Drag your design files here or click to choose')}<small>PDF · AI · EPS · PSD · PNG · JPG</small>
+          <input id="designFiles" type="file" multiple accept=".pdf,.ai,.eps,.psd,.png,.jpg,.jpeg,.svg" aria-label="${tr('ملفات التصميم','Design files')}"></div><ul class="files" id="designList"></ul></div>
         <div id="no-design" hidden style="margin-top:14px"><div class="fields">
-          <div><div class="drop"><div class="ic">↑</div>ارفع اللوغو<small>يفضل PNG شفاف أو ملف AI</small><input id="logoFile" type="file" accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg" aria-label="اللوغو"></div><ul class="files" id="logoList"></ul></div>
-          <label class="f">المعلومات اللي بدك ياها عالكرت<small>الاسم، المسمى، الأرقام، الإيميل، الموقع، السوشال</small><textarea id="info" placeholder="أحمد خالد – مدير مبيعات&#10;050 123 4567&#10;ahmad@example.com"></textarea></label>
+          <div><div class="drop"><div class="ic">↑</div>${tr('ارفع الشعار','Upload your logo')}<small>${tr('يُفضَّل PNG شفاف أو ملف AI','Transparent PNG or AI file preferred')}</small><input id="logoFile" type="file" accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg" aria-label="${tr('الشعار','Logo')}"></div><ul class="files" id="logoList"></ul></div>
+          <label class="f">${tr('المعلومات المطلوبة على البطاقة','Information for the card')}<small>${tr('الاسم، المسمى الوظيفي، الأرقام، البريد الإلكتروني، الموقع، حسابات التواصل','Name, job title, numbers, email, website, social accounts')}</small><textarea id="info" placeholder="${tr('أحمد خالد – مدير المبيعات&#10;050 123 4567&#10;ahmad@example.com','Ahmed Khaled – Sales Manager&#10;050 123 4567&#10;ahmad@example.com')}"></textarea></label>
         </div></div>
-        <div class="note">اللوغو ورقم الهاتف ونوع النشاط بيخلّونا نتأكد من طلبك ونطلع شغل مضبوط من أول مرة، وبيسرّعوا التسليم.</div></div>
-      <div class="box"><div class="bt"><b>5</b><h3>الدفع</h3></div>
+        <div class="note">${tr('يساعدنا الشعار ورقم الهاتف ونوع النشاط على التحقق من طلبك وتنفيذه بدقة من المرة الأولى، كما يسرّع التسليم.','Your logo, phone number and business type help us verify your order, get it right the first time and deliver faster.')}</div></div>
+      <div class="box"><div class="bt"><b>5</b><h3>${tr('الدفع','Payment')}</h3></div>
         <div class="opts">
-          <label class="opt"><input type="radio" name="pay" value="tabby" checked><div><b>تابي · 4 دفعات</b><span id="tabbyNote">بدون فوائد</span></div></label>
-          <label class="opt"><input type="radio" name="pay" value="tamara"><div><b>تمارة · قسّطها</b><span>بدون فوائد</span></div></label>
-          <label class="opt"><input type="radio" name="pay" value="card"><div><b>بطاقة بنكية</b><span>Visa · Mastercard</span></div></label>
-          <label class="opt"><input type="radio" name="pay" value="bank"><div><b>حوالة بنكية</b><span>منبعتلك الـ IBAN على واتساب</span></div></label>
-
+          ${radio('pay','tabby',true,tr('تابي · 4 دفعات','Tabby · 4 payments'),tr('دون فوائد','Interest-free'))}
+          ${radio('pay','tamara',false,tr('تمارا · قسّط مشترياتك','Tamara · Pay in instalments'),tr('دون فوائد','Interest-free'))}
+          ${radio('pay','card',false,tr('البطاقة البنكية','Bank card'),'Visa · Mastercard')}
+          ${radio('pay','bank',false,tr('التحويل البنكي','Bank transfer'),tr('نرسل لك رقم الـ IBAN عبر واتساب','We send you the IBAN on WhatsApp'))}
         </div>
-        <div class="note" id="bankNote" hidden><b>للحوالة البنكية:</b> بعد ما تبعت الفاتورة منرد عليك برقم الـ IBAN واسم الحساب. حوّل المبلغ وابعتلنا صورة الإيصال، ومنبلّش دغري.</div>
-        <div class="note"><b>✓ تدقيق قبل الطباعة.</b> كل طلب بيمرّ على مدقق بيراجع الملفات والبيانات والدفع، وما منطبع شي قبل موافقتك.</div></div>
+        <div class="note" id="bankNote" hidden><b>${tr('التحويل البنكي:','Bank transfer:')}</b> ${tr('بعد إرسال الفاتورة نزوّدك برقم الـ IBAN واسم الحساب. يُرجى تحويل المبلغ وإرسال صورة الإيصال، وسنبدأ العمل فوراً.','after you send the invoice, we will share the IBAN and account name. Please transfer the amount and send us a photo of the receipt, and we will start right away.')}</div>
+        <div class="note"><b>✓ ${tr('تدقيق قبل الطباعة.','Proofing before print.')}</b> ${tr('يمرّ كل طلب على مختصّ تدقيق يراجع الملفات والبيانات والدفع، ولا نطبع شيئاً قبل موافقتك.','Every order is checked by a proofreader who reviews files, details and payment. Nothing is printed without your approval.')}</div></div>
     </div>
-    <div class="bar"><div class="in"><div><div class="tot num" id="total">0 درهم</div><div class="sub" id="count"></div></div><button class="btn grad" type="submit">أكّد وأصدر الفاتورة</button></div><p class="err" id="err" hidden></p></div>
+    <div class="bar"><div class="in"><div><div class="tot num" id="total">${fmt(0)}</div><div class="sub" id="count"></div></div><button class="btn grad" type="submit">${tr('تأكيد وإصدار الفاتورة','Confirm & issue invoice')}</button></div><p class="err" id="err" hidden></p></div>
   </form>
   <section class="sec" id="confirm" hidden style="padding-top:clamp(24px,5vw,48px)">
-    <div class="inv-head"><div class="big">✓</div><h2>فاتورتك جاهزة</h2><p>ابعتها على واتساب لنبلّش التصميم دغري. أرفق ملفات التصميم أو اللوغو بنفس المحادثة.</p></div>
-    <div class="acts" style="margin-bottom:10px"><button class="btn wa" type="button" id="sharePdf">📄 ابعت الفاتورة PDF على واتساب</button></div>
-    <div class="acts" style="margin-bottom:18px"><button class="btn out" type="button" id="dlPdf">⬇ حمّل الفاتورة PDF</button><a class="btn out" id="waBtn" href="#" target="_blank" rel="noopener">💬 ابعتها كرسالة</a></div>
+    <div class="inv-head"><div class="big">✓</div><h2>${tr('فاتورتك جاهزة','Your invoice is ready')}</h2><p>${tr('أرسلها إلينا عبر واتساب لنبدأ التصميم فوراً، وأرفق ملفات التصميم أو الشعار في المحادثة نفسها.','Send it to us on WhatsApp so we can start the design right away, and attach your design files or logo in the same chat.')}</p></div>
+    <div class="acts" style="margin-bottom:10px"><button class="btn wa" type="button" id="sharePdf">📄 ${tr('أرسل الفاتورة PDF عبر واتساب','Send invoice PDF on WhatsApp')}</button></div>
+    <div class="acts" style="margin-bottom:18px"><button class="btn out" type="button" id="dlPdf">⬇ ${tr('تحميل الفاتورة PDF','Download invoice PDF')}</button><a class="btn out" id="waBtn" href="#" target="_blank" rel="noopener">💬 ${tr('أرسلها كرسالة نصية','Send as a text message')}</a></div>
     <p class="pdf-st" id="pdfStatus" role="status"></p>
     <article class="inv" id="invoice"></article>
-    <div class="acts" style="margin-top:18px"><button class="btn out" type="button" id="copyBtn">انسخ الفاتورة</button><button class="btn out" type="button" id="editBtn">عدّل الطلب</button></div>
-    <p style="color:var(--muted);font-size:.9rem;margin-top:14px;text-align:center">إذا ما فتح واتساب، راسلنا على <code>+971 50 689 2431</code></p>
+    <div class="acts" style="margin-top:18px"><button class="btn out" type="button" id="copyBtn">${tr('نسخ الفاتورة','Copy invoice')}</button><button class="btn out" type="button" id="editBtn">${tr('تعديل الطلب','Edit order')}</button></div>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:14px;text-align:center">${tr('إذا لم يفتح تطبيق واتساب، راسلنا على','If WhatsApp doesn’t open, message us at')} <code>${PHONE}</code></p>
   </section>
   </div></div>`;
 }
 
 /* ---------- order logic ---------- */
 function cartCount(){return Object.keys(cart).length}
-function updateBadge(){const n=cartCount(),c=$('cnt');c.hidden=!n;c.textContent=n;}
+function updateBadge(){const n=cartCount(),c=$('cnt');if(!c)return;c.hidden=!n;c.textContent=n;}
+const itemName=(id,fold)=>{const p=prod(id);return p.name+(p.fold?' ('+foldL(fold)+')':'');};
 function renderCart(){
   const list=$('cartList'); if(!list)return;
   const ids=Object.keys(cart);
-  list.innerHTML=ids.length?ids.map(id=>{const p=byId[id],c=cart[id];return `<div class="ci"><img src="img/${p.img}.jpg" alt=""><div><h4>${p.name}${p.fold?' · '+c.fold:''}</h4><small class="num">${fmt(p.price)} لكل 1000</small></div>
-    <div class="r"><div class="stepper"><button type="button" data-cq="1" data-id="${id}" aria-label="زيادة">+</button><output class="num">${(c.q*1000).toLocaleString('en-US')}</output><button type="button" data-cq="-1" data-id="${id}" aria-label="إنقاص">−</button></div><button type="button" class="rm" data-rm="${id}">إزالة</button></div></div>`}).join('')
-    :`<div class="empty">طلبك فاضي لسا. ضيف منتج من تحت أو <a href="#products">تصفّح المنتجات</a>.</div>`;
-  $('addMore').innerHTML=P.filter(p=>!cart[p.id]).map(p=>`<button type="button" data-quick="${p.id}"><img src="img/${p.img}.jpg" alt="">${p.name} · ${p.price}</button>`).join('')||'<span style="color:var(--muted);font-size:.85rem">ضفت كل المنتجات</span>';
+  list.innerHTML=ids.length?ids.map(id=>{const p=prod(id),c=cart[id];return `<div class="ci"><img src="img/${p.img}.jpg" alt=""><div><h4>${p.name}${p.fold?' · '+foldL(c.fold):''}</h4><small class="num">${fmt(p.price)} ${tr('لكل 1000','per 1,000')}</small></div>
+    <div class="r"><div class="stepper"><button type="button" data-cq="1" data-id="${id}" aria-label="${tr('زيادة','Increase')}">+</button><output class="num">${(c.q*1000).toLocaleString('en-US')}</output><button type="button" data-cq="-1" data-id="${id}" aria-label="${tr('إنقاص','Decrease')}">−</button></div><button type="button" class="rm" data-rm="${id}">${tr('إزالة','Remove')}</button></div></div>`}).join('')
+    :`<div class="empty">${tr('طلبك فارغ حالياً. أضف منتجاً من الأسفل أو','Your order is empty. Add a product below or')} <a href="#products">${tr('تصفّح المنتجات','browse products')}</a>.</div>`;
+  $('addMore').innerHTML=P.filter(p=>!cart[p.id]).map(b=>{const p=prod(b.id);return `<button type="button" data-quick="${p.id}"><img src="img/${p.img}.jpg" alt="">${p.name} · ${p.price}</button>`}).join('')||`<span style="color:var(--muted);font-size:.85rem">${tr('أضفت جميع المنتجات','All products added')}</span>`;
   const sub=ids.reduce((a,id)=>a+byId[id].price*cart[id].q,0),fee=ids.length&&ship==='delivery'?DEL:0,t=sub+fee;
   $('total').textContent=fmt(t);
-  $('count').textContent=ids.length?`${ids.length} ${ids.length>1?'منتجات':'منتج'} · ${fee?'شامل توصيل 25 درهم':'استلام من عجمان'}`:'ما في منتجات بالطلب';
-  $('tabbyNote').textContent=t?`4 × ${(t/4).toLocaleString('en-US',{maximumFractionDigits:2})} درهم بدون فوائد`:'بدون فوائد';
+  const n=ids.length;
+  $('count').textContent=n?`${LANG==='en'?n+(n>1?' products':' product'):(n>1?n+' منتجات':'منتج واحد')} · ${fee?tr('شامل التوصيل 25 درهم','incl. AED 25 delivery'):tr('استلام من عجمان','Pickup in Ajman')}`:tr('لا توجد منتجات في الطلب','No products in your order');
+  $('tabbyNote').textContent=t?`4 × ${(t/4).toLocaleString('en-US',{maximumFractionDigits:2})} ${tr('درهم دون فوائد','AED, interest-free')}`:tr('دون فوائد','Interest-free');
   updateBadge(); return t;
 }
 function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>el.classList.remove('show'),1900);}
-function addFromDraft(id){const d=drafts[id]||{q:1,fold:'3 طيّات'};cart[id]={q:d.q,fold:d.fold};updateBadge();}
+function addFromDraft(id){const d=drafts[id]||{q:1,fold:'tri'};cart[id]={q:d.q,fold:d.fold};updateBadge();}
 
 const DEL=25; let ship='delivery';
-const PAY={tabby:'تابي (4 دفعات بدون فوائد)',tamara:'تمارة (تقسيط بدون فوائد)',card:'بطاقة بنكية',bank:'حوالة بنكية'};
-const NEXT={tabby:'منبعتلك رابط الدفع بتابي على واتساب، وبعد الدفع منبلّش.',card:'منبعتلك رابط الدفع بالبطاقة على واتساب، وبعد الدفع منبلّش.',bank:'منبعتلك رقم الـ IBAN واسم الحساب على واتساب. حوّل المبلغ وابعت صورة الإيصال ومنبلّش.',tamara:'منبعتلك رابط الدفع بتمارة على واتساب، وبعد الدفع منبلّش.'};
+const PAYS={tabby:['تابي (4 دفعات دون فوائد)','Tabby (4 interest-free payments)'],tamara:['تمارا (تقسيط دون فوائد)','Tamara (interest-free instalments)'],card:['البطاقة البنكية','Bank card'],bank:['التحويل البنكي','Bank transfer']};
+const NEXTS={tabby:['سنرسل لك رابط الدفع عبر تابي على واتساب، ونبدأ العمل فور إتمام الدفع.','We will send you a Tabby payment link on WhatsApp and start as soon as payment is complete.'],
+  tamara:['سنرسل لك رابط الدفع عبر تمارا على واتساب، ونبدأ العمل فور إتمام الدفع.','We will send you a Tamara payment link on WhatsApp and start as soon as payment is complete.'],
+  card:['سنرسل لك رابط الدفع بالبطاقة على واتساب، ونبدأ العمل فور إتمام الدفع.','We will send you a card payment link on WhatsApp and start as soon as payment is complete.'],
+  bank:['سنرسل لك رقم الـ IBAN واسم الحساب على واتساب. يُرجى تحويل المبلغ وإرسال صورة الإيصال لنبدأ العمل.','We will send you the IBAN and account name on WhatsApp. Please transfer the amount and send a photo of the receipt so we can begin.']};
+const payL=(k,l=LANG)=>PAYS[k][l==='en'?1:0], nextL=(k,l=LANG)=>NEXTS[k][l==='en'?1:0];
 function bindOrder(){
   bindSign();
   renderCart();
-  const lf=(i,u)=>i.addEventListener('change',()=>{u.innerHTML=[...i.files].map(f=>`<li>✓ ${f.name}</li>`).join('');});
+  const lf=(i,u)=>i.addEventListener('change',()=>{u.innerHTML=[...i.files].map(f=>`<li>✓ ${pesc(f.name)}</li>`).join('');});
   lf($('designFiles'),$('designList'));lf($('logoFile'),$('logoList'));
   document.querySelectorAll('input[name=design]').forEach(r=>r.addEventListener('change',()=>{const y=$('d-yes').checked;$('has-design').hidden=!y;$('no-design').hidden=y;}));
   document.querySelectorAll('input[name=pay]').forEach(r=>r.addEventListener('change',()=>{const v=document.querySelector('input[name=pay]:checked').value;$('bankNote').hidden=v!=='bank';}));
   document.querySelectorAll('input[name=ship]').forEach(r=>r.addEventListener('change',()=>{ship=document.querySelector('input[name=ship]:checked').value;$('shipFields').hidden=ship!=='delivery';$('pickupNote').hidden=ship==='delivery';renderCart();}));
   $('order').addEventListener('submit',e=>{
     e.preventDefault();
-    const err=$('err'),ids=Object.keys(cart);
-    const req=[['name','الاسم'],['phone','رقم الموبايل'],['biz','اسم النشاط'],['activity','نوع النشاط']];
-    if(ship==='delivery')req.push(['emirate','الإمارة'],['address','عنوان التوصيل']);
+    const en=LANG==='en',err=$('err'),ids=Object.keys(cart);
+    const req=[['name',tr('الاسم','Name')],['phone',tr('رقم الهاتف','Mobile')],['biz',tr('اسم النشاط','Business name')],['activity',tr('نوع النشاط','Business type')]];
+    if(ship==='delivery')req.push(['emirate',tr('الإمارة','Emirate')],['address',tr('عنوان التوصيل','Delivery address')]);
     const need=req.filter(([i])=>!$(i).value.trim());
-    if(!ids.length){err.textContent='ضيف منتج واحد عالأقل لطلبك.';err.hidden=false;$('cartList').scrollIntoView({behavior:'smooth',block:'center'});return;}
-    if(need.length){err.textContent='كمّل هالحقول: '+need.map(n=>n[1]).join('، ');err.hidden=false;$(need[0][0]).focus();return;}
+    if(!ids.length){err.textContent=tr('يُرجى إضافة منتج واحد على الأقل إلى طلبك.','Please add at least one product to your order.');err.hidden=false;$('cartList').scrollIntoView({behavior:'smooth',block:'center'});return;}
+    if(need.length){err.textContent=tr('يُرجى استكمال الحقول التالية: ','Please complete the following fields: ')+need.map(n=>n[1]).join(tr('، ',', '));err.hidden=false;$(need[0][0]).focus();return;}
     err.hidden=true;
     const t=renderCart(),fee=ship==='delivery'?DEL:0,sub=t-fee,pay=document.querySelector('input[name=pay]:checked').value,design=$('d-yes').checked;
     const now=new Date(),no='INV-'+now.getFullYear().toString().slice(2)+String(now.getMonth()+1).padStart(2,'0')+'-'+Date.now().toString().slice(-5);
     const date=now.toLocaleDateString('en-GB',{timeZone:'Asia/Dubai'});
     const v=id=>$(id).value.trim();
-    const rows=ids.map(id=>{const p=byId[id],q=cart[id].q;return {n:p.name+(p.fold?' ('+cart[id].fold+')':''),qty:q*1000,unit:p.price,tot:p.price*q}});
+    const rows=ids.map(id=>{const p=byId[id],q=cart[id].q;return {n:itemName(id,cart[id].fold),qty:q*1000,unit:p.price,tot:p.price*q}});
     const files=(design?[...$('designFiles').files]:[...$('logoFile').files]).map(f=>f.name);
-    const esc=x=>x.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const esc=pesc;
+    const shipTxt=fee?tr('توصيل: ','Delivery: ')+v('emirate')+tr('، ',', ')+v('address'):tr('استلام من عجمان','Pickup in Ajman');
+    const feeLbl=fee?tr('التوصيل','Delivery')+' ('+v('emirate')+')':tr('استلام من عجمان','Pickup in Ajman');
+    const designTxt=design?tr('تصميم جاهز من العميل','Customer-supplied design'):tr('تصميم من Infinity Graphic','Designed by Infinity Graphic');
+    const reviewTxt=tr('بعد ذلك يراجع مختصّ التدقيق التصميم ويحصل على موافقتك قبل الطباعة.','A proofreader will then review the design and obtain your approval before printing.');
     $('invoice').innerHTML=`
       <header class="inv-top"><div class="brand"><img src="img/logo.jpg" alt=""><div><b>Infinity Graphic</b><small>TO BE UNIQUE</small></div></div>
-        <div class="inv-meta"><h3>فاتورة</h3><div class="num">${no}</div><div class="num">${date}</div></div></header>
-      <div class="inv-parties"><div><span>من</span><b>Infinity Graphic</b><div>طباعة أونلاين · الإمارات</div><div dir="ltr" class="num">+971 50 689 2431</div></div>
-        <div><span>إلى</span><b>${esc(v('name'))}</b><div>${esc(v('biz'))} · ${esc(v('activity'))}</div><div dir="ltr" class="num">${esc(v('phone'))}</div></div></div>
-      <div class="cmp-wrap" style="border-radius:16px"><table class="inv-t num"><thead><tr><th>المنتج</th><th>الكمية</th><th>السعر / 1000</th><th>المجموع</th></tr></thead><tbody>
+        <div class="inv-meta"><h3>${tr('فاتورة','Invoice')}</h3><div class="num">${no}</div><div class="num">${date}</div></div></header>
+      <div class="inv-parties"><div><span>${tr('من','From')}</span><b>Infinity Graphic</b><div>${tr('خدمات طباعة إلكترونية · الإمارات','Online printing · UAE')}</div><div dir="ltr" class="num">${PHONE}</div></div>
+        <div><span>${tr('إلى','To')}</span><b>${esc(v('name'))}</b><div>${esc(v('biz'))} · ${esc(v('activity'))}</div><div dir="ltr" class="num">${esc(v('phone'))}</div></div></div>
+      <div class="cmp-wrap" style="border-radius:16px"><table class="inv-t num"><thead><tr><th>${tr('المنتج','Product')}</th><th>${tr('الكمية','Qty')}</th><th>${tr('السعر / 1000','Price / 1,000')}</th><th>${tr('المبلغ','Amount')}</th></tr></thead><tbody>
         ${rows.map(r=>`<tr><td>${r.n}</td><td>${r.qty.toLocaleString('en-US')}</td><td>${r.unit}</td><td>${fmt(r.tot)}</td></tr>`).join('')}
       </tbody></table></div>
-      <div class="inv-sum num"><div><span>المجموع الفرعي</span><span>${fmt(sub)}</span></div>
-        <div><span>${fee?'التوصيل ('+esc(v('emirate'))+')':'استلام من عجمان'}</span><span>${fee?fmt(fee):'مجاناً'}</span></div>
-        <div class="grand"><span>المجموع الكلي</span><span>${fmt(t)}</span></div></div>
-      <div class="inv-info"><div><span>الاستلام</span><b>${fee?'توصيل: '+esc(v('emirate'))+'، '+esc(v('address')):'استلام من عجمان'}</b></div>
-        <div><span>طريقة الدفع</span><b>${PAY[pay]}</b></div>
-        <div><span>التصميم</span><b>${design?'تصميم جاهز من الزبون':'تصميم من Infinity Graphic'}</b></div></div>
-      <div class="inv-next"><b>الخطوة الجاية:</b> ${NEXT[pay]} بعدها المدقق بيراجع التصميم وبياخد موافقتك قبل الطباعة.</div>
-      <div class="inv-sign" id="invSign"><span>توقيع الزبون</span><button type="button" class="btn grad sm" data-sign>✍️ وقّع على الفاتورة</button></div>`;
-    msg=[`🧾 فاتورة ${no}`,`التاريخ: ${date}`,'',`الزبون: ${v('name')}`,`الموبايل: ${v('phone')}`,`النشاط: ${v('biz')} (${v('activity')})`,'',
+      <div class="inv-sum num"><div><span>${tr('المجموع الفرعي','Subtotal')}</span><span>${fmt(sub)}</span></div>
+        <div><span>${esc(feeLbl)}</span><span>${fee?fmt(fee):tr('مجاناً','Free')}</span></div>
+        <div class="grand"><span>${tr('الإجمالي','Total')}</span><span>${fmt(t)}</span></div></div>
+      <div class="inv-info"><div><span>${tr('الاستلام','Delivery')}</span><b>${esc(shipTxt)}</b></div>
+        <div><span>${tr('طريقة الدفع','Payment method')}</span><b>${payL(pay)}</b></div>
+        <div><span>${tr('التصميم','Design')}</span><b>${designTxt}</b></div></div>
+      <div class="inv-next"><b>${tr('الخطوة التالية:','Next step:')}</b> ${nextL(pay)} ${reviewTxt}</div>
+      <div class="inv-sign" id="invSign"><span>${tr('توقيع العميل','Customer signature')}</span><button type="button" class="btn grad sm" data-sign>✍️ ${tr('وقّع الفاتورة','Sign the invoice')}</button></div>`;
+    const info=$('info').value.trim();
+    msg=[`🧾 ${tr('فاتورة','Invoice')} ${no}`,`${tr('التاريخ','Date')}: ${date}`,'',`${tr('العميل','Customer')}: ${v('name')}`,`${tr('الهاتف','Mobile')}: ${v('phone')}`,`${tr('النشاط','Business')}: ${v('biz')} (${v('activity')})`,'',
       ...rows.map(r=>`• ${r.n} × ${r.qty.toLocaleString('en-US')} = ${fmt(r.tot)}`),'',
-      `المجموع الفرعي: ${fmt(sub)}`,fee?`التوصيل (${v('emirate')}): ${fmt(fee)}`:'الاستلام: من عجمان (مجاناً)',`المجموع الكلي: ${fmt(t)}`,'',
-      fee?`عنوان التوصيل: ${v('emirate')}، ${v('address')}`:'',`الدفع: ${PAY[pay]}`,
-      `التصميم: ${design?'عندي تصميم جاهز':'بدي تصميم منكم'}`,!design&&$('info').value.trim()?`معلومات الكرت:\n${$('info').value.trim()}`:'',
-      files.length?`الملفات (رح ابعتها هون): ${files.join('، ')}`:'','','بدي ابلّش التصميم ✅'].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n');
-    const url='https://wa.me/971506892431?text='+encodeURIComponent(msg);
-    $('waBtn').href=url;
+      `${tr('المجموع الفرعي','Subtotal')}: ${fmt(sub)}`,fee?`${feeLbl}: ${fmt(fee)}`:tr('الاستلام: من عجمان (مجاناً)','Pickup: Ajman (free)'),`${tr('الإجمالي','Total')}: ${fmt(t)}`,'',
+      fee?`${tr('عنوان التوصيل','Delivery address')}: ${v('emirate')}${tr('، ',', ')}${v('address')}`:'',`${tr('الدفع','Payment')}: ${payL(pay)}`,
+      `${tr('التصميم','Design')}: ${design?tr('لديّ تصميم جاهز','I have a ready design'):tr('أرغب في تصميم من فريقكم','I would like your team to design it')}`,!design&&info?`${tr('معلومات البطاقة','Card details')}:\n${info}`:'',
+      files.length?`${tr('الملفات (سأرسلها في هذه المحادثة)','Files (I will send them in this chat)')}: ${files.join(tr('، ',', '))}`:'','',tr('أرغب في البدء بالتصميم ✅','I would like to start the design ✅')].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n');
+    $('waBtn').href=waLink(msg);
     $('order').hidden=true;$('confirm').hidden=false;window.scrollTo({top:0,behavior:'smooth'});
-    inv={no,date,name:v('name'),phone:v('phone'),biz:v('biz'),activity:v('activity'),rows,sub,fee,t,
-      shipTxt:fee?'توصيل: '+v('emirate')+'، '+v('address'):'استلام من عجمان',feeLbl:fee?'التوصيل ('+v('emirate')+')':'استلام من عجمان',
-      pay:PAY[pay],design:design?'تصميم جاهز من الزبون':'تصميم من Infinity Graphic',next:NEXT[pay],
-      emirate:fee?v('emirate'):'',address:fee?v('address'):'',info:design?'':$('info').value.trim(),files,createdAt:now.toISOString(),signName:'',signature:'',signedAt:''};
+    inv={no,date,lang:LANG,name:v('name'),phone:v('phone'),biz:v('biz'),activity:v('activity'),rows,sub,fee,t,
+      shipTxt,feeLbl,pay:payL(pay),design:designTxt,next:nextL(pay),
+      emirate:fee?v('emirate'):'',address:fee?v('address'):'',info:design?'':info,files,createdAt:now.toISOString(),signName:'',signature:'',signedAt:''};
     pdfFile=null;pdfJob=null;openSign();
   });
   $('editBtn').addEventListener('click',()=>{$('order').hidden=false;$('confirm').hidden=true;});
   $('sharePdf').addEventListener('click',sharePdf);
   $('dlPdf').addEventListener('click',()=>{track('invoice_pdf');downloadPdf();});
-  $('copyBtn').addEventListener('click',()=>{const b=$('copyBtn');navigator.clipboard.writeText(msg).then(()=>{b.textContent='انتسخ ✓';setTimeout(()=>b.textContent='انسخ الفاتورة',1800);}).catch(()=>{b.textContent='ما زبط، انسخ من الجدول';});});
+  $('copyBtn').addEventListener('click',()=>{const b=$('copyBtn'),l=tr('نسخ الفاتورة','Copy invoice');navigator.clipboard.writeText(msg).then(()=>{b.textContent=tr('تم النسخ ✓','Copied ✓');setTimeout(()=>b.textContent=l,1800);}).catch(()=>{b.textContent=tr('تعذّر النسخ، انسخ من الجدول','Couldn’t copy; copy from the table');});});
 }
 
 /* ---------- backend (Google Sheet) ---------- */
@@ -1037,19 +1151,19 @@ const API_URL='';
 function sendOrder(o){track('order_submitted',{order_total:o.t,pay:o.pay});if(!API_URL)return;try{fetch(API_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({action:'new',order:o})});}catch(_){}}
 
 /* ---------- dashboard ---------- */
-const STATUSES=['جديد','قيد التصميم','بالطباعة','تم التسليم'];
+const STATUSES=['جديد','قيد التصميم','قيد الطباعة','تم التسليم'];
 let dash={orders:[],q:'',st:'الكل',open:{},demo:false,err:''};
 const getKey=()=>{try{return localStorage.getItem('ig_admin_key')||''}catch(_){return ''}};
 const setKey=k=>{try{localStorage.setItem('ig_admin_key',k)}catch(_){}};
 const waNum=p=>{let d=String(p||'').replace(/\D/g,'');if(d.startsWith('00'))d=d.slice(2);if(d.startsWith('05'))d='971'+d.slice(1);else if(d.length===9&&d.startsWith('5'))d='971'+d;return d;};
 function demoOrders(){
-  const mk=(no,date,name,phone,biz,act,items,ship,em,pay,status)=>{const rows=items.map(([id,q,fold])=>{const p=byId[id];return {n:p.name+(fold?' ('+fold+')':''),qty:q*1000,unit:p.price,tot:p.price*q}});
+  const mk=(no,date,name,phone,biz,act,items,ship,em,pay,status)=>{const rows=items.map(([id,q,fold])=>{const p=byId[id];return {n:p.name+(fold?' ('+FOLDS[fold][0]+')':''),qty:q*1000,unit:p.price,tot:p.price*q}});
     const sub=rows.reduce((a,r)=>a+r.tot,0),fee=ship?DEL:0;
     return {no,date,name,phone,biz,activity:act,rows,sub,fee,t:sub+fee,shipTxt:fee?'توصيل: '+em+'، (عنوان تجريبي)':'استلام من عجمان',feeLbl:fee?'التوصيل ('+em+')':'استلام من عجمان',
-      pay:PAY[pay],design:'تصميم من Infinity Graphic',next:NEXT[pay],emirate:em,address:fee?'(عنوان تجريبي)':'',info:'',files:[],signName:name,signature:'',signedAt:date,status,demo:true};};
-  return [mk('INV-مثال-1','09/11/2026','مثال: زبون أول','0500000001','مثال: مطعم','مطاعم',[['c400f',1],['fa5',1]],true,'دبي','tabby','جديد'),
-          mk('INV-مثال-2','08/11/2026','مثال: زبون تاني','0500000002','مثال: عيادة','عيادات',[['bA4',1,'3 طيّات']],false,'','bank','قيد التصميم'),
-          mk('INV-مثال-3','07/11/2026','مثال: زبون تالت','0500000003','مثال: عقارات','عقارات',[['c760f',2]],true,'الشارقة','tamara','تم التسليم')];
+      lang:'ar',pay:payL(pay,'ar'),design:'تصميم من Infinity Graphic',next:nextL(pay,'ar'),emirate:em,address:fee?'(عنوان تجريبي)':'',info:'',files:[],signName:name,signature:'',signedAt:date,status,demo:true};};
+  return [mk('INV-مثال-1','09/11/2026','مثال: العميل الأول','0500000001','مثال: مطعم','مطاعم',[['c400f',1],['fa5',1]],true,'دبي','tabby','جديد'),
+          mk('INV-مثال-2','08/11/2026','مثال: العميل الثاني','0500000002','مثال: عيادة','عيادات',[['bA4',1,'tri']],false,'','bank','قيد التصميم'),
+          mk('INV-مثال-3','07/11/2026','مثال: العميل الثالث','0500000003','مثال: عقارات','عقارات',[['c760f',2]],true,'الشارقة','tamara','تم التسليم')];
 }
 async function loadOrders(){
   dash.err='';
@@ -1065,57 +1179,57 @@ function orderCard(o){
     <div class="oc-h"><div><b class="num" dir="ltr">${pesc(o.no)}</b><small class="num" dir="ltr">${pesc(o.date)}</small></div>
       <select class="st-sel st-${STATUSES.indexOf(o.status||'جديد')}" data-status="${pesc(o.no)}" aria-label="حالة الطلب">${STATUSES.map(x=>`<option${(o.status||'جديد')===x?' selected':''}>${x}</option>`).join('')}</select></div>
     <div class="oc-b"><div class="oc-who"><b>${pesc(o.name)}</b><span>${pesc(o.biz)} · ${pesc(o.activity)}</span><span class="num" dir="ltr" style="text-align:right">${pesc(o.phone)}</span></div>
-      <div class="oc-tot"><b class="num">${fmt(o.t)}</b><span>${pesc(o.pay)}</span></div></div>
+      <div class="oc-tot"><b class="num">${fmtA(o.t)}</b><span>${pesc(o.pay)}</span></div></div>
     <div class="oc-tags"><span>${o.rows.length} ${o.rows.length>1?'منتجات':'منتج'}</span><span>${o.fee?'🚚 توصيل · '+pesc(o.emirate):'📍 استلام عجمان'}</span><span>${o.signature?'✍️ موقّعة':'غير موقّعة'}</span>${o.demo?'<span class="demo">مثال</span>':''}</div>
     <div class="oc-d" ${open?'':'hidden'}>
-      <table class="oc-t num">${o.rows.map(r=>`<tr><td>${pesc(r.n)}</td><td>${r.qty.toLocaleString('en-US')}</td><td>${fmt(r.tot)}</td></tr>`).join('')}
-        <tr><td>${pesc(o.feeLbl)}</td><td></td><td>${o.fee?fmt(o.fee):'مجاناً'}</td></tr></table>
+      <table class="oc-t num">${o.rows.map(r=>`<tr><td>${pesc(r.n)}</td><td>${r.qty.toLocaleString('en-US')}</td><td>${fmtA(r.tot)}</td></tr>`).join('')}
+        <tr><td>${pesc(o.feeLbl)}</td><td></td><td>${o.fee?fmtA(o.fee):'مجاناً'}</td></tr></table>
       <dl><dt>الاستلام</dt><dd>${pesc(o.shipTxt)}</dd><dt>التصميم</dt><dd>${pesc(o.design)}</dd>
         ${o.info?`<dt>معلومات الكرت</dt><dd style="white-space:pre-line">${pesc(o.info)}</dd>`:''}
-        ${o.files&&o.files.length?`<dt>ملفات ذكرها الزبون</dt><dd dir="ltr" style="text-align:right">${o.files.map(pesc).join('، ')}</dd>`:''}
+        ${o.files&&o.files.length?`<dt>ملفات ذكرها العميل</dt><dd dir="ltr" style="text-align:right">${o.files.map(pesc).join('، ')}</dd>`:''}
         <dt>التوقيع</dt><dd>${o.signature?`<img class="oc-sig" src="${o.signature}" alt=""> ${pesc(o.signName)} · <span dir="ltr">${pesc(o.signedAt)}</span>`:'—'}</dd></dl>
     </div>
     <div class="oc-f"><button type="button" class="btn grad sm" data-dl="${pesc(o.no)}">⬇ الفاتورة PDF</button>
       <button type="button" class="btn out sm" data-toggle="${pesc(o.no)}">${open?'إخفاء':'التفاصيل'}</button>
-      <a class="btn wa sm" href="https://wa.me/${waNum(o.phone)}" target="_blank" rel="noopener">واتساب الزبون</a></div>
+      <a class="btn wa sm" href="https://wa.me/${waNum(o.phone)}" target="_blank" rel="noopener">واتساب العميل</a></div>
   </article>`;
 }
 function renderDash(){
   const box=$('dashBody');if(!box)return;
   if(dash.err==='key'||dash.err==='badkey'){box.innerHTML=`<div class="box" style="max-width:460px;margin-inline:auto"><div class="bt"><b>🔒</b><h3>دخول اللوحة</h3></div>
-    <label class="f">كلمة سر اللوحة<input id="adminKey" type="text" dir="ltr" autocomplete="off" placeholder="الكلمة اللي حطيتها بجدول Google"></label>
-    ${dash.err==='badkey'?'<p class="err">الكلمة غلط، جرّب مرة تانية.</p>':''}<button class="btn grad" type="button" id="keyGo" style="width:100%;margin-top:12px">ادخل</button></div>`;return;}
-  if(dash.err==='fail'){box.innerHTML=`<div class="note" style="text-align:center">ما قدرنا نجيب الطلبات هلأ. تأكد من الإنترنت وكبس تحديث.</div>`;return;}
+    <label class="f">كلمة مرور اللوحة<input id="adminKey" type="text" dir="ltr" autocomplete="off" placeholder="كلمة المرور التي حددتها في Google Apps Script"></label>
+    ${dash.err==='badkey'?'<p class="err">كلمة المرور غير صحيحة، يُرجى المحاولة مجدداً.</p>':''}<button class="btn grad" type="button" id="keyGo" style="width:100%;margin-top:12px">دخول</button></div>`;return;}
+  if(dash.err==='fail'){box.innerHTML=`<div class="note" style="text-align:center">تعذّر تحميل الطلبات حالياً. تحقّق من اتصالك بالإنترنت ثم اضغط «تحديث».</div>`;return;}
   const os=dash.orders,q=dash.q.trim().toLowerCase();
   const list=os.filter(o=>(dash.st==='الكل'||(o.status||'جديد')===dash.st)&&(!q||[o.no,o.name,o.phone,o.biz].join(' ').toLowerCase().includes(q)));
   const sales=os.reduce((a,o)=>a+(+o.t||0),0),nw=os.filter(o=>(o.status||'جديد')==='جديد').length;
-  box.innerHTML=`${dash.demo?`<div class="demo-banner"><b>هاي بيانات تجريبية.</b> الطلبات الحقيقية بتظهر هون بعد ما ينرفع الموقع وينربط بجدول Google.</div>`:''}
-    <div class="kpis"><div><span>كل الطلبات</span><b class="num">${os.length}</b></div><div><span>طلبات جديدة</span><b class="num">${nw}</b></div><div><span>المبيعات</span><b class="num">${fmt(sales)}</b></div></div>
-    <div class="dtools"><input id="dq" type="text" placeholder="دوّر برقم الفاتورة، الاسم أو الموبايل" value="${pesc(dash.q)}">
+  box.innerHTML=`${dash.demo?`<div class="demo-banner"><b>هذه بيانات تجريبية.</b> ستظهر الطلبات الفعلية هنا بعد ربط الموقع بجدول Google.</div>`:''}
+    <div class="kpis"><div><span>كل الطلبات</span><b class="num">${os.length}</b></div><div><span>طلبات جديدة</span><b class="num">${nw}</b></div><div><span>المبيعات</span><b class="num">${fmtA(sales)}</b></div></div>
+    <div class="dtools"><input id="dq" type="text" placeholder="ابحث برقم الفاتورة أو الاسم أو رقم الهاتف" value="${pesc(dash.q)}">
       <div class="seg dseg">${['الكل',...STATUSES].map(x=>`<button type="button" data-st="${x}" aria-pressed="${dash.st===x}">${x}</button>`).join('')}</div></div>
-    <div class="olist">${list.length?list.map(orderCard).join(''):'<div class="empty">ما في طلبات بهالفلتر.</div>'}</div>`;
+    <div class="olist">${list.length?list.map(orderCard).join(''):'<div class="empty">لا توجد طلبات ضمن هذا التصنيف.</div>'}</div>`;
 }
 function vAdmin(){
   return `<header class="phero gut" style="padding-block:32px"><span class="blob b1"></span><span class="blob b2"></span>
-    <div class="wrap"><h1>لوحة الطلبات</h1><p>كل الطلبات والفواتير الموقّعة بمكان واحد.</p>
+    <div class="wrap"><h1>لوحة الطلبات</h1><p>جميع الطلبات والفواتير الموقّعة في مكان واحد.</p>
     <button type="button" class="btn ghost sm" id="dashRefresh" style="margin-top:14px">↻ تحديث</button></div></header>
-  <div class="gut"><div class="wrap"><section class="sec" style="padding-top:28px" id="dashBody"><div class="empty">عم نجيب الطلبات…</div></section></div></div>`;
+  <div class="gut"><div class="wrap"><section class="sec" style="padding-top:28px" id="dashBody"><div class="empty">جارٍ تحميل الطلبات…</div></section></div></div>`;
 }
 async function bootDash(){await loadOrders();renderDash();}
 document.addEventListener('input',e=>{if(e.target.id==='dq'){dash.q=e.target.value;const pos=e.target.selectionStart;renderDash();const i=$('dq');i.focus();try{i.setSelectionRange(pos,pos)}catch(_){}}});
 document.addEventListener('change',e=>{
   const sel=e.target.closest&&e.target.closest('[data-status]');if(!sel)return;
   const o=dash.orders.find(x=>x.no===sel.dataset.status);if(!o)return;o.status=sel.value;renderDash();
-  if(API_URL&&!o.demo){try{fetch(API_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({action:'status',key:getKey(),no:o.no,status:o.status})});toast('انحفظت الحالة ✓');}catch(_){}}
+  if(API_URL&&!o.demo){try{fetch(API_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({action:'status',key:getKey(),no:o.no,status:o.status})});toast('تم حفظ الحالة ✓');}catch(_){}}
 });
 document.addEventListener('click',async e=>{
   const t=e.target.closest('button');if(!t)return;
-  if(t.id==='dashRefresh'){$('dashBody').innerHTML='<div class="empty">عم نجيب الطلبات…</div>';bootDash();return;}
+  if(t.id==='dashRefresh'){$('dashBody').innerHTML='<div class="empty">جارٍ تحميل الطلبات…</div>';bootDash();return;}
   if(t.id==='keyGo'){setKey($('adminKey').value.trim());bootDash();return;}
   if(t.dataset.st){dash.st=t.dataset.st;renderDash();return;}
   if(t.dataset.toggle){dash.open[t.dataset.toggle]=!dash.open[t.dataset.toggle];renderDash();return;}
-  if(t.dataset.dl){const o=dash.orders.find(x=>x.no===t.dataset.dl);if(!o)return;const old=t.textContent;t.textContent='عم نجهّز…';
-    try{const f=await buildPdf(o);await saveFile(f);t.textContent='نزلت ✓';}catch(err){t.textContent=err&&err.code==='declined'?old:'ما زبط';}
+  if(t.dataset.dl){const o=dash.orders.find(x=>x.no===t.dataset.dl);if(!o)return;const old=t.textContent;t.textContent='جارٍ التجهيز…';
+    try{const f=await buildPdf(o);await saveFile(f);t.textContent='تم التحميل ✓';}catch(err){t.textContent=err&&err.code==='declined'?old:'تعذّر التحميل';}
     setTimeout(()=>{t.textContent=old},1800);}
 });
 
@@ -1149,7 +1263,7 @@ function openSign(){
 function closeSign(){$('signModal').hidden=true;document.body.classList.remove('modal-open');}
 function renderSigned(){
   const el=$('invSign');if(!el||!inv)return;
-  el.innerHTML=`<span>توقيع الزبون</span><img src="${inv.signature}" alt="توقيع ${pesc(inv.signName)}"><div class="sg-meta"><b>${pesc(inv.signName)}</b><small class="num" dir="ltr">${inv.signedAt}</small></div><button type="button" class="rm" data-sign>تعديل التوقيع</button>`;
+  el.innerHTML=`<span>${tr('توقيع العميل','Customer signature')}</span><img src="${inv.signature}" alt="${tr('توقيع','Signature of')} ${pesc(inv.signName)}"><div class="sg-meta"><b>${pesc(inv.signName)}</b><small class="num" dir="ltr">${inv.signedAt}</small></div><button type="button" class="rm" data-sign>${tr('تعديل التوقيع','Edit signature')}</button>`;
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-sign]'))openSign();});
 function bindSign(){
@@ -1158,14 +1272,14 @@ function bindSign(){
   $('signBack').addEventListener('click',()=>{closeSign();$('order').hidden=false;$('confirm').hidden=true;});
   $('signOk').addEventListener('click',async()=>{
     const name=$('signName').value.trim(),err=$('signErr');
-    if(!name){err.textContent='اكتب اسمك لينزل عالفاتورة.';err.hidden=false;$('signName').focus();return;}
-    if(!padDirty){err.textContent='وقّع بإصبعك بالمربع.';err.hidden=false;return;}
-    if(!$('signAgree').checked){err.textContent='أكّد إنك راجعت الطلب.';err.hidden=false;return;}
+    if(!name){err.textContent=tr('يُرجى كتابة اسمك ليظهر على الفاتورة.','Please type your name to appear on the invoice.');err.hidden=false;$('signName').focus();return;}
+    if(!padDirty){err.textContent=tr('يُرجى التوقيع بإصبعك داخل المربع.','Please sign with your finger inside the box.');err.hidden=false;return;}
+    if(!$('signAgree').checked){err.textContent=tr('يُرجى تأكيد مراجعتك للطلب.','Please confirm you have reviewed the order.');err.hidden=false;return;}
     err.hidden=true;
     inv.signName=name;inv.signature=padImage();
     inv.signedAt=new Date().toLocaleString('en-GB',{timeZone:'Asia/Dubai',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
-    msg+=`\n\n✍️ الفاتورة موقّعة من: ${name} (${inv.signedAt})`;
-    $('waBtn').href='https://wa.me/971506892431?text='+encodeURIComponent(msg);
+    msg+=`\n\n✍️ ${tr('الفاتورة موقّعة من','Invoice signed by')}: ${name} (${inv.signedAt})`;
+    $('waBtn').href=waLink(msg);
     renderSigned();closeSign();
     pdfFile=null;pdfJob=null;
     sendOrder(inv);
@@ -1180,62 +1294,67 @@ const pesc=x=>String(x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 function pdfStatus(t){const el=$('pdfStatus');if(el)el.textContent=t;}
 function loadImg(src){return new Promise((ok,no)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=no;i.src=src;});}
 async function drawInvoice(d){
+  const EN=d.lang==='en',T=(a,e)=>EN?e:a,F=EN?fmtE:fmtA;
   const W=794,H=1123,S=2,M=48,cv=document.createElement('canvas');cv.width=W*S;cv.height=H*S;
   const c=cv.getContext('2d');c.scale(S,S);
   const AR='"Tajawal","Alexandria",Tahoma,"Noto Naskh Arabic","Geeza Pro",sans-serif',HD='"Alexandria","Tajawal",Tahoma,"Noto Sans Arabic","Geeza Pro",sans-serif';
   const INK='#16143A',MUT='#625F82',IND='#4F5CC2',SOFT='#F3F2FB',LINE='#E3E1F1';
   const R=W-M,L=M;
+  // layout is drawn right-to-left; for English every x is mirrored
+  const X=(x,w=0)=>EN?W-x-w:x,AL=a=>EN?(a==='right'?'left':a==='left'?'right':a):a;
   const font=(sz,w,f)=>c.font=`${w||400} ${sz}px ${f||AR}`;
-  const txt=(t,x,y,o={})=>{font(o.sz||15,o.w,o.f);c.fillStyle=o.col||INK;c.direction=o.ltr?'ltr':'rtl';c.textAlign=o.al||'right';c.textBaseline='alphabetic';c.fillText(String(t),x,y);};
-  const rr=(x,y,w,h,r,fill)=>{c.beginPath();c.roundRect?c.roundRect(x,y,w,h,r):c.rect(x,y,w,h);c.fillStyle=fill;c.fill();};
-  const wrap=(t,x,y,maxW,o={})=>{font(o.sz||15,o.w,o.f);c.direction='rtl';const words=String(t).split(' ');let line='',yy=y;const lh=o.lh||24;
+  const txt=(t,x,y,o={})=>{font(o.sz||15,o.w,o.f);c.fillStyle=o.col||INK;c.direction=(o.ltr||EN)?'ltr':'rtl';c.textAlign=AL(o.al||'right');c.textBaseline='alphabetic';c.fillText(String(t),X(x),y);};
+  const rr=(x,y,w,h,r,fill)=>{c.beginPath();c.roundRect?c.roundRect(X(x,w),y,w,h,r):c.rect(X(x,w),y,w,h);c.fillStyle=fill;c.fill();};
+  const fr=(x,y,w,h,col)=>{c.fillStyle=col;c.fillRect(X(x,w),y,w,h);};
+  const wrap=(t,x,y,maxW,o={})=>{font(o.sz||15,o.w,o.f);c.direction=EN?'ltr':'rtl';const words=String(t).split(' ');let line='',yy=y;const lh=o.lh||24;
     for(const w of words){const test=line?line+' '+w:w;if(c.measureText(test).width>maxW&&line){txt(line,x,yy,o);line=w;yy+=lh;}else line=test;}
     if(line)txt(line,x,yy,o);return yy;};
   c.fillStyle='#fff';c.fillRect(0,0,W,H);
   const g=c.createLinearGradient(0,0,W,0);g.addColorStop(0,'#1F8BC9');g.addColorStop(.5,'#4F5CC2');g.addColorStop(1,'#5634A4');c.fillStyle=g;c.fillRect(0,0,W,10);
   // header
-  try{const lg=await loadImg(PDF_LOGO);c.save();c.beginPath();c.arc(R-32,76,32,0,Math.PI*2);c.clip();c.drawImage(lg,R-64,44,64,64);c.restore();}catch(_){}
+  try{const lg=await loadImg(PDF_LOGO);c.save();c.beginPath();c.arc(X(R-32),76,32,0,Math.PI*2);c.clip();c.drawImage(lg,X(R-64,64),44,64,64);c.restore();}catch(_){}
   txt('Infinity Graphic',R-78,72,{sz:21,w:700,f:HD,ltr:true,al:'right'});
   txt('TO BE UNIQUE',R-78,92,{sz:10,col:MUT,ltr:true,al:'right'});
-  txt('فاتورة',L,80,{sz:36,w:800,f:HD,col:IND,al:'left'});
-  txt(d.no,L,106,{sz:13,w:700,ltr:true,al:'left'});txt('رقم الفاتورة:',L+150,106,{sz:13,col:MUT,al:'left'});
-  txt(d.date,L,126,{sz:13,w:700,ltr:true,al:'left'});txt('التاريخ:',L+150,126,{sz:13,col:MUT,al:'left'});
+  txt(T('فاتورة','Invoice'),L,80,{sz:36,w:800,f:HD,col:IND,al:'left'});
+  txt(d.no,L,106,{sz:13,w:700,ltr:true,al:'left'});txt(T('رقم الفاتورة:','Invoice no.:'),L+150,106,{sz:13,col:MUT,al:'left'});
+  txt(d.date,L,126,{sz:13,w:700,ltr:true,al:'left'});txt(T('التاريخ:','Date:'),L+150,126,{sz:13,col:MUT,al:'left'});
   // parties
   const py=154,pw=(W-2*M-14)/2,ph=112;
   const party=(x,lab,name,l2,l3)=>{rr(x,py,pw,ph,14,SOFT);const xr=x+pw-16;txt(lab,xr,py+26,{sz:12,w:600,f:HD,col:IND});txt(name,xr,py+52,{sz:17,w:700,f:HD});txt(l2,xr,py+76,{sz:14,col:MUT});txt(l3,xr,py+98,{sz:14,col:MUT,ltr:true});};
-  party(R-pw,'من','Infinity Graphic','طباعة أونلاين · الإمارات','+971 50 689 2431');
-  party(L,'إلى',d.name,d.biz+' · '+d.activity,d.phone);
+  party(R-pw,T('من','From'),'Infinity Graphic',T('خدمات طباعة إلكترونية · الإمارات','Online printing · UAE'),PHONE);
+  party(L,T('إلى','To'),d.name,d.biz+' · '+d.activity,d.phone);
   // table
   let y=py+ph+30;const cols=[R-14,R-50,L+290,L+150,L+14];
   rr(L,y,W-2*M,38,8,INK);
-  [['#',cols[0],'right'],['المنتج',cols[1],'right'],['الكمية',cols[2],'left'],['السعر لكل 1000',cols[3],'left'],['المجموع',cols[4],'left']].forEach(([t,x,al])=>txt(t,x,y+25,{sz:12,w:600,f:HD,col:'#fff',al}));
+  [['#',cols[0],'right'],[T('المنتج','Product'),cols[1],'right'],[T('الكمية','Qty'),cols[2],'left'],[T('السعر لكل 1000','Price / 1,000'),cols[3],'left'],[T('المبلغ','Amount'),cols[4],'left']].forEach(([t,x,al])=>txt(t,x,y+25,{sz:12,w:600,f:HD,col:'#fff',al}));
   y+=38;
   d.rows.forEach((r,i)=>{y+=36;txt(i+1,cols[0],y,{sz:14,col:MUT});txt(r.n,cols[1],y,{sz:15});
-    txt(r.qty.toLocaleString('en-US'),cols[2],y,{sz:15,ltr:true,al:'left'});txt(r.unit+' درهم',cols[3],y,{sz:15,al:'left'});txt(fmt(r.tot),cols[4],y,{sz:15,w:700,al:'left'});
-    y+=14;c.fillStyle=LINE;c.fillRect(L,y,W-2*M,1);});
-  // sums (left side)
+    txt(r.qty.toLocaleString('en-US'),cols[2],y,{sz:15,ltr:true,al:'left'});txt(F(r.unit),cols[3],y,{sz:15,al:'left'});txt(F(r.tot),cols[4],y,{sz:15,w:700,al:'left'});
+    y+=14;fr(L,y,W-2*M,1,LINE);});
+  // sums
   y+=34;const sx=L,sw=300,sr=L+sw;
   const sl=(a,b2,o={})=>{txt(a,sr,y,o);txt(b2,sx,y,{...o,al:'left'});y+=o.gap||28;};
-  sl('المجموع الفرعي',fmt(d.sub));sl(d.feeLbl,d.fee?fmt(d.fee):'مجاناً');
-  c.fillStyle=INK;c.fillRect(sx,y-12,sw,2);y+=18;sl('المجموع الكلي',fmt(d.t),{sz:20,w:800,f:HD,col:IND,gap:34});
+  sl(T('المجموع الفرعي','Subtotal'),F(d.sub));sl(d.feeLbl,d.fee?F(d.fee):T('مجاناً','Free'));
+  fr(sx,y-12,sw,2,INK);y+=18;sl(T('الإجمالي','Total'),F(d.t),{sz:20,w:800,f:HD,col:IND,gap:34});
   // info
   y+=10;c.strokeStyle='#C9C6E4';c.setLineDash([5,4]);c.beginPath();c.moveTo(L,y);c.lineTo(R,y);c.stroke();c.setLineDash([]);
   y+=30;const iw=(W-2*M)/3;let maxY=y;
-  [['الاستلام',d.shipTxt],['طريقة الدفع',d.pay],['التصميم',d.design]].forEach(([a,b2],i)=>{const xr=R-i*iw;txt(a,xr,y,{sz:12,w:600,f:HD,col:IND});maxY=Math.max(maxY,wrap(b2,xr,y+24,iw-16,{sz:14,w:700}));});
+  [[T('الاستلام','Delivery'),d.shipTxt],[T('طريقة الدفع','Payment method'),d.pay],[T('التصميم','Design'),d.design]].forEach(([a,b2],i)=>{const xr=R-i*iw;txt(a,xr,y,{sz:12,w:600,f:HD,col:IND});maxY=Math.max(maxY,wrap(b2,xr,y+24,iw-16,{sz:14,w:700}));});
   // next box
-  y=maxY+26;const nt='الخطوة الجاية: '+d.next+' بعدها المدقق بيراجع التصميم وبياخد موافقتك قبل الطباعة.';
+  y=maxY+26;const nt=T('الخطوة التالية: ','Next step: ')+d.next+' '+T('بعد ذلك يراجع مختصّ التدقيق التصميم ويحصل على موافقتك قبل الطباعة.','A proofreader will then review the design and obtain your approval before printing.');
   font(14);const lines=Math.ceil(c.measureText(nt).width/(W-2*M-36))+1;const nh=lines*24+22;
   rr(L,y,W-2*M,nh,12,'#EEF0FB');wrap(nt,R-18,y+30,W-2*M-36,{sz:14,lh:24});
   // signature
   const sy=H-210,sbw=300,sbx=R-sbw;
-  rr(sbx,sy,sbw,124,12,SOFT);txt('توقيع الزبون',R-16,sy+26,{sz:12,w:600,f:HD,col:IND});
-  if(d.signature){try{const si=await loadImg(d.signature);const sw=Math.min(200,si.width*(60/si.height)),sh=sw*si.height/si.width;c.drawImage(si,sbx+(sbw-sw)/2,sy+32,sw,Math.min(sh,62));}catch(_){}
-    c.fillStyle='#C9C6E4';c.fillRect(sbx+16,sy+96,sbw-32,1);txt(d.signName,R-16,sy+116,{sz:13,w:700});txt(d.signedAt||d.date,sbx+16,sy+116,{sz:12,col:MUT,ltr:true,al:'left'});}
-  else{txt('غير موقّعة',sbx+sbw/2,sy+76,{sz:14,col:MUT,al:'center'});}
-  txt('التوقيع بيأكّد مراجعة الطلب والموافقة على الأسعار.',L,sy+26,{sz:12,col:MUT,al:'left'});
+  rr(sbx,sy,sbw,124,12,SOFT);txt(T('توقيع العميل','Customer signature'),R-16,sy+26,{sz:12,w:600,f:HD,col:IND});
+  if(d.signature){try{const si=await loadImg(d.signature);const sw2=Math.min(200,si.width*(60/si.height)),sh=sw2*si.height/si.width;c.drawImage(si,X(sbx+(sbw-sw2)/2,sw2),sy+32,sw2,Math.min(sh,62));}catch(_){}
+    fr(sbx+16,sy+96,sbw-32,1,'#C9C6E4');txt(d.signName,R-16,sy+116,{sz:13,w:700});txt(d.signedAt||d.date,sbx+16,sy+116,{sz:12,col:MUT,ltr:true,al:'left'});}
+  else{txt(T('غير موقّعة','Not signed'),sbx+sbw/2,sy+76,{sz:14,col:MUT,al:'center'});}
+  txt(T('يؤكّد التوقيع مراجعة الطلب والموافقة على الأسعار.','Signature confirms the order and prices were approved.'),L,sy+26,{sz:12,col:MUT,al:'left'});
   // footer
-  c.fillStyle=LINE;c.fillRect(L,H-62,W-2*M,1);
-  txt('شكراً لثقتك · Infinity Graphic · واتساب واتصال',W/2+70,H-34,{sz:12,col:MUT,al:'center'});txt('+971 50 689 2431',W/2-150,H-34,{sz:12,col:MUT,ltr:true,al:'center'});
+  fr(L,H-62,W-2*M,1,LINE);
+  if(EN)txt('Thank you for your business · Infinity Graphic · '+PHONE,W/2,H-34,{sz:12,col:MUT,al:'center'});
+  else{txt('شكراً لثقتكم · Infinity Graphic · واتساب وهاتف',W/2+70,H-34,{sz:12,col:MUT,al:'center'});txt(PHONE,W/2-150,H-34,{sz:12,col:MUT,ltr:true,al:'center'});}
   return cv;
 }
 async function buildPdf(d){
@@ -1244,8 +1363,8 @@ async function buildPdf(d){
   const cv=await drawInvoice(d);
   const pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',orientation:'portrait'});
   pdf.addImage(cv.toDataURL('image/jpeg',.94),'JPEG',0,0,210,297);
-  pdf.setProperties({title:'فاتورة '+d.no,author:'Infinity Graphic'});
-  return new File([pdf.output('blob')],`فاتورة-${String(d.no).replace(/[^\w\u0600-\u06FF-]/g,'')}.pdf`,{type:'application/pdf'});
+  pdf.setProperties({title:(d.lang==='en'?'Invoice ':'فاتورة ')+d.no,author:'Infinity Graphic'});
+  return new File([pdf.output('blob')],`${d.lang==='en'?'Invoice':'فاتورة'}-${String(d.no).replace(/[^\w\u0600-\u06FF-]/g,'')}.pdf`,{type:'application/pdf'});
 }
 function preparePdf(){
   if(!inv)return Promise.reject(new Error('no invoice'));
@@ -1267,27 +1386,28 @@ async function saveFile(f){
   const url=URL.createObjectURL(f),a=document.createElement('a');
   a.href=url;a.download=f.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);
 }
-const saveErr=e=>e&&e.code==='declined'?'':'ما زبط التحميل من هالمتصفح. كبس "ابعتها كرسالة" وبتوصلنا الفاتورة كاملة.';
+const failMsg=()=>tr('تعذّر تجهيز ملف PDF على هذا المتصفح. اضغط «أرسلها كرسالة نصية» لتصلنا الفاتورة كاملة.','Couldn’t create the PDF in this browser. Tap “Send as a text message” and we will receive the full invoice.');
+const saveErr=e=>e&&e.code==='declined'?'':failMsg();
 async function sharePdf(){
   if(inv&&!inv.signature){openSign();return;}
   let f;
-  try{pdfStatus('عم نجهّز الفاتورة…');f=pdfFile||await preparePdf();}
-  catch(e){pdfStatus('ما زبط تجهيز الـ PDF من هالمتصفح. كبس "ابعتها كرسالة" وبتوصلنا الفاتورة كاملة.');return;}
+  try{pdfStatus(tr('جارٍ تجهيز الفاتورة…','Preparing your invoice…'));f=pdfFile||await preparePdf();}
+  catch(e){pdfStatus(failMsg());return;}
   try{
     if(navigator.canShare&&navigator.canShare({files:[f]})){
-      await navigator.share({files:[f],title:'فاتورة '+inv.no,text:msg});
-      pdfStatus('تمام ✓ إذا ما اخترت واتساب، ابعت الملف على 050 689 2431');return;
+      await navigator.share({files:[f],title:tr('فاتورة ','Invoice ')+inv.no,text:msg});
+      pdfStatus(tr('تم ✓ إذا لم تختر واتساب، يُرجى إرسال الملف إلى 050 689 2431','Done ✓ If you didn’t choose WhatsApp, please send the file to 050 689 2431'));return;
     }
   }catch(e){if(e&&e.name==='AbortError'){pdfStatus('');return;}}
-  try{await saveFile(f);pdfStatus('نزلت الفاتورة PDF ✓ ابعتها على واتساب لـ 050 689 2431، أو كبس "ابعتها كرسالة".');}
+  try{await saveFile(f);pdfStatus(tr('تم تحميل الفاتورة PDF ✓ أرسلها عبر واتساب إلى 050 689 2431، أو اضغط «أرسلها كرسالة نصية».','Invoice PDF downloaded ✓ Send it on WhatsApp to 050 689 2431, or tap “Send as a text message”.'));}
   catch(e){pdfStatus(saveErr(e));}
 }
 async function downloadPdf(){
   if(inv&&!inv.signature){openSign();return;}
   let f;
-  try{pdfStatus('عم نجهّز الفاتورة…');f=pdfFile||await preparePdf();}
-  catch(e){pdfStatus('ما زبط تجهيز الـ PDF من هالمتصفح. كبس "ابعتها كرسالة" وبتوصلنا الفاتورة كاملة.');return;}
-  try{await saveFile(f);pdfStatus('نزلت الفاتورة PDF ✓');}catch(e){pdfStatus(saveErr(e));}
+  try{pdfStatus(tr('جارٍ تجهيز الفاتورة…','Preparing your invoice…'));f=pdfFile||await preparePdf();}
+  catch(e){pdfStatus(failMsg());return;}
+  try{await saveFile(f);pdfStatus(tr('تم تحميل الفاتورة PDF ✓','Invoice PDF downloaded ✓'));}catch(e){pdfStatus(saveErr(e));}
 }
 // keyboard open → move the sticky bar out of the way and keep the field visible
 document.addEventListener('focusin',e=>{
@@ -1306,14 +1426,15 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)
   else if(h.startsWith('tel:'))track('call_click',{from:location.hash||'#home'});},true);
 document.addEventListener('click',e=>{
   const t=e.target.closest('button'); if(!t)return;
+  if(t.hasAttribute('data-lang')){setLang(LANG==='en'?'ar':'en');return;}
   if(t.dataset.tab){tab=t.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>x.setAttribute('aria-selected',x===t));$('grid').innerHTML=P.filter(p=>tab==='all'||p.g===tab).map(prodCard).join('');observe();return;}
   if(t.dataset.pq){const id=location.hash.slice(3),d=drafts[id];d.q=Math.max(1,Math.min(20,d.q+ +t.dataset.pq));$('pq').textContent=(d.q*1000).toLocaleString('en-US');$('ptot').textContent=fmt(byId[id].price*d.q);return;}
   if(t.dataset.fold){const id=location.hash.slice(3);drafts[id].fold=t.dataset.fold;document.querySelectorAll('[data-fold]').forEach(x=>x.setAttribute('aria-pressed',x===t));return;}
   if(t.dataset.order){track('buy_now',{product:t.dataset.order});addFromDraft(t.dataset.order);location.hash='order';return;}
-  if(t.dataset.add){track('add_to_cart',{product:t.dataset.add});addFromDraft(t.dataset.add);toast('انضاف لطلبك ✓');return;}
+  if(t.dataset.add){track('add_to_cart',{product:t.dataset.add});addFromDraft(t.dataset.add);toast(tr('تمت الإضافة إلى طلبك ✓','Added to your order ✓'));return;}
   if(t.dataset.cq){const c=cart[t.dataset.id];c.q=Math.max(1,Math.min(20,c.q+ +t.dataset.cq));renderCart();return;}
   if(t.dataset.rm){delete cart[t.dataset.rm];renderCart();return;}
-  if(t.dataset.quick){cart[t.dataset.quick]={q:1,fold:'3 طيّات'};renderCart();return;}
+  if(t.dataset.quick){cart[t.dataset.quick]={q:1,fold:'tri'};renderCart();return;}
 });
 
 let io;
@@ -1333,6 +1454,8 @@ function route(){
   else if(h.startsWith('cat-')&&catById[h.slice(4)]){view='products';html=vCat(catById[h.slice(4)]);}
   else if(h.startsWith('p-')&&byId[h.slice(2)]){view='products';html=vProduct(byId[h.slice(2)]);}
   else html=vHome();
+  // the orders dashboard is internal and always in Arabic
+  app.dir=view==='admin'||LANG==='ar'?'rtl':'ltr';app.lang=view==='admin'?'ar':LANG;
   app.innerHTML=`<div class="view">${html}</div>`;
   document.body.classList.toggle('on-order',view==='order');
   document.body.classList.toggle('on-admin',view==='admin');
@@ -1346,6 +1469,7 @@ function route(){
   else window.scrollTo(0,0);
 }
 addEventListener('hashchange',route);
+renderShell();
 route();
 </script>
 
