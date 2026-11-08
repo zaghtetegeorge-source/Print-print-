@@ -598,6 +598,27 @@ body.modal-open{overflow:hidden}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rot span:first-child{opacity:1;transform:none}.js .reveal:not(.in){transform:none}}
 
+/* legal pages */
+.legal{max-width:780px;margin-inline:auto;padding-top:clamp(28px,5vw,48px)}
+.legal h2{font-size:1.2rem;margin:30px 0 8px;color:var(--ink)}
+.legal p,.legal li{color:var(--ink);font-size:1rem;line-height:1.85}
+.legal p{margin:0 0 10px}
+.legal ul{margin:0 0 12px;padding-inline-start:22px}
+.legal li{margin-bottom:6px}
+.legal li::marker{color:var(--indigo)}
+.legal a{color:var(--indigo)}
+.legal-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.legal-tabs a{text-decoration:none;font-family:var(--head);font-weight:600;font-size:.88rem;padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.legal-tabs a[aria-current="page"]{background:var(--grad);border-color:transparent;color:#fff}
+.legal-date{color:var(--muted);font-size:.88rem}
+.legal-contact{margin-top:34px;padding:18px 20px;border-radius:16px;background:var(--soft)}
+.legal-contact h2{margin-top:0}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin-top:14px}
+.foot-links a{color:#C9C7E6;text-decoration:none;font-size:.85rem}
+.foot-links a:hover{color:#fff;text-decoration:underline}
+.foot-copy{margin-top:10px;font-size:.78rem;color:#8F8CB8}
+.agree-note{text-align:center;color:var(--muted);font-size:.85rem;margin:14px auto 0;max-width:640px}
+.agree-note a{color:var(--indigo)}
 /* language switch + LTR (English) adjustments */
 .nav-r{display:flex;align-items:center;gap:8px}
 .lang{font-family:var(--head);font-weight:700;font-size:.82rem;line-height:1;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 12px;cursor:pointer}
@@ -772,7 +793,9 @@ function renderShell(){
     <a class="nav-cta" href="#order">${tr('اطلب الآن','Order now')}<span class="cnt num" id="cnt" hidden>0</span></a></div></div>`;
   $('tabbar').innerHTML=links;
   $('foot').innerHTML=`<div class="brand"><img src="img/logo.jpg" alt=""><div><b>Infinity Graphic</b><small>TO BE UNIQUE</small></div></div>
-    ${tr('خدمات طباعة إلكترونية في الإمارات · واتساب وهاتف','Online printing across the UAE · WhatsApp & phone')} <span dir="ltr">${PHONE}</span>`;
+    ${tr('خدمات طباعة إلكترونية في الإمارات · واتساب وهاتف','Online printing across the UAE · WhatsApp & phone')} <span dir="ltr">${PHONE}</span>
+    <div class="foot-links">${LEGAL_NAV().map(([k,l])=>`<a href="#${k}">${l}</a>`).join('')}</div>
+    <div class="foot-copy">© ${new Date().getFullYear()} Infinity Graphic. ${tr('جميع الحقوق محفوظة.','All rights reserved.')}</div>`;
   $('fab').setAttribute('aria-label',tr('تواصل معنا عبر واتساب','Chat with us on WhatsApp'));
   $('fab').innerHTML=`<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
   <span>${tr('واتساب','WhatsApp')}</span>`;
@@ -1041,6 +1064,7 @@ function vOrder(){
         <div class="note"><b>✓ ${tr('تدقيق قبل الطباعة.','Proofing before print.')}</b> ${tr('يمرّ كل طلب على مختصّ تدقيق يراجع الملفات والبيانات والدفع، ولا نطبع شيئاً قبل موافقتك.','Every order is checked by a proofreader who reviews files, details and payment. Nothing is printed without your approval.')}</div></div>
     </div>
     <div class="bar"><div class="in"><div><div class="tot num" id="total">${fmt(0)}</div><div class="sub" id="count"></div></div><button class="btn grad" type="submit">${tr('تأكيد وإصدار الفاتورة','Confirm & issue invoice')}</button></div><p class="err" id="err" hidden></p></div>
+    <p class="agree-note">${tr('بتأكيد الطلب فإنك توافق على <a href="#terms">الشروط والأحكام</a> و<a href="#returns">سياسة الإرجاع والاسترداد</a> و<a href="#privacy">سياسة الخصوصية</a>.','By confirming your order, you agree to our <a href="#terms">Terms & Conditions</a>, <a href="#returns">Return & Refund Policy</a> and <a href="#privacy">Privacy Policy</a>.')}</p>
   </form>
   <section class="sec" id="confirm" hidden style="padding-top:clamp(24px,5vw,48px)">
     <div class="inv-head"><div class="big">✓</div><h2>${tr('فاتورتك جاهزة','Your invoice is ready')}</h2><p>${tr('أرسلها إلينا عبر واتساب لنبدأ التصميم فوراً، وأرفق ملفات التصميم أو الشعار في المحادثة نفسها.','Send it to us on WhatsApp so we can start the design right away, and attach your design files or logo in the same chat.')}</p></div>
@@ -1423,6 +1447,98 @@ document.addEventListener('focusout',()=>{setTimeout(()=>{const a=document.activ
 // warm the namespace early so the click stays fast
 downloadsNS();
 
+/* ---------- legal pages ---------- */
+// each section: [heading, [paragraph | [list items]]]
+const LEGAL_UPDATED=['8 نوفمبر 2026','8 November 2026'];
+const LEGAL={
+ terms:{
+  ar:{title:'الشروط والأحكام',lead:'تنظّم هذه الشروط استخدامك لموقع Infinity Graphic وطلبك لمنتجاتنا وخدماتنا. يُرجى قراءتها بعناية قبل تقديم أي طلب.',s:[
+   ['1. القبول بالشروط',['يُشار إلى Infinity Graphic في هذه الشروط بـ«نحن» أو «الشركة»، وإلى مستخدم الموقع أو صاحب الطلب بـ«العميل». باستخدامك للموقع أو تقديمك طلباً، فإنك تقرّ بأنك قرأت هذه الشروط ووافقت عليها، إلى جانب سياسة الخصوصية وسياسة الإرجاع والاسترداد.']],
+   ['2. المنتجات والأسعار',[['الأسعار معروضة بالدرهم الإماراتي، وتُحسب لكل 1000 قطعة ما لم يُذكر خلاف ذلك.','تُحدَّد ضريبة القيمة المضافة، إن وُجدت، في الفاتورة.','نحتفظ بحق تعديل الأسعار أو المنتجات في أي وقت، ويبقى السعر المعتمد هو الوارد في الفاتورة الموقّعة.','الصور المعروضة توضيحية، وقد تختلف الألوان المطبوعة اختلافاً طفيفاً عمّا يظهر على الشاشة بسبب اختلاف إعدادات الشاشات وطبيعة الطباعة.']]],
+   ['3. تقديم الطلب وتأكيده',['يُعدّ الطلب مؤكداً بعد توقيع العميل على الفاتورة إلكترونياً وإتمام الدفع. ويُعدّ التوقيع الإلكتروني إقراراً من العميل بمراجعة المنتجات والكميات والأسعار وبيانات التوصيل والموافقة عليها.']],
+   ['4. الدفع',[['طرق الدفع المتاحة: تابي، تمارا، البطاقة البنكية، والتحويل البنكي.','يُسدَّد المبلغ كاملاً قبل البدء بالطباعة.','تخضع خدمات التقسيط عبر تابي وتمارا لشروط وأحكام مزوّدي هذه الخدمات.','لا نجمع بيانات البطاقات البنكية عبر الموقع، إذ تتم عمليات الدفع من خلال روابط مزوّدي الدفع المعتمدين.']]],
+   ['5. التصميم والملفات',[['يتحمّل العميل مسؤولية صحة جميع البيانات والنصوص والأرقام الواردة في التصميم أو المرسلة إلينا.','يقرّ العميل بامتلاكه الحق في استخدام الشعارات والصور والعلامات التجارية التي يرسلها، ويتحمّل وحده أي مسؤولية تنشأ عن ذلك.','نرسل للعميل نموذجاً (بروفة) للموافقة عليه قبل الطباعة، ولا نطبع أي طلب قبل هذه الموافقة.','بعد اعتماد البروفة، لا نتحمّل مسؤولية أي أخطاء وردت فيها.','قد تتأثر جودة الطباعة إذا كانت الملفات المرسلة منخفضة الدقة، وسننبّه العميل إلى ذلك قبل الطباعة.','قد تُطبَّق رسوم إضافية على التعديلات الجوهرية المطلوبة بعد اعتماد التصميم.']]],
+   ['6. الإنتاج والتوصيل',[['تبدأ مدة التنفيذ بعد اعتماد التصميم وإتمام الدفع، وتُعدّ المواعيد المذكورة تقديرية.','رسوم التوصيل 25 درهماً إلى جميع الإمارات، والاستلام من مقرّنا في عجمان مجاني.','يتحمّل العميل مسؤولية صحة عنوان التوصيل ورقم التواصل، وقد تُطبَّق رسوم إضافية لإعادة التوصيل.','لا نتحمّل مسؤولية التأخير الناتج عن ظروف خارجة عن إرادتنا.','يُرجى فحص الطلب عند استلامه وإبلاغنا بأي ملاحظة وفق سياسة الإرجاع والاسترداد.']]],
+   ['7. إلغاء الطلب',['يمكن إلغاء الطلب قبل بدء الطباعة مع استرداد المبلغ المدفوع، ويحق لنا خصم تكلفة التصميم إذا كان العمل عليه قد أُنجز. ولا يمكن إلغاء الطلب بعد بدء الطباعة نظراً لأن المنتجات تُصنَّع خصيصاً للعميل.']],
+   ['8. خدمات التسويق الرقمي',[['تُحدَّد تفاصيل الخدمات ومدتها وأسعارها باتفاق مستقل مع العميل.','ميزانية الإعلانات المدفوعة لمنصات الإعلان منفصلة عن رسوم إدارة الخدمة ما لم يُتفق على خلاف ذلك.','نلتزم ببذل أفضل جهد مهني، دون أن نضمن نتائج محددة كعدد المتابعين أو المبيعات.']]],
+   ['9. الملكية الفكرية',['جميع محتويات الموقع من نصوص وتصاميم وصور وشعارات مملوكة لـ Infinity Graphic أو مستخدمة بترخيص، ولا يجوز نسخها أو استخدامها دون إذن مسبق. وتُسلَّم التصاميم التي نُعدّها للعميل لاستخدامه الخاص بعد سداد قيمتها كاملة. وما لم يطلب العميل خلاف ذلك، يجوز لنا عرض نماذج من الأعمال المنفّذة ضمن معرض أعمالنا.']],
+   ['10. حدود المسؤولية',['في جميع الأحوال، لا تتجاوز مسؤوليتنا القيمة المدفوعة للطلب المعني، ولا نتحمّل أي أضرار غير مباشرة أو تبعية ناتجة عن استخدام منتجاتنا أو خدماتنا.']],
+   ['11. القانون الواجب التطبيق',['تخضع هذه الشروط لقوانين دولة الإمارات العربية المتحدة وتُفسَّر وفقاً لها، وتختص المحاكم المختصة في الدولة بالنظر في أي نزاع ينشأ عنها.']],
+   ['12. تعديل الشروط',['يحق لنا تعديل هذه الشروط في أي وقت، ويسري التعديل من تاريخ نشره على هذه الصفحة. ويُطبَّق على كل طلب الشروطُ السارية وقت تقديمه.']]]},
+  en:{title:'Terms & Conditions',lead:'These terms govern your use of the Infinity Graphic website and your orders for our products and services. Please read them carefully before placing an order.',s:[
+   ['1. Acceptance',['In these terms, “we”, “us” or “the company” refers to Infinity Graphic, and “the customer” refers to any website user or person placing an order. By using the website or placing an order, you confirm that you have read and agree to these terms, together with our Privacy Policy and Return & Refund Policy.']],
+   ['2. Products and prices',[['Prices are shown in UAE dirhams (AED) per 1,000 pieces unless stated otherwise.','VAT, where applicable, is shown on the invoice.','We may change prices or products at any time; the price that applies is the one on your signed invoice.','Images are for illustration. Printed colours may differ slightly from what you see on screen due to display settings and the nature of printing.']]],
+   ['3. Placing and confirming an order',['An order is confirmed once the customer has signed the invoice electronically and completed payment. The electronic signature confirms that the customer has reviewed and approved the products, quantities, prices and delivery details.']],
+   ['4. Payment',[['Available payment methods: Tabby, Tamara, bank card and bank transfer.','Full payment is required before printing begins.','Instalment services from Tabby and Tamara are subject to those providers’ own terms.','We do not collect card details on this website; payments are processed through links from approved payment providers.']]],
+   ['5. Design and files',[['The customer is responsible for the accuracy of all details, text and numbers in the design or sent to us.','The customer confirms they have the right to use any logos, images and trademarks they send and bears sole responsibility for them.','We send a proof for the customer’s approval before printing, and nothing is printed without that approval.','Once a proof is approved, we are not responsible for any errors it contains.','Low-resolution files may affect print quality; we will alert the customer before printing.','Additional charges may apply to substantial changes requested after the design is approved.']]],
+   ['6. Production and delivery',[['Production time starts after design approval and payment, and any stated timelines are estimates.','Delivery costs AED 25 to all emirates; pickup from our Ajman location is free.','The customer is responsible for providing a correct address and contact number; re-delivery may incur extra charges.','We are not liable for delays caused by circumstances beyond our control.','Please inspect your order on receipt and report any issue in line with our Return & Refund Policy.']]],
+   ['7. Cancellation',['An order may be cancelled before printing begins, with a refund of the amount paid; we may deduct the cost of any design work already completed. Orders cannot be cancelled once printing has started, as products are made specifically for the customer.']],
+   ['8. Digital marketing services',[['Service details, duration and pricing are set out in a separate agreement with the customer.','Advertising budgets paid to ad platforms are separate from our management fees unless agreed otherwise.','We commit to our best professional effort but do not guarantee specific results such as follower counts or sales.']]],
+   ['9. Intellectual property',['All website content, including text, designs, images and logos, is owned by or licensed to Infinity Graphic and may not be copied or used without prior permission. Designs we create are handed over for the customer’s own use once paid in full. Unless the customer asks otherwise, we may display samples of completed work in our portfolio.']],
+   ['10. Limitation of liability',['In all cases, our liability is limited to the amount paid for the relevant order, and we are not liable for any indirect or consequential losses arising from the use of our products or services.']],
+   ['11. Governing law',['These terms are governed by and interpreted in accordance with the laws of the United Arab Emirates, and the competent UAE courts have jurisdiction over any dispute arising from them.']],
+   ['12. Changes to these terms',['We may update these terms at any time; changes take effect when published on this page. Each order is governed by the terms in force when it was placed.']]]}
+ },
+ privacy:{
+  ar:{title:'سياسة الخصوصية',lead:'نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضّح هذه السياسة البيانات التي نجمعها، وكيفية استخدامها وحمايتها، وحقوقك المتعلقة بها.',s:[
+   ['1. البيانات التي نجمعها',['عند تقديم طلب، نجمع البيانات التي تُدخلها بنفسك، وتشمل:',['الاسم الكامل ورقم الهاتف أو واتساب.','اسم النشاط التجاري ونوعه.','الإمارة وعنوان التوصيل عند اختيار التوصيل.','المعلومات المطلوب طباعتها على البطاقة وأسماء الملفات التي تذكرها.','تفاصيل الطلب والفاتورة، واسم الموقّع وصورة التوقيع الإلكتروني.'],'لا نجمع بيانات البطاقات البنكية عبر الموقع؛ إذ تتم عمليات الدفع لدى مزوّدي الدفع مباشرة.']],
+   ['2. بيانات الاستخدام',['لتحسين الموقع وفهم كيفية استخدامه، نستعين بالأدوات التالية:',['Vercel Web Analytics: إحصاءات مجمّعة عن عدد الزيارات والصفحات والدول ونوع الجهاز، دون استخدام ملفات تعريف ارتباط للتتبّع.','Microsoft Clarity: تسجيل التفاعلات مع الموقع كالنقرات والتمرير وخرائط الحرارة، مع إخفاء ما يُكتب في حقول الإدخال تلقائياً.','التخزين المحلي في متصفحك: لحفظ تفضيلاتك مثل لغة الموقع.']]],
+   ['3. كيف نستخدم بياناتك',[['تنفيذ طلبك وإصدار الفاتورة وتوصيل المنتجات.','التواصل معك عبر واتساب أو الهاتف بشأن طلبك والتصميم والدفع.','الاحتفاظ بسجلات الطلبات لأغراض محاسبية وقانونية.','تحسين الموقع وتجربة الاستخدام.'],'لا نبيع بياناتك الشخصية ولا نؤجّرها لأي طرف.']],
+   ['4. مشاركة البيانات',['نشارك بياناتك فقط بالقدر اللازم لتقديم خدماتنا، ومع الجهات التالية:',['مزوّدو الدفع (تابي، تمارا، البنوك) لإتمام عمليات الدفع.','شركات التوصيل لإيصال طلبك.','مزوّدو الخدمات التقنية: Vercel لاستضافة الموقع، وGoogle لتخزين سجلات الطلبات، وMicrosoft Clarity لتحليل الاستخدام، وواتساب (Meta) للمراسلة.','الجهات الرسمية عند وجود التزام قانوني بذلك.'],'قد تُعالَج بعض هذه البيانات على خوادم خارج دولة الإمارات وفق سياسات الخصوصية الخاصة بهذه الجهات.']],
+   ['5. مدة الاحتفاظ بالبيانات',['نحتفظ ببياناتك طوال المدة اللازمة لتنفيذ طلبك وتقديم الدعم، وللمدة التي تفرضها المتطلبات المحاسبية والقانونية، ثم نحذفها أو نجعلها مجهولة الهوية.']],
+   ['6. حماية البيانات',['نتخذ تدابير تقنية وتنظيمية معقولة لحماية بياناتك من الوصول غير المصرّح به أو الفقدان أو التعديل، ويقتصر الوصول إلى سجلات الطلبات على الأشخاص المخوّلين. ومع ذلك، لا يمكن ضمان أمان أي وسيلة نقل أو تخزين إلكترونية بشكل مطلق.']],
+   ['7. حقوقك',['وفقاً للقوانين المعمول بها في دولة الإمارات، ومنها المرسوم بقانون اتحادي رقم 45 لسنة 2021 بشأن حماية البيانات الشخصية، يحق لك:',['طلب الاطلاع على بياناتك الشخصية لدينا.','طلب تصحيح بياناتك أو تحديثها.','طلب حذف بياناتك، ما لم نكن ملزمين قانوناً بالاحتفاظ بها.','الاعتراض على معالجة بياناتك لأغراض تحليل الاستخدام.'],'لممارسة أي من هذه الحقوق، تواصل معنا عبر واتساب أو الهاتف.']],
+   ['8. ملفات تعريف الارتباط',['يستخدم الموقع التخزين المحلي في المتصفح لحفظ تفضيلاتك، وقد تستخدم أداة Microsoft Clarity ملفات تعريف ارتباط لتحليل الاستخدام. يمكنك حذفها أو تعطيلها من إعدادات متصفحك، وقد يؤثر ذلك على بعض وظائف الموقع.']],
+   ['9. تعديل السياسة',['قد نحدّث هذه السياسة من وقت لآخر، ويسري التحديث من تاريخ نشره على هذه الصفحة.']]]},
+  en:{title:'Privacy Policy',lead:'We respect your privacy and are committed to protecting your personal data. This policy explains what we collect, how we use and protect it, and your rights.',s:[
+   ['1. Data we collect',['When you place an order, we collect the information you enter, including:',['Full name and phone or WhatsApp number.','Business name and type.','Emirate and delivery address, if you choose delivery.','Information to be printed on your card and the names of files you mention.','Order and invoice details, the signer’s name and the electronic signature image.'],'We do not collect card details on this website; payments are made directly with payment providers.']],
+   ['2. Usage data',['To improve the website and understand how it is used, we rely on:',['Vercel Web Analytics: aggregated statistics on visits, pages, countries and device types, without tracking cookies.','Microsoft Clarity: records interactions such as clicks, scrolling and heatmaps, with text typed into form fields masked automatically.','Local storage in your browser: to remember preferences such as the site language.']]],
+   ['3. How we use your data',[['To process your order, issue the invoice and deliver your products.','To contact you on WhatsApp or by phone about your order, design and payment.','To keep order records for accounting and legal purposes.','To improve the website and user experience.'],'We do not sell or rent your personal data to anyone.']],
+   ['4. Sharing your data',['We share your data only as needed to provide our services, with:',['Payment providers (Tabby, Tamara, banks) to process payments.','Delivery companies to deliver your order.','Technical service providers: Vercel for hosting, Google for storing order records, Microsoft Clarity for usage analytics, and WhatsApp (Meta) for messaging.','Authorities, where we are legally required to do so.'],'Some of this data may be processed on servers outside the UAE under these providers’ own privacy policies.']],
+   ['5. Data retention',['We keep your data for as long as needed to fulfil your order and provide support, and for as long as accounting and legal requirements demand, after which we delete or anonymise it.']],
+   ['6. Data security',['We take reasonable technical and organisational measures to protect your data from unauthorised access, loss or alteration, and access to order records is limited to authorised people. However, no method of electronic transmission or storage is completely secure.']],
+   ['7. Your rights',['Under applicable UAE law, including Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data, you have the right to:',['Request access to the personal data we hold about you.','Request correction or updating of your data.','Request deletion of your data, unless we are legally required to keep it.','Object to the processing of your data for usage analytics.'],'To exercise any of these rights, contact us on WhatsApp or by phone.']],
+   ['8. Cookies',['The website uses your browser’s local storage to remember your preferences, and Microsoft Clarity may use cookies for usage analytics. You can delete or block them in your browser settings, which may affect some features.']],
+   ['9. Changes to this policy',['We may update this policy from time to time; changes take effect when published on this page.']]]}
+ },
+ returns:{
+  ar:{title:'سياسة الإرجاع والاسترداد',lead:'نحرص على أن يصلك طلبك بأعلى جودة. ونظراً لأن منتجاتنا تُطبع خصيصاً لكل عميل، توضّح هذه السياسة الحالات التي يحق فيها إعادة الطباعة أو الاسترداد.',s:[
+   ['1. طبيعة المنتجات',['جميع منتجاتنا مطبوعات مخصّصة تحمل بيانات العميل وتصميمه، ولذلك لا نقبل إرجاعها أو استبدالها بسبب تغيير الرأي أو عدم الحاجة إليها بعد الطباعة.']],
+   ['2. الحالات المؤهلة لإعادة الطباعة أو الاسترداد',[['وجود عيب واضح في الطباعة، كتلطّخ الحبر أو انحراف الألوان بشكل كبير عن البروفة المعتمدة.','اختلاف المنتج عن الطلب المعتمد، كنوع الورق أو السماكة أو التشطيب أو المقاس.','نقص في الكمية المستلمة عن الكمية المدفوعة.','تلف المنتج أثناء التوصيل.']]],
+   ['3. الحالات غير المؤهلة',[['الأخطاء الإملائية أو أخطاء الأرقام والبيانات الواردة في البروفة التي اعتمدها العميل.','الاختلاف الطفيف في الألوان بين الشاشة والمطبوع.','ضعف الجودة الناتج عن ملفات منخفضة الدقة أرسلها العميل رغم تنبيهه.','التفاوت الطفيف في القص أو الطي ضمن المعايير المعتادة في الطباعة.','طلبات الإلغاء بعد بدء الطباعة.']]],
+   ['4. مدة الإبلاغ',['يُرجى إبلاغنا بأي ملاحظة خلال 3 أيام من تاريخ الاستلام، مع إرفاق رقم الفاتورة وصور واضحة للمنتج، وذلك عبر واتساب أو الهاتف. وقد لا نتمكن من معالجة البلاغات الواردة بعد هذه المدة.']],
+   ['5. معالجة البلاغ',['بعد مراجعة البلاغ والتحقق منه، نقدّم أحد الحلول التالية:',['إعادة طباعة الطلب أو الجزء المعيب دون أي تكلفة إضافية، وهو الحل الذي نعتمده أولاً.','استرداد كامل أو جزئي للمبلغ بحسب حجم المشكلة.'],'وقد نطلب إعادة المطبوعات المعيبة أو صوراً إضافية لها قبل اعتماد الحل.']],
+   ['6. استرداد المبالغ',[['يتم الاسترداد بالوسيلة نفسها المستخدمة في الدفع.','للطلبات المدفوعة عبر تابي أو تمارا، يتم الاسترداد وفق إجراءات مزوّد الخدمة.','نبدأ إجراءات الاسترداد خلال مدة تصل إلى 14 يوم عمل من الموافقة، وتعتمد مدة ظهور المبلغ في حسابك على البنك أو مزوّد الدفع.','لا تُسترد رسوم التوصيل إلا إذا كان الخطأ من جانبنا.']]],
+   ['7. إلغاء الطلب',['يمكن إلغاء الطلب قبل بدء الطباعة مع استرداد المبلغ المدفوع، مع حقنا في خصم تكلفة التصميم إذا كان العمل عليه قد أُنجز. ولا يمكن الإلغاء بعد بدء الطباعة.']],
+   ['8. خدمات التسويق الرقمي',[['يمكن إيقاف الاشتراكات الشهرية بإشعار مسبق قبل بداية الشهر التالي، ولا تُسترد رسوم الشهر الجاري.','المبالغ المدفوعة لمنصات الإعلان مقابل الإعلانات المنشورة غير قابلة للاسترداد.']]],
+   ['9. كيفية تقديم طلب',['تواصل معنا عبر واتساب أو الهاتف على الرقم الظاهر أدناه، مع ذكر رقم الفاتورة ووصف المشكلة وإرفاق الصور، وسيتواصل معك فريقنا في أقرب وقت.']]]},
+  en:{title:'Return & Refund Policy',lead:'We want every order to reach you in perfect condition. Because our products are printed specifically for each customer, this policy explains when you are entitled to a reprint or a refund.',s:[
+   ['1. Nature of our products',['All our products are custom prints carrying the customer’s details and design. We therefore cannot accept returns or exchanges for a change of mind or because the items are no longer needed after printing.']],
+   ['2. Eligible cases for a reprint or refund',[['A clear printing defect, such as ink smudging or colours differing significantly from the approved proof.','A product that differs from the approved order, such as paper type, thickness, finish or size.','A shortfall in the quantity received compared with the quantity paid for.','Damage during delivery.']]],
+   ['3. Cases not eligible',[['Spelling mistakes or errors in numbers and details contained in a proof the customer approved.','Slight colour differences between screen and print.','Poor quality caused by low-resolution files supplied by the customer despite our warning.','Minor variations in trimming or folding within normal printing tolerances.','Cancellation requests after printing has started.']]],
+   ['4. Reporting period',['Please report any issue within 3 days of receipt, including your invoice number and clear photos of the product, via WhatsApp or phone. We may be unable to process reports received after this period.']],
+   ['5. How we resolve issues',['After reviewing and verifying your report, we will offer one of the following:',['A reprint of the order or the defective part at no extra cost, which is our first choice.','A full or partial refund, depending on the extent of the issue.'],'We may ask you to return the defective prints or send additional photos before confirming a solution.']],
+   ['6. Refunds',[['Refunds are made using the original payment method.','For orders paid with Tabby or Tamara, refunds follow the provider’s procedures.','We initiate refunds within up to 14 business days of approval; the time it takes to appear in your account depends on your bank or payment provider.','Delivery fees are refunded only if the error was ours.']]],
+   ['7. Cancellation',['An order may be cancelled before printing begins, with a refund of the amount paid; we may deduct the cost of any design work already completed. Orders cannot be cancelled once printing has started.']],
+   ['8. Digital marketing services',[['Monthly subscriptions can be stopped with notice before the start of the next month; fees for the current month are non-refundable.','Amounts paid to advertising platforms for ads already run are non-refundable.']]],
+   ['9. How to submit a request',['Contact us on WhatsApp or by phone at the number below with your invoice number, a description of the issue and photos, and our team will get back to you as soon as possible.']]]}
+ }
+};
+const LEGAL_NAV=()=>[['terms',tr('الشروط والأحكام','Terms & Conditions')],['privacy',tr('سياسة الخصوصية','Privacy Policy')],['returns',tr('سياسة الإرجاع والاسترداد','Return & Refund Policy')]];
+function vLegal(key){
+  const d=LEGAL[key][LANG];
+  const block=x=>Array.isArray(x)?`<ul>${x.map(li=>`<li>${li}</li>`).join('')}</ul>`:`<p>${x}</p>`;
+  return `<header class="phero gut"><span class="blob b1"></span><span class="blob b2"></span>${loopSVG}
+    <div class="wrap">${crumbs(d.title)}<h1>${d.title}</h1><p>${d.lead}</p></div></header>
+  <div class="gut"><div class="wrap"><section class="sec legal">
+    <div role="navigation" class="legal-tabs" aria-label="${tr('الصفحات القانونية','Legal pages')}">${LEGAL_NAV().map(([k,l])=>`<a href="#${k}"${k===key?' aria-current="page"':''}>${l}</a>`).join('')}</div>
+    <p class="legal-date">${tr('آخر تحديث:','Last updated:')} ${LEGAL_UPDATED[LANG==='en'?1:0]}</p>
+    ${d.s.map(([h,items])=>`<h2>${h}</h2>${items.map(block).join('')}`).join('')}
+    <div class="legal-contact"><h2>${tr('تواصل معنا','Contact us')}</h2><p>${tr('لأي استفسار حول هذه السياسة، يسعدنا تواصلك معنا:','For any questions about this policy, we’d be glad to hear from you:')}</p>
+      <p><b>Infinity Graphic</b> · ${tr('عجمان، الإمارات العربية المتحدة','Ajman, United Arab Emirates')}<br>${tr('واتساب وهاتف:','WhatsApp & phone:')} <a href="${waLink()}" target="_blank" rel="noopener" dir="ltr">${PHONE}</a></p></div>
+  </section></div></div>`;
+}
+
 /* ---------- events ---------- */
 document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const h=a.getAttribute('href');
   if(h.startsWith('https://wa.me'))track(a.id==='waBtn'?'whatsapp_invoice':'whatsapp_click',{from:location.hash||'#home'});
@@ -1454,6 +1570,7 @@ function route(){
   else if(h==='services'){view='services';html=vServices();}
   else if(h==='admin'){view='admin';html=vAdmin();}
   else if(h==='order'){view='order';html=vOrder();}
+  else if(LEGAL[h]){view='legal';html=vLegal(h);}
   else if(h.startsWith('cat-')&&catById[h.slice(4)]){view='products';html=vCat(catById[h.slice(4)]);}
   else if(h.startsWith('p-')&&byId[h.slice(2)]){view='products';html=vProduct(byId[h.slice(2)]);}
   else html=vHome();
