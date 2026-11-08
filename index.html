@@ -1044,8 +1044,9 @@ function vOrder(){
   </form>
   <section class="sec" id="confirm" hidden style="padding-top:clamp(24px,5vw,48px)">
     <div class="inv-head"><div class="big">✓</div><h2>${tr('فاتورتك جاهزة','Your invoice is ready')}</h2><p>${tr('أرسلها إلينا عبر واتساب لنبدأ التصميم فوراً، وأرفق ملفات التصميم أو الشعار في المحادثة نفسها.','Send it to us on WhatsApp so we can start the design right away, and attach your design files or logo in the same chat.')}</p></div>
-    <div class="acts" style="margin-bottom:10px"><button class="btn wa" type="button" id="sharePdf">📄 ${tr('أرسل الفاتورة PDF عبر واتساب','Send invoice PDF on WhatsApp')}</button></div>
-    <div class="acts" style="margin-bottom:18px"><button class="btn out" type="button" id="dlPdf">⬇ ${tr('تحميل الفاتورة PDF','Download invoice PDF')}</button><a class="btn out" id="waBtn" href="#" target="_blank" rel="noopener">💬 ${tr('أرسلها كرسالة نصية','Send as a text message')}</a></div>
+    <div class="acts" style="margin-bottom:8px"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">💬 ${tr('أرسل الفاتورة عبر واتساب','Send invoice on WhatsApp')}</a></div>
+    <p style="color:var(--muted);font-size:.88rem;text-align:center;margin:0 auto 14px;max-width:560px">${tr('تُفتح المحادثة مباشرة على رقمنا <span dir="ltr">'+PHONE+'</span> مع تفاصيل الفاتورة كاملة. لإرفاق ملف PDF، اضغط 📎 داخل المحادثة واختر الملف الذي تم تحميله.','The chat opens directly with our number <span dir="ltr">'+PHONE+'</span>, with the full invoice details. To attach the PDF, tap 📎 in the chat and choose the downloaded file.')}</p>
+    <div class="acts" style="margin-bottom:18px"><button class="btn out" type="button" id="dlPdf">⬇ ${tr('تحميل الفاتورة PDF','Download invoice PDF')}</button><button class="btn out" type="button" id="sharePdf">📄 ${tr('مشاركة ملف PDF','Share PDF file')}</button></div>
     <p class="pdf-st" id="pdfStatus" role="status"></p>
     <article class="inv" id="invoice"></article>
     <div class="acts" style="margin-top:18px"><button class="btn out" type="button" id="copyBtn">${tr('نسخ الفاتورة','Copy invoice')}</button><button class="btn out" type="button" id="editBtn">${tr('تعديل الطلب','Edit order')}</button></div>
@@ -1132,7 +1133,7 @@ function bindOrder(){
       `${tr('المجموع الفرعي','Subtotal')}: ${fmt(sub)}`,fee?`${feeLbl}: ${fmt(fee)}`:tr('الاستلام: من عجمان (مجاناً)','Pickup: Ajman (free)'),`${tr('الإجمالي','Total')}: ${fmt(t)}`,'',
       fee?`${tr('عنوان التوصيل','Delivery address')}: ${v('emirate')}${tr('، ',', ')}${v('address')}`:'',`${tr('الدفع','Payment')}: ${payL(pay)}`,
       `${tr('التصميم','Design')}: ${design?tr('لديّ تصميم جاهز','I have a ready design'):tr('أرغب في تصميم من فريقكم','I would like your team to design it')}`,!design&&info?`${tr('معلومات البطاقة','Card details')}:\n${info}`:'',
-      files.length?`${tr('الملفات (سأرسلها في هذه المحادثة)','Files (I will send them in this chat)')}: ${files.join(tr('، ',', '))}`:'','',tr('أرغب في البدء بالتصميم ✅','I would like to start the design ✅')].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n');
+      files.length?`${tr('الملفات (سأرسلها في هذه المحادثة)','Files (I will send them in this chat)')}: ${files.join(tr('، ',', '))}`:'','',tr('📎 سأرفق ملف الفاتورة PDF في هذه المحادثة.','📎 I will attach the invoice PDF in this chat.'),tr('أرغب في البدء بالتصميم ✅','I would like to start the design ✅')].filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n');
     $('waBtn').href=waLink(msg);
     $('order').hidden=true;$('confirm').hidden=false;window.scrollTo({top:0,behavior:'smooth'});
     inv={no,date,lang:LANG,name:v('name'),phone:v('phone'),biz:v('biz'),activity:v('activity'),rows,sub,fee,t,
@@ -1142,6 +1143,8 @@ function bindOrder(){
   });
   $('editBtn').addEventListener('click',()=>{$('order').hidden=false;$('confirm').hidden=true;});
   $('sharePdf').addEventListener('click',sharePdf);
+  // unsigned invoice → ask for the signature before opening the chat; make sure the PDF is saved for attaching
+  $('waBtn').addEventListener('click',e=>{if(inv&&!inv.signature){e.preventDefault();openSign();return;}if(!pdfFile)downloadPdf();});
   $('dlPdf').addEventListener('click',()=>{track('invoice_pdf');downloadPdf();});
   $('copyBtn').addEventListener('click',()=>{const b=$('copyBtn'),l=tr('نسخ الفاتورة','Copy invoice');navigator.clipboard.writeText(msg).then(()=>{b.textContent=tr('تم النسخ ✓','Copied ✓');setTimeout(()=>b.textContent=l,1800);}).catch(()=>{b.textContent=tr('تعذّر النسخ، انسخ من الجدول','Couldn’t copy; copy from the table');});});
 }
@@ -1386,7 +1389,7 @@ async function saveFile(f){
   const url=URL.createObjectURL(f),a=document.createElement('a');
   a.href=url;a.download=f.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);
 }
-const failMsg=()=>tr('تعذّر تجهيز ملف PDF على هذا المتصفح. اضغط «أرسلها كرسالة نصية» لتصلنا الفاتورة كاملة.','Couldn’t create the PDF in this browser. Tap “Send as a text message” and we will receive the full invoice.');
+const failMsg=()=>tr('تعذّر تجهيز ملف PDF على هذا المتصفح. اضغط الزر الأخضر لإرسال الفاتورة كاملة عبر واتساب.','Couldn’t create the PDF in this browser. Tap the green button to send the full invoice on WhatsApp.');
 const saveErr=e=>e&&e.code==='declined'?'':failMsg();
 async function sharePdf(){
   if(inv&&!inv.signature){openSign();return;}
@@ -1396,10 +1399,10 @@ async function sharePdf(){
   try{
     if(navigator.canShare&&navigator.canShare({files:[f]})){
       await navigator.share({files:[f],title:tr('فاتورة ','Invoice ')+inv.no,text:msg});
-      pdfStatus(tr('تم ✓ إذا لم تختر واتساب، يُرجى إرسال الملف إلى 050 689 2431','Done ✓ If you didn’t choose WhatsApp, please send the file to 050 689 2431'));return;
+      pdfStatus(tr('تم ✓ عند المشاركة عبر واتساب اختر الرقم 050 689 2431، أو استخدم الزر الأخضر لفتح محادثتنا مباشرة.','Done ✓ When sharing via WhatsApp, choose 050 689 2431, or use the green button to open our chat directly.'));return;
     }
   }catch(e){if(e&&e.name==='AbortError'){pdfStatus('');return;}}
-  try{await saveFile(f);pdfStatus(tr('تم تحميل الفاتورة PDF ✓ أرسلها عبر واتساب إلى 050 689 2431، أو اضغط «أرسلها كرسالة نصية».','Invoice PDF downloaded ✓ Send it on WhatsApp to 050 689 2431, or tap “Send as a text message”.'));}
+  try{await saveFile(f);pdfStatus(tr('تم تحميل الفاتورة PDF ✓ اضغط الزر الأخضر لفتح محادثتنا على واتساب، ثم أرفق الملف عبر 📎.','Invoice PDF downloaded ✓ Tap the green button to open our WhatsApp chat, then attach the file with 📎.'));}
   catch(e){pdfStatus(saveErr(e));}
 }
 async function downloadPdf(){
