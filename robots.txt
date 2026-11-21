@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://infinity-graphic.art/sitemap.xml
