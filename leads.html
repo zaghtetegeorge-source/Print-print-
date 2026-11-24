@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة العملاء | Infinity Graphic</title><meta name="robots" content="noindex,nofollow"><link rel="icon" href="/img/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--muted:#6a6f7a;--line:#ececec;--bg:#f6f7fb;--g:#1f7a4d;--gl:#e6f7ec;--r:#b3261e}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.top .w{display:flex;justify-content:space-between;align-items:center;height:60px}
+.w{max-width:1100px;margin:0 auto;padding:0 16px}.logo{display:flex;gap:10px;align-items:center;font-weight:700}.logo img{width:34px;height:34px;border-radius:50%}
+button{font:inherit;cursor:pointer}.rf{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:600}
+.login{max-width:360px;margin:80px auto;background:#fff;border-radius:22px;padding:26px;text-align:center}.login input{width:100%;font:inherit;border:1.5px solid var(--line);border-radius:12px;padding:12px;margin:14px 0;text-align:center;direction:ltr}
+.login button{width:100%;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:12px;font-weight:700}
+.kp{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0}@media(min-width:760px){.kp{grid-template-columns:repeat(4,1fr)}}
+.kp div{background:#fff;border-radius:18px;padding:14px 16px}.kp b{display:block;font-size:28px;line-height:1.2}.kp span{color:var(--muted);font-size:13px}
+.tabs{display:flex;gap:8px;margin:6px 0 12px;flex-wrap:wrap}.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:600}.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.brk{display:grid;gap:10px;margin-bottom:16px}@media(min-width:760px){.brk{grid-template-columns:repeat(3,1fr)}}
+.brk div{background:#fff;border-radius:18px;padding:14px 16px}.brk h4{font-size:14px;margin-bottom:8px}.bar{display:flex;justify-content:space-between;font-size:13px;margin:5px 0}.bar i{display:block;height:6px;background:var(--ink);border-radius:9px;margin-top:3px}
+.list{display:grid;gap:10px;margin-bottom:40px}
+.c{background:#fff;border-radius:18px;padding:14px 16px;border-inline-start:5px solid var(--line)}.c.wa{border-color:#25d366}.c.sold{border-color:var(--g);background:#f3fbf6}.c.lost{border-color:var(--r)}
+.c .h{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}.c .code{font-weight:700;direction:ltr}.c .t{color:var(--muted);font-size:12.5px}
+.st{font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--bg)}.st.wa{background:#e3fbe9;color:#137a3a}.st.sold{background:var(--g);color:#fff}.st.lost{background:#fdecea;color:var(--r)}
+.c .m{font-size:13.5px;color:#333;margin-top:6px}.c .m b{font-weight:600}.c .p{margin-top:6px;font-size:14px}.c .p s{color:var(--muted)}.c .p strong{color:var(--g);font-size:17px}
+.c .a{display:flex;gap:8px;margin-top:10px}.c .a button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
+.empty{background:#fff;border-radius:18px;padding:30px;text-align:center;color:var(--muted)}
+.f{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}.f select{font:inherit;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:#fff}
+</style></head><body>
+<div class="top"><div class="w"><div class="logo"><img src="/img/logo.jpg" alt="">لوحة العملاء</div><div><span id="upd" style="font-size:12px;color:var(--muted)"></span> <button class="rf" onclick="load()">تحديث</button></div></div></div>
+<div class="w" id="app"></div>
+<script>
+var API="", K=localStorage.getItem('igk')||'', D=null, tab='offers', flt='all';
+var app=document.getElementById('app');
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function login(msg){app.innerHTML='<div class="login"><h3>لوحة العملاء</h3><p style="color:var(--muted);font-size:14px">'+(msg||'أدخل كلمة السر')+'</p><input id="k" placeholder="IG-XXXXXXXX" value=""><button onclick="K=document.getElementById(\'k\').value.trim();localStorage.setItem(\'igk\',K);load()">دخول</button></div>'}
+function load(){if(!API){app.innerHTML='<div class="empty" style="margin-top:40px">اللوحة غير مربوطة بعد.</div>';return}if(!K)return login();
+ document.getElementById('upd').textContent='جارٍ التحميل…';
+ fetch(API+'?key='+encodeURIComponent(K)).then(function(r){return r.json()}).then(function(d){if(!d.ok){localStorage.removeItem('igk');K='';return login('كلمة السر غير صحيحة')}D=d;render();document.getElementById('upd').textContent='آخر تحديث '+d.now.slice(11)}).catch(function(){document.getElementById('upd').textContent='تعذّر الاتصال'})}
+function cls(s){return s==='تم البيع'?'sold':s==='لم يتم'?'lost':s==='أرسل على واتساب'?'wa':''}
+function count(rows,i){var m={};rows.forEach(function(r){var k=r.v[i]||'—';m[k]=(m[k]||0)+1});return Object.keys(m).map(function(k){return[k,m[k]]}).sort(function(a,b){return b[1]-a[1]})}
+function box(t,rows,i){var c=count(rows,i),mx=c.length?c[0][1]:1;return '<div><h4>'+t+'</h4>'+c.slice(0,6).map(function(x){return '<div class="bar"><span>'+esc(x[0])+'</span><b>'+x[1]+'</b></div><i style="width:'+Math.round(x[1]/mx*100)+'%"></i>'}).join('')+'</div>'}
+function render(){var o=D.offers,w=D.wholesale,today=D.now.slice(0,10);
+ var wa=o.filter(function(r){return r.v[13]==='نعم'}).length, sold=o.filter(function(r){return r.v[2]==='تم البيع'}).length, td=o.filter(function(r){return r.v[0].slice(0,10)===today}).length;
+ var h='<div class="kp"><div><b>'+o.length+'</b><span>عملوا الاستبيان</span></div><div><b>'+wa+'</b><span>أرسلوا على واتساب ('+(o.length?Math.round(wa/o.length*100):0)+'%)</span></div><div><b>'+sold+'</b><span>تم البيع</span></div><div><b>'+td+'</b><span>اليوم</span></div></div>';
+ h+='<div class="tabs"><button class="'+(tab==='offers'?'on':'')+'" onclick="tab=\'offers\';render()">العروض الخاصة ('+o.length+')</button><button class="'+(tab==='ws'?'on':'')+'" onclick="tab=\'ws\';render()">طلبات الجملة ('+w.length+')</button><button class="'+(tab==='st'?'on':'')+'" onclick="tab=\'st\';render()">إحصائيات</button></div>';
+ if(tab==='st'){h+='<div class="brk">'+box('نوع النشاط',o,3)+box('الميزانية',o,6)+box('من أين أتوا',o,17)+box('جديد / قائم',o,4)+box('التصاميم',o,5)+box('الجهاز',o,16)+'</div>'}
+ else if(tab==='offers'){var rows=o.filter(function(r){return flt==='all'||(flt==='wa'&&r.v[13]==='نعم')||(flt==='no'&&r.v[13]!=='نعم')||(flt==='sold'&&r.v[2]==='تم البيع')});
+  h+='<div class="f"><select onchange="flt=this.value;render()"><option value="all"'+(flt==='all'?' selected':'')+'>الكل</option><option value="wa"'+(flt==='wa'?' selected':'')+'>أرسلوا على واتساب</option><option value="no"'+(flt==='no'?' selected':'')+'>لم يرسلوا</option><option value="sold"'+(flt==='sold'?' selected':'')+'>تم البيع</option></select></div><div class="list">';
+  h+=rows.length?rows.map(function(r){var v=r.v,c=cls(v[2]);return '<div class="c '+c+'"><div class="h"><span class="code">'+esc(v[1])+'</span><span class="st '+c+'">'+esc(v[2])+'</span><span class="t">'+esc(v[0])+'</span></div>'+
+   '<div class="m"><b>'+esc(v[3])+'</b> · '+esc(v[4])+' · '+esc(v[5])+' · ميزانية: '+esc(v[6])+'</div><div class="m">'+esc(v[8])+'</div>'+
+   '<div class="p"><s>'+esc(v[9])+'</s> → <strong>'+esc(v[11])+' درهم</strong> (خصم '+esc(v[10])+'%) · ينتهي '+esc(v[12].slice(11))+'</div>'+
+   '<div class="m" style="color:var(--muted);font-size:12.5px">المصدر: '+esc(v[17])+' · '+esc(v[16])+(v[14]?' · واتساب '+esc(v[14].slice(11)):'')+'</div>'+
+   '<div class="a"><button onclick="mark(\''+esc(v[1])+'\',\'تم البيع\')">✓ تم البيع</button><button onclick="mark(\''+esc(v[1])+'\',\'لم يتم\')">✗ لم يتم</button></div></div>'}).join(''):'<div class="empty">لا توجد عروض بعد</div>';h+='</div>'}
+ else{h+='<div class="list">'+(w.length?w.map(function(r){var v=r.v;return '<div class="c wa"><div class="h"><span class="code">'+esc(v[1])+'</span><span class="t">'+esc(v[0])+'</span></div><div class="m">'+esc(v[2])+'</div><div class="m"><b>الكمية:</b> '+esc(v[3])+' · <b>التكرار:</b> '+esc(v[4])+' · '+esc(v[5])+'</div><div class="m" style="color:var(--muted);font-size:12.5px">المصدر: '+esc(v[8])+' · '+esc(v[7])+'</div></div>'}).join(''):'<div class="empty">لا توجد طلبات جملة بعد</div>')+'</div>'}
+ app.innerHTML=h}
+function mark(code,s){fetch(API+'?key='+encodeURIComponent(K)+'&action=sold&code='+encodeURIComponent(code)+'&status='+encodeURIComponent(s)).then(function(){load()})}
+load();setInterval(load,60000);
+</script></body></html>

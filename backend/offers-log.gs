@@ -4,6 +4,7 @@
  * Deploy → New deployment → Web app → Execute as: Me → Who has access: Anyone.
  */
 const TZ = 'Asia/Dubai';
+const ADMIN_KEY = 'CHANGE-ME'; // dashboard password — keep private
 
 const SHEETS = {
   offers: ['الوقت', 'رمز العرض', 'الحالة', 'النشاط', 'جديد/قائم', 'التصاميم', 'الميزانية', 'الباقة', 'المنتجات',
@@ -73,5 +74,26 @@ function doPost(e) {
   }
 }
 
-function doGet() { return out_({ ok: true, service: 'infinity-offers-log' }); }
+function rows_(name) {
+  const sh = sheet_(name), v = sh.getDataRange().getDisplayValues();
+  return v.length > 1 ? v.slice(1).map(function (r, i) { return { row: i + 2, v: r }; }).reverse() : [];
+}
+
+function doGet(e) {
+  const p = (e && e.parameter) || {};
+  if (p.key !== ADMIN_KEY) return out_({ ok: false, error: 'key' });
+  if (p.action === 'sold' && p.code) {
+    const sh = sheet_('offers');
+    const codes = sh.getRange(1, 2, sh.getLastRow(), 1).getValues();
+    for (let i = codes.length - 1; i >= 1; i--) {
+      if (String(codes[i][0]) === String(p.code)) {
+        sh.getRange(i + 1, 3).setValue(p.status || 'تم البيع');
+        sh.getRange(i + 1, 1, 1, SHEETS.offers.length).setBackground(p.status === 'لم يتم' ? '#fdecea' : '#d7f5e1');
+        break;
+      }
+    }
+    return out_({ ok: true });
+  }
+  return out_({ ok: true, offers: rows_('offers'), wholesale: rows_('wholesale'), now: t_() });
+}
 function out_(o) { return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }
