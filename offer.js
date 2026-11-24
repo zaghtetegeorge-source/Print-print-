@@ -132,7 +132,7 @@
   }
   function generate() {
     ob.innerHTML = hdr() + '<div class="oload"><i></i><p class="os" style="margin-top:12px">' + X.loading + '</p></div>';
-    setTimeout(function () { var o = build(ans); save(o); showOffer(o); var lab = function (i) { var f = X.o[i].filter(function (x) { return x[0] === ans[i]; })[0]; return f ? f[2] : ans[i]; }; log({ type: 'offer', code: o.code, biz: lab(0), stage: lab(1), design: lab(2), budget: lab(3), name: o.name, items: o.items.map(function (i) { return CAT[i].n; }).join(' + '), sum: o.sum, d: o.d, total: o.total, exp: o.exp, lang: L, device: dev(), src: src(), page: location.pathname }); try { gtag('event', 'offer_generated', { offer_code: o.code, value: o.total, currency: 'AED' }); } catch (e) {} }, 1400);
+    setTimeout(function () { var o = build(ans); save(o); showOffer(o); var lab = function (i) { var f = X.o[i].filter(function (x) { return x[0] === ans[i]; })[0]; return f ? f[2] : ans[i]; }; log({ type: 'offer', code: o.code, biz: lab(0), stage: lab(1), design: lab(2), budget: lab(3), name: o.name, items: o.items.map(function (i) { return CAT[i].n; }).join(' + '), sum: o.sum, d: o.d, total: o.total, exp: o.exp, lang: L, device: dev(), src: src(), page: location.pathname }); try { gtag('event', 'offer_generated', { offer_code: o.code, value: o.total, currency: 'AED' }); } catch (e) {} try { fbq('track', 'Lead', { content_name: 'personal_offer', value: o.total, currency: 'AED' }); } catch (e) {} }, 1400);
   }
   function left(o) { var s = Math.max(0, Math.round((o.exp - Date.now()) / 1000)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }
   function showOffer(o) {
