@@ -9,10 +9,10 @@
     yes: 'نعم، خصّص لي عرضاً', no: 'لا، شكراً', step: 'السؤال',
     q: ['ما نوع نشاطك التجاري؟', 'هل نشاطك جديد أم قائم؟', 'هل لديك تصاميم جاهزة؟', 'ما الميزانية التقريبية للطباعة؟'],
     o: [
-      [['restaurant', '🍽️', 'مطعم أو مقهى'], ['realestate', '🏢', 'عقارات'], ['clinic', '🩺', 'عيادة أو صالون'], ['shop', '🛍️', 'متجر أو تجارة'], ['services', '💼', 'شركة خدمات'], ['other', '✨', 'نشاط آخر']],
-      [['new', '🚀', 'نشاط جديد / افتتاح قريب'], ['existing', '📈', 'نشاط قائم']],
-      [['ready', '✅', 'نعم، لديّ تصاميم جاهزة'], ['design', '🎨', 'أحتاج إلى تصميم']],
-      [['low', '💵', 'أقل من 300 درهم'], ['mid', '💰', '300 – 800 درهم'], ['high', '🏆', 'أكثر من 800 درهم'], ['unsure', '🤔', 'غير متأكد']]
+      [['restaurant', '', 'مطعم أو مقهى'], ['realestate', '', 'عقارات'], ['clinic', '', 'عيادة أو صالون'], ['shop', '', 'متجر أو تجارة'], ['services', '', 'شركة خدمات'], ['other', '', 'نشاط آخر']],
+      [['new', '', 'نشاط جديد / افتتاح قريب'], ['existing', '', 'نشاط قائم']],
+      [['ready', '', 'نعم، لديّ تصاميم جاهزة'], ['design', '', 'أحتاج إلى تصميم']],
+      [['b100', '', 'أقل من 100 درهم'], ['b200', '', 'أقل من 200 درهم'], ['mid', '', '200 – 800 درهم'], ['high', '', 'أكثر من 800 درهم']]
     ],
     loading: 'نجهّز باقتك الخاصة…', your: 'باقتك الخاصة', code: 'رمز العرض',
     orig: 'السعر الأصلي', aed: 'درهم', off: 'خصم', left: 'ينتهي العرض خلال',
@@ -22,8 +22,8 @@
     design: 'تصميم احترافي مجاني لجميع منتجات الباقة', review: 'مراجعة فنية مجانية لملفاتك قبل الطباعة',
     freeDel: 'توصيل مجاني إلى أي إمارة', del: 'التوصيل 25 درهماً أو استلام مجاني من عجمان',
     opening: 'خصم إضافي بمناسبة الافتتاح', payAfter: 'الدفع بعد اعتماد التصميم',
-    names: { restaurant: 'المطاعم والمقاهي', realestate: 'العقارات', clinic: 'العيادات والصالونات', shop: 'المتاجر', services: 'شركات الخدمات', other: 'الأعمال' },
-    pkg: function (n, isNew) { return (isNew ? 'باقة الانطلاقة لـ' : 'باقة النمو لـ') + n; },
+    names: { restaurant: 'للمطاعم والمقاهي', realestate: 'للعقارات', clinic: 'للعيادات والصالونات', shop: 'للمتاجر', services: 'لشركات الخدمات', other: 'للأعمال' },
+    pkg: function (n, isNew) { return (isNew ? 'باقة الانطلاقة ' : 'باقة النمو ') + n; },
     tz: 'بتوقيت الإمارات', valid: 'صالح حتى',
     msg: function (o) {
       return 'مرحباً، أرغب في حجز عرضي الخاص.\nرمز العرض: ' + o.code + '\n' + o.name + ':\n' +
@@ -37,10 +37,10 @@
     yes: 'Yes, tailor my offer', no: 'No, thank you', step: 'Question',
     q: ['What type of business do you run?', 'Is your business new or established?', 'Do you have ready designs?', 'What is your approximate printing budget?'],
     o: [
-      [['restaurant', '🍽️', 'Restaurant or café'], ['realestate', '🏢', 'Real estate'], ['clinic', '🩺', 'Clinic or salon'], ['shop', '🛍️', 'Shop or retail'], ['services', '💼', 'Services company'], ['other', '✨', 'Other business']],
-      [['new', '🚀', 'New / opening soon'], ['existing', '📈', 'Established business']],
-      [['ready', '✅', 'Yes, my designs are ready'], ['design', '🎨', 'I need a design']],
-      [['low', '💵', 'Under AED 300'], ['mid', '💰', 'AED 300 – 800'], ['high', '🏆', 'Over AED 800'], ['unsure', '🤔', 'Not sure yet']]
+      [['restaurant', '', 'Restaurant or café'], ['realestate', '', 'Real estate'], ['clinic', '', 'Clinic or salon'], ['shop', '', 'Shop or retail'], ['services', '', 'Services company'], ['other', '', 'Other business']],
+      [['new', '', 'New / opening soon'], ['existing', '', 'Established business']],
+      [['ready', '', 'Yes, my designs are ready'], ['design', '', 'I need a design']],
+      [['b100', '', 'Under AED 100'], ['b200', '', 'Under AED 200'], ['mid', '', 'AED 200 – 800'], ['high', '', 'Over AED 800']]
     ],
     loading: 'Preparing your package…', your: 'Your package', code: 'Offer code',
     orig: 'Regular price', aed: 'AED', off: 'off', left: 'Offer ends in',
@@ -69,7 +69,7 @@
     services: ['business-cards', 'letterhead', 'roll-up', 'bill-books', 'flyers', 'envelopes'],
     other: ['business-cards', 'flyers', 'stickers', 'roll-up', 'letterhead', 'bill-books']
   };
-  var CAP = { low: 320, mid: 850, high: 2300, unsure: 600 };
+  var CAP = { b100: 100, b200: 200, mid: 800, high: 2300 };
 
   function rnd(n) { var a = new Uint32Array(1); (window.crypto || window.msCrypto).getRandomValues(a); return a[0] % n; }
   function fmt(n) { var s = (Math.round(n * 100) / 100).toFixed(2); s = s.replace(/\.00$/, ''); return s.replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
@@ -85,10 +85,12 @@
     list.unshift(head);
     var cap = CAP[a[3]], items = [], sum = 0;
     list.forEach(function (id) { if (items.length < 4 && sum + CAT[id].p <= cap) { items.push(id); sum += CAT[id].p; } });
-    if (items.length < 2) {
+    var minItems = cap <= 200 ? 1 : 2;
+    if (items.length < minItems) {
       var cheap = list.slice().sort(function (x, y) { return CAT[x].p - CAT[y].p; });
       items = []; sum = 0;
-      cheap.slice(0, 2).forEach(function (id) { items.push(id); sum += CAT[id].p; });
+      cheap.forEach(function (id) { if (items.length < minItems && sum + CAT[id].p <= Math.max(cap, 200)) { items.push(id); sum += CAT[id].p; } });
+      if (!items.length) { items = ['business-cards']; sum = CAT['business-cards'].p; }
     }
     var isNew = a[1] === 'new';
     var d = 5 + rnd(6) + (isNew ? 2 : 0);          // 5–10%, +2% for new businesses
@@ -116,7 +118,7 @@
     ob.querySelector('[data-go]').onclick = function () { ans = []; ask(0); };
   }
   function ask(i) {
-    var opts = X.o[i].map(function (o) { return '<button data-v="' + o[0] + '"><span>' + o[1] + '</span>' + o[2] + '</button>'; }).join('');
+    var opts = X.o[i].map(function (o) { return '<button data-v="' + o[0] + '">' + o[2] + '</button>'; }).join('');
     ob.innerHTML = hdr() + '<div class="obar"><i style="width:' + ((i + 1) * 25) + '%"></i></div><div class="os" style="color:var(--muted);font-size:13px">' + X.step + ' ' + (i + 1) + ' / 4</div><div class="oq">' + X.q[i] + '</div><div class="oo">' + opts + '</div>';
     [].forEach.call(ob.querySelectorAll('[data-v]'), function (b) {
       b.onclick = function () { ans[i] = b.getAttribute('data-v'); if (i < 3) ask(i + 1); else generate(); };
@@ -164,8 +166,6 @@
     });
     badge.onclick = open;
     tick(); paintBadge();
-    var seen; try { seen = sessionStorage.getItem(DIS); } catch (e) {}
-    if (!load() && !seen) setTimeout(function () { if (!om.classList.contains('show')) open(); }, 6000);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
