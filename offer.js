@@ -93,7 +93,7 @@
       if (!items.length) { items = ['business-cards']; sum = CAT['business-cards'].p; }
     }
     var isNew = a[1] === 'new';
-    var d = 5 + rnd(6) + (isNew ? 2 : 0);          // 5–10%, +2% for new businesses
+    var d = Math.min(10, 5 + rnd(6) + (isNew ? 2 : 0));   // 5–10%, never above 10%
     var total = Math.floor(sum * (1 - d / 100));
     var perks = [a[2] === 'design' ? X.design : X.review, total >= 300 ? X.freeDel : X.del];
     if (isNew) perks.push(X.opening);
@@ -166,6 +166,7 @@
     });
     badge.onclick = open;
     tick(); paintBadge();
+    if (/^#(offer|special-offer)$/.test(location.hash)) setTimeout(open, 400);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
