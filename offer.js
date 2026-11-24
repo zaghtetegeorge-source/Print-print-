@@ -3,6 +3,12 @@
   var L = window.IGL || 'ar', CAT = window.IGCAT || {}, WA = '971542503114';
   var KEY = 'igOffer', DIS = 'igOfferDismissed', MIN = 30;
   var AR = L === 'ar';
+  var LOG = window.IG_LOG_URL || '';
+  function src() { try { var q = new URLSearchParams(location.search), r = sessionStorage.getItem('igSrc'); if (!r) { r = q.get('gclid') ? 'Google Ads' : (q.get('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'مباشر')); sessionStorage.setItem('igSrc', r); } return r; } catch (e) { return ''; } }
+  function dev() { return /Mobi|Android|iPhone/i.test(navigator.userAgent) ? 'موبايل' : 'كمبيوتر'; }
+  function log(o) { if (!LOG) return; try { var b = JSON.stringify(o); if (!(navigator.sendBeacon && navigator.sendBeacon(LOG, new Blob([b], { type: 'text/plain' })))) fetch(LOG, { method: 'POST', body: b, mode: 'no-cors', keepalive: true }); } catch (e) {} }
+  window.IGlog = log; window.IGsrc = src; window.IGdev = dev;
+  src();
   var X = AR ? {
     tag: 'عرض خاص لك', t0: 'هل ترغب بتخصيص عرض خاص لنشاطك التجاري؟',
     s0: 'أجب عن أربعة أسئلة سريعة، ونجهّز لك باقة طباعة بسعر خاص صالح لمدة 30 دقيقة.',
@@ -126,7 +132,7 @@
   }
   function generate() {
     ob.innerHTML = hdr() + '<div class="oload"><i></i><p class="os" style="margin-top:12px">' + X.loading + '</p></div>';
-    setTimeout(function () { var o = build(ans); save(o); showOffer(o); try { gtag('event', 'offer_generated', { offer_code: o.code, value: o.total, currency: 'AED' }); } catch (e) {} }, 1400);
+    setTimeout(function () { var o = build(ans); save(o); showOffer(o); var lab = function (i) { var f = X.o[i].filter(function (x) { return x[0] === ans[i]; })[0]; return f ? f[2] : ans[i]; }; log({ type: 'offer', code: o.code, biz: lab(0), stage: lab(1), design: lab(2), budget: lab(3), name: o.name, items: o.items.map(function (i) { return CAT[i].n; }).join(' + '), sum: o.sum, d: o.d, total: o.total, exp: o.exp, lang: L, device: dev(), src: src(), page: location.pathname }); try { gtag('event', 'offer_generated', { offer_code: o.code, value: o.total, currency: 'AED' }); } catch (e) {} }, 1400);
   }
   function left(o) { var s = Math.max(0, Math.round((o.exp - Date.now()) / 1000)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }
   function showOffer(o) {
@@ -136,7 +142,7 @@
     ob.innerHTML = hdr() + '<h3>' + X.your + '</h3><div class="opk"><div class="on">' + o.name + '</div><div class="oc">' + X.code + ': <b dir="ltr">' + o.code + '</b> · ' + X.valid + ' ' + clock(o.exp) + ' (' + X.tz + ')</div><ul>' + li + '</ul>' + pk +
       '<div class="tot"><span><s>' + X.orig + ': ' + fmt(o.sum) + '</s><br><span style="color:var(--price);font-weight:700;font-size:13.5px">' + X.off + ' ' + o.d + '%</span></span><b>' + price + '</b></div></div>' +
       '<div class="otimer">⏳ ' + X.left + ' <b id="otl">' + left(o) + '</b></div>' +
-      '<a class="obtn green" href="' + waLink(X.msg(o)) + '">' + X.book + '</a><button class="obtn light" data-x>' + X.later + '</button>';
+      '<a class="obtn green" data-code="' + o.code + '" href="' + waLink(X.msg(o)) + '">' + X.book + '</a><button class="obtn light" data-x>' + X.later + '</button>';
     tick();
   }
   function showExpired() {
@@ -165,6 +171,7 @@
       if (t) { e.preventDefault(); document.body.classList.remove('xopen'); open(); }
     });
     badge.onclick = open;
+    ob.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[data-code]'); if (a) log({ type: 'offer_click', code: a.getAttribute('data-code') }); });
     tick(); paintBadge();
     if (/^#(offer|special-offer)$/.test(location.hash)) setTimeout(open, 400);
   }
